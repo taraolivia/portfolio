@@ -1,53 +1,52 @@
 /* ============================= */
 /*          CSS Reset            */
 /* ============================= */
-
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
-    2. Remove default margin
-  */
-  * {
-    margin: 0;
-  }
-  /*
-    Typographic tweaks!
-    3. Add accessible line-height
-    4. Improve text rendering
-  */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
-    5. Improve media defaults
-  */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
-    6. Remove built-in form typography styles
-  */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
-    7. Avoid text overflows
-  */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
-    8. Create a root stacking context
-  */
-  #root, #__next {
-    isolation: isolate;
-  }
+    /*
+    1. Use a more-intuitive box-sizing model.
+    */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    /*
+        2. Remove default margin
+    */
+    * {
+        margin: 0;
+    }
+    /*
+        Typographic tweaks!
+        3. Add accessible line-height
+        4. Improve text rendering
+    */
+    body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
+    /*
+        5. Improve media defaults
+    */
+    img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+    }
+    /*
+        6. Remove built-in form typography styles
+    */
+    input, button, textarea, select {
+        font: inherit;
+    }
+    /*
+        7. Avoid text overflows
+    */
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+    }
+    /*
+        8. Create a root stacking context
+    */
+    #root, #__next {
+        isolation: isolate;
+    }
 
 
 
@@ -69,13 +68,7 @@ html, body, div {
     block-size: 100%;
   }
 
-  nav {
-    block-size: 10%;
-    position: fixed;
-    background-color: antiquewhite;
-    width: 100%;
 
-  }
 
   html {
     scroll-snap-type: y mandatory;
@@ -83,23 +76,13 @@ html, body, div {
 
 
   body {
-    background-image: linear-gradient(
-        325deg,
-        hsl(240deg 100% 75%) 0%,
-        hsl(254deg 72% 73%) 29%,
-        hsl(317deg 60% 68%) 43%,
-        hsl(25deg 72% 70%) 57%,
-        hsl(116deg 47% 83%) 71%,
-        hsl(55deg 100% 77%) 100%
-      );
-      background-position: 100% auto;
+    background-color: lightgray;
 } 
 
 
 .scroll-div {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,10 +100,147 @@ html, body, div {
 /*        Navigation Styles      */
 /* ============================= */
 
+/* ============================= */
+/*          Header Styles        */
+/* ============================= */
+
 .header__nav {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: darkslategrey;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
+
+.header__nav img {
+    height: 50px;
+}
+
+.header__nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.header__nav-menu li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.header__nav-menu li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: lightgrey;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header__nav-menu li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    transition: transform 0.3s;
+}
+
+.header__nav-menu li.active a img {
+    content: url('/assets/photos/icons/pink-flower.png'); /* Change to the flower icon when active */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+.header__nav-menu li a:hover img {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+.header__nav-menu li a:hover,
+.header__nav-menu li.active a {
+    color: #D4B05F;
+}
+
+/* ============================= */
+/*         Page Navigation       */
+/* ============================= */
+
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.scroll-div {
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ============================= */
+/*      Projects Section         */
+/* ============================= */
+
+.projects-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.projects-container {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+}
+
+.project-details {
+    flex: 2;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff51;
+}
+
+#project-content {
+    text-align: center;
+}
+
+.project-menu {
+    flex: 1;
+    background-color: transparent;
+    overflow-y: auto;
+}
+
+.project-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-menu li {
+    padding: 5em;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    text-align: right;
+    background-color: #ffffff51;
+
+}
+
+.project-menu li.active {
+    background-color: #e68a8fc0;
+}
+
+.project-menu li:hover {
+    background-color: gray;
+} 
+
+
+
 
 /* ============================= */
 /*          Forms Styling        */
