@@ -1,54 +1,63 @@
+
 /* ============================= */
 /*          CSS Reset            */
 /* ============================= */
-    /*
+/*
     1. Use a more-intuitive box-sizing model.
     */
-    *, *::before, *::after {
-        box-sizing: border-box;
-    }
-    /*
-        2. Remove default margin
-    */
-    * {
-        margin: 0;
-    }
-    /*
-        Typographic tweaks!
-        3. Add accessible line-height
-        4. Improve text rendering
-    */
-    body {
-        line-height: 1.5;
-        -webkit-font-smoothing: antialiased;
-    }
-    /*
-        5. Improve media defaults
-    */
-    img, picture, video, canvas, svg {
-        display: block;
-        max-width: 100%;
-    }
-    /*
-        6. Remove built-in form typography styles
-    */
-    input, button, textarea, select {
-        font: inherit;
-    }
-    /*
-        7. Avoid text overflows
-    */
-    p, h1, h2, h3, h4, h5, h6 {
-        overflow-wrap: break-word;
-    }
-    /*
-        8. Create a root stacking context
-    */
-    #root, #__next {
-        isolation: isolate;
-    }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+* {
+  margin: 0;
+}
 
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ============================= */
+/*          CSS Variables        */
+/* ============================= */
+
+/* ============================= */
+/*          CSS Utilities        */
+/* ============================= */
 
 /* ============================= */
 /*        Typography Styles      */
@@ -59,33 +68,55 @@
 /* ============================= */
 
 #logo-main-gold-round {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }
 
 
-html, body, div {
-    block-size: 100%;
+  
+
+  
+/*   body {
+    position: relative;
+    background: 
+    linear-gradient(0deg, hsla(205, 46%, 10%, 1), hsla(191, 28%, 23%, 1), hsla(191, 28%, 23%, 1), hsla(205, 46%, 10%, 1));  
+      background-size: 100% 500%;  /* Stretch over 500% of the height 
+    animation: gradientAnimation 100s linear infinite alternate-reverse;
   }
+     */
+  
 
 
+.ff-ibarra {
+    font-family: 'Ibarra Real Nova', serif;
+    font-feature-settings: "liga" 1, "calt" 1;
+    font-variant-ligatures: common-ligatures;
+}
 
-  html {
-    scroll-snap-type: y mandatory;
-  }
+.ff-lora {
+    font-family: 'Lora', serif;
+    font-variant-ligatures: common-ligatures;
+}
 
+.fw-200 {
+    font-weight: 200;
+}
 
-  body {
-    background-color: lightgray;
-} 
+.fw-500 {
+    font-weight: 500;
+}
 
+.fw-700 {
+    font-weight: bold;
+}
 
-.scroll-div {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+.fstyle-italic {
+    font-style: italic;
+}
+
+.flex {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    column-gap: 2em;
 }
 
 /* ============================= */
@@ -104,79 +135,142 @@ html, body, div {
 /*          Header Styles        */
 /* ============================= */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-image: url(/assets/background/Untitled\ design.png);
+  background-repeat:repeat-y;
+  background-size: 100% 1000%;
+  animation: gradientAnimation 30s linear infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 50% 0%; }
+    100% { background-position: 50% 50%; }
+  }
+
+
+.scroll-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero__section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: hotpink;
+}
+
+#hero__section h1 {
+        font-size: 100px;
+}
+#hero__section h2 {
+    font-size: 40px;
+}
+
 .header__nav {
+    position:fixed;
+    top: 0;
+    z-index: 10; /* Keep it above other elements */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: darkslategrey;
+    padding: 20px 20px;
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 
-.header__nav img {
-    height: 50px;
+.header__nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 90%;
+    margin: auto;
 }
 
 .header__nav-menu {
     list-style: none;
     display: flex;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    position: relative;
+    height: fit-content;
+
 }
 
+.header__name {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 30px;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.header__name.visible {
+    opacity: 1;
+    font-size: 30px;
+    text-decoration: none;
+    color: inherit;
+}
+
+
 .header__nav-menu li {
-    margin: 0 10px;
+    margin: 0 20px;
     position: relative;
+    z-index: 1;
 }
 
 .header__nav-menu li a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: lightgrey;
-    font-weight: bold;
+    color: inherit;
     transition: color 0.3s;
+    padding: 10px;
+    font-family: 'raleway';
+    font-size: 18px;
 }
 
-.header__nav-menu li a img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    transition: transform 0.3s;
-}
-
-.header__nav-menu li.active a img {
-    content: url('/assets/photos/icons/pink-flower.png'); /* Change to the flower icon when active */
-    transform: scale(1.2); /* Slightly enlarge the icon */
-}
-
-.header__nav-menu li a:hover img {
-    transform: scale(1.2); /* Slightly enlarge the icon on hover */
-}
-
-.header__nav-menu li a:hover,
 .header__nav-menu li.active a {
-    color: #D4B05F;
+    background-size: cover;
+    color: rgb(255, 0, 128);
 }
+
+.invisible-nav-item {
+    visibility: hidden;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.cloud {
+    position: absolute;
+    background: url('/assets/icons/icons8-cloud-48.png') no-repeat center;
+    width: 150px; /* Adjust to fit the icon size */
+    height: 100px; /* Adjust to fit the icon size */
+    top: 50%; /* Ensures the cloud stays vertically centered */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 0;
+    transition: left 0.5s ease, width 0.5s ease;
+    background-size: 120%;
+}
+
 
 /* ============================= */
 /*         Page Navigation       */
 /* ============================= */
 
-body {
-    position: relative;
-    font-family: Arial, sans-serif;
-}
+
 
 .scroll-div {
-    height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
+height: 100%;
 }
 
 /* ============================= */
@@ -184,61 +278,102 @@ body {
 /* ============================= */
 
 .projects-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .projects-container {
-    display: flex;
-    width: 100%;
-    height: 80%;
-    background-color: transparent;
+  display: flex;
+  width: 100%;
+  height: 80%;
+  background-color: transparent;
+  
 }
 
 .project-details {
-    flex: 2;
-    padding: 20px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff51;
+  flex: 4;
+  padding: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.gallery img{
+    max-height: 800px;
+    width: auto;
 }
 
 #project-content {
-    text-align: center;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  column-gap: 2em;
 }
 
 .project-menu {
-    flex: 1;
-    background-color: transparent;
-    overflow-y: auto;
+  flex: 1;
+  background-color: transparent;
+  overflow-y: auto;
+  font-family: 'Lora';
+  font-size: 20px;
 }
 
 .project-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .project-menu li {
-    padding: 5em;
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-    text-align: right;
-    background-color: #ffffff51;
+  padding: 1em;
+  cursor: pointer;
+  text-align: right;
+  backdrop-filter: blur(5px);  background-color: #ffffff51;
 
 }
 
 .project-menu li.active {
-    background-color: #e68a8fc0;
+    backdrop-filter: blur(5px);  
+    background-color: #ffffff78;
+
 }
 
 .project-menu li:hover {
-    background-color: gray;
-} 
+    backdrop-filter: blur(10px);
+}
 
+/* ============================= */
+/*      About Section         */
+/* ============================= */
+
+#about-me__section {
+}
+
+/* ============================= */
+/*      Experience Section         */
+/* ============================= */
+
+#experience__section {
+}
+
+/* ============================= */
+/*      Contact Section         */
+/* ============================= */
+
+#contact__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.instagram-media {
+    box-shadow: 0 4px 10px hotpink !important;
+    margin: 20px auto !important; /* Center the embed and add margin */
+    width: 10% !important;
+}
 
 
 
