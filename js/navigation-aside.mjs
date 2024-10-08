@@ -2,79 +2,117 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.scroll-div');
     const navItems = document.querySelectorAll('.header__nav-menu li a');
     const cloud = document.querySelector('.cloud');
-    const firstNavItem = document.querySelector('.header__nav-menu li:first-child'); // First nav item after hero section
-    const cloudPadding = 50; // Add padding here
+    const firstNavItem = document.querySelector('.header__nav-menu li:first-child');
+    const cloudPadding = 50;
     const headerName = document.querySelector('.header__name');
-    const heroSection = document.querySelector('#hero__section');
+    const navHeight = document.querySelector('.header__nav').offsetHeight;
+    let isScrollingWithLink = false;
 
-
-    // Set initial cloud position for hero section
+    // Set initial cloud position
     function setInitialCloudPosition() {
         const navContainerRect = document.querySelector('.header__nav').getBoundingClientRect();
         const firstNavItemRect = firstNavItem.getBoundingClientRect();
-
-        // Position the cloud just to the left of the first visible nav item, with added padding
         cloud.style.left = `${firstNavItemRect.left - navContainerRect.left - firstNavItemRect.width - cloudPadding}px`;
     }
 
-    function activateNavItem() {
+    // Function to detect the current section based on scroll position
+    function getCurrentSection() {
         let currentSection = '';
+        const scrollPosition = window.scrollY + navHeight;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
 
-            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 currentSection = section.getAttribute('id');
             }
         });
 
+        return currentSection;
+    }
+
+    // Function to update the nav item and cloud based on the current section
+    function activateNavItem() {
+        let currentSection = getCurrentSection();
+
         navItems.forEach(navItem => {
             const parentLi = navItem.parentElement;
             parentLi.classList.remove('active');
-            
+
             if (navItem.getAttribute('href').includes(currentSection)) {
                 parentLi.classList.add('active');
-                
+
                 // Move the cloud behind the active item
                 const navItemRect = parentLi.getBoundingClientRect();
                 const navContainerRect = document.querySelector('.header__nav').getBoundingClientRect();
 
-                // Update cloud position and width based on the active item
                 cloud.style.left = `${navItemRect.left - navContainerRect.left}px`;
                 cloud.style.width = `${navItemRect.width}px`;
 
-                // If the cloud reaches "About me" or any section after, show the name
-                if (navItem.getAttribute('href') === "#about-me__section" || window.scrollY >= document.querySelector("#about-me__section").offsetTop) {
+                // Show the name when not in hero section
+                if (currentSection !== 'hero__section') {
                     headerName.classList.add('visible');
+                }
+
+                // Update the URL hash manually if scrolling manually
+                if (!isScrollingWithLink) {
+                    history.replaceState(null, null, `#${currentSection}`);
                 }
             }
         });
 
-        // Special case: if currentSection is hero__section, set cloud to initial position and hide the name
         if (currentSection === 'hero__section') {
             setInitialCloudPosition();
-            headerName.classList.remove('visible'); // Hide the name while in the hero section
+            headerName.classList.remove('visible');
         }
     }
 
+    // Smooth scrolling when clicking on a navigation link
     function smoothScroll(event) {
         event.preventDefault();
+        isScrollingWithLink = true; // Prevent hash update during smooth scroll
+
         const targetId = event.currentTarget.getAttribute('href');
         const targetSection = document.querySelector(targetId);
-        const topOffset = targetSection.offsetTop - document.querySelector('.header__nav').offsetHeight;
 
-        window.scrollTo({
-            top: topOffset,
-            behavior: 'smooth'
-        });
+        if (targetSection) {
+            const topOffset = targetSection.offsetTop - navHeight;
+
+            window.scrollTo({
+                top: topOffset,
+                behavior: 'smooth'
+            });
+
+            // Delay updating the URL hash until scroll completes
+            setTimeout(() => {
+                history.pushState(null, null, targetId);
+                isScrollingWithLink = false;
+            }, 600); // 600ms to match the smooth scroll duration
+        }
     }
 
-    window.addEventListener('scroll', activateNavItem);
-    activateNavItem(); // Initial call to set the active item and cloud position
-    setInitialCloudPosition(); // Set the cloud position on page load
+    // Detect if the page has a hash and scroll to the respective section on load
+    if (window.location.hash) {
+        const targetSection = document.querySelector(window.location.hash);
+        if (targetSection) {
+            const topOffset = targetSection.offsetTop - navHeight;
+            window.scrollTo({
+                top: topOffset,
+                behavior: 'smooth'
+            });
+        }
+    }
 
+    // Listen for scrolling to update the active section
+    window.addEventListener('scroll', activateNavItem);
+
+    // Attach smooth scroll to navigation links
     navItems.forEach(navItem => {
         navItem.addEventListener('click', smoothScroll);
     });
+
+    // Initial setup: activate the correct nav item and set the initial cloud position
+    activateNavItem();
+    setInitialCloudPosition();
 });

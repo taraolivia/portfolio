@@ -154,11 +154,7 @@ html, body {
   }
 
 
-.scroll-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 #hero__section {
     display: flex;
@@ -258,8 +254,8 @@ html, body {
     top: 50%; /* Ensures the cloud stays vertically centered */
     transform: translateY(-50%); /* Center vertically */
     z-index: 0;
-    transition: left 0.5s ease, width 0.5s ease;
-    background-size: 120%;
+    transition: left 0.3s ease, width 0s ease;
+    background-size: contain;
 }
 
 
@@ -267,9 +263,10 @@ html, body {
 /*         Page Navigation       */
 /* ============================= */
 
-
-
 .scroll-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 height: 100%;
 }
 
@@ -371,9 +368,11 @@ height: 100%;
 
 .instagram-media {
     box-shadow: 0 4px 10px hotpink !important;
-    margin: 20px auto !important; /* Center the embed and add margin */
-    width: 10% !important;
-}
+    margin: 20px auto !important; /* Center the embed */
+    max-width: 600px; /* Set a reasonable max-width */
+    width: 100% !important; /* Responsive to screen size */
+  }
+  
 
 
 
