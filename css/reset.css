@@ -1,0 +1,103 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-weight: var(--font-weight-normal);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+blockquote {
+  margin: 0;
+}
+
+/* Link styling */
+a,
+a:visited {
+  text-decoration: none;
+  color: unset;
+}
+
+a:visited {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-variant-ligatures: common-ligatures;
+  font-kerning: normal;
+}
+
+
+
+p {
+  max-width: 60em;
+}
+
+html {
+  font-size: 62.5%; /* Sets the base size to 10px, making 1rem = 10px */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 56.25%; /* Reduces the base size to 9px, making 1rem = 9px */
+  }
+}

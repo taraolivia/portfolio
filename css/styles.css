@@ -1,63 +1,23 @@
 
-/* ============================= */
-/*          CSS Reset            */
-/* ============================= */
-/*
-    1. Use a more-intuitive box-sizing model.
-    */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-#root,
-#__next {
-  isolation: isolate;
-}
 
 /* ============================= */
-/*          CSS Variables        */
-/* ============================= */
+/* Imports
+
+/* Import variables */
+@import url('variables.css');
+
+/* Import reset styles */
+@import url('reset.css');
+
+/* Import utilities */
+@import url('utilities.css');
+
+/* Import prelaod */
+@import url('preload.css');
 
 /* ============================= */
-/*          CSS Utilities        */
-/* ============================= */
+
+
 
 /* ============================= */
 /*        Typography Styles      */
@@ -66,58 +26,6 @@ h6 {
 /* ============================= */
 /*        Branding Styles        */
 /* ============================= */
-
-#logo-main-gold-round {
-  width: 100px;
-  height: auto;
-}
-
-
-  
-
-  
-/*   body {
-    position: relative;
-    background: 
-    linear-gradient(0deg, hsla(205, 46%, 10%, 1), hsla(191, 28%, 23%, 1), hsla(191, 28%, 23%, 1), hsla(205, 46%, 10%, 1));  
-      background-size: 100% 500%;  /* Stretch over 500% of the height 
-    animation: gradientAnimation 100s linear infinite alternate-reverse;
-  }
-     */
-  
-
-
-.ff-ibarra {
-    font-family: 'Ibarra Real Nova', serif;
-    font-feature-settings: "liga" 1, "calt" 1;
-    font-variant-ligatures: common-ligatures;
-}
-
-.ff-lora {
-    font-family: 'Lora', serif;
-    font-variant-ligatures: common-ligatures;
-}
-
-.fw-200 {
-    font-weight: 200;
-}
-
-.fw-500 {
-    font-weight: 500;
-}
-
-.fw-700 {
-    font-weight: bold;
-}
-
-.fstyle-italic {
-    font-style: italic;
-}
-
-.flex {
-    display: flex;
-    column-gap: 2em;
-}
 
 /* ============================= */
 /*        Color Schemes          */
@@ -153,21 +61,40 @@ html, body {
     100% { background-position: 50% 50%; }
   }
 
-
+.about-me__section,
+.projects__section,
+.experience__section,
+.contact__section {
+  padding-top: 10em;
+}
 
 
 #hero__section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    color: hotpink;
+    color: darkslategray;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100dvh;
 }
 
 #hero__section h1 {
-        font-size: 100px;
+        font-size: 9vw;
+        word-wrap: break-word; 
 }
-#hero__section h2 {
-    font-size: 40px;
+.hero__section-h2 {
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 2em;
+    column-gap: 4em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2em;
 }
 
 .header__nav {
@@ -179,13 +106,13 @@ html, body {
     align-items: center;
     padding: 20px 20px;
     width: 100%;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
 }
 
 .header__nav-content {
     display: flex;
     justify-content: space-between;
-    align-content: space-between;
+    align-content: center;
     width: 90%;
     margin: auto;
 }
@@ -211,7 +138,7 @@ html, body {
 
 .header__name.visible {
     opacity: 1;
-    font-size: 30px;
+    font-size: 20px;
     text-decoration: none;
     color: inherit;
 }
@@ -263,12 +190,7 @@ html, body {
 /*         Page Navigation       */
 /* ============================= */
 
-.scroll-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-height: 100%;
-}
+
 
 /* ============================= */
 /*      Projects Section         */
@@ -277,85 +199,319 @@ height: 100%;
 .projects-section {
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center;  
+  margin: auto;
+  padding-top: 5em;
 }
 
 .projects-container {
   display: flex;
-  width: 100%;
-  height: 80%;
-  background-color: transparent;
-  
-}
-
-.project-details {
-  flex: 4;
-  padding: 0px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 90%;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: top;  
+  margin: auto;
+column-gap: 5%;
+row-gap: 5em;
+flex-wrap: wrap;
 }
 
-.gallery img{
-    max-height: 800px;
-    width: auto;
+.project-card {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: flex-start;
+width: 30%;
+min-width: 250px;
 }
+.project-thumbnail {
+  height: auto;
 
-#project-content {
-  text-align: center;
+}
+.project-title {
+  font-family: var(--font-lora);
+  font-size: var(--font-size-xl);
+
+}
+.project-description {
+  font-family: var(--font-raleway);
+  font-size: var(--font-size-base);
+  flex: 1;
+
+}
+.project-links {
+  background-color: beige;
+  padding: 0.5em;
+  border-radius: 10px;
+  width: fit-content;
   display: flex;
   justify-content: space-between;
-  align-content: space-between;
-  column-gap: 2em;
+  flex-direction: row;
 }
-
-.project-menu {
-  flex: 1;
-  background-color: transparent;
-  overflow-y: auto;
-  font-family: 'Lora';
-  font-size: 20px;
-}
-
-.project-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.project-menu li {
+.project-links a {
   padding: 1em;
-  cursor: pointer;
-  text-align: right;
-  backdrop-filter: blur(5px);  background-color: #ffffff51;
-
-}
-
-.project-menu li.active {
-    backdrop-filter: blur(5px);  
-    background-color: #ffffff78;
-
-}
-
-.project-menu li:hover {
-    backdrop-filter: blur(10px);
 }
 
 /* ============================= */
 /*      About Section         */
 /* ============================= */
 
-#about-me__section {
+.about-me__section-content {
+  display: flex;
+  gap: 1em;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
 }
+
+
+/* Slider container */
+.slider-container {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden; /* Hide overflowed parts */
+  position: relative;
+  margin: 0.5em 0 0 0;
+  padding: 2em 0;
+}
+
+/* Slider list (flexbox container) */
+.slider-list {
+  display: flex;
+  align-items: center;
+}
+
+/* Slider list item */
+.slider-list-item {
+  flex-shrink: 0;
+  height: 200px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+
+}
+/* Enlarge the individual images on hover */
+.slider-list-item:hover {
+  z-index: 2; /* Bring the hovered image in front */
+  overflow: visible;
+
+}
+/* Slider list item image */
+.slider-list-item img {
+  height: 200px;
+  object-fit: cover;
+  width: auto; /* Keep width dynamic based on the aspect ratio */
+  transition: filter 0.3s ease;
+}
+
+/* Enlarge the individual images on hover */
+.slider-list-item img:hover {
+  transform: scale(1.1); /* Scale the image when hovered */
+  transition: 0.3s ease-in-out;
+  z-index: 2; /* Bring the hovered image in front */
+  overflow: visible;
+  height: 110%; /* Increase height on hover */
+  width: 110%; /* Increase width on hover */
+}
+
+/* Apply grayscale to all images except the hovered one */
+.slider-list-item.grayscale img {
+  filter: grayscale(100%);
+}
+
+/* Container styles */
+.scrolling-text-container {
+  padding-top: 2em;
+  overflow: hidden;
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+  display: flex;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-lora);
+  font-style: italic;
+  padding: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text {
+  display: flex;
+}
+
+.scrolling-text-item {
+  padding: 0 30px;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+  animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+  animation-play-state: paused;
+}
+
+/* Keyframes for scrolling to the right */
+@keyframes scroll-right {
+  0% {
+      transform: translateX(-50%); /* Start off the screen to the left */
+  }
+  100% {
+      transform: translateX(0); /* Move fully onto the screen */
+  }
+}
+
+
+
 
 /* ============================= */
 /*      Experience Section         */
 /* ============================= */
 
-#experience__section {
+
+
+/* Style for the tab buttons */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
+
+.tab-link {
+  background-color: rgb(207, 207, 254);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+
+}
+
+.tab-link.active {
+  background-color: lavenderblush;
+}
+
+.tab-link:hover {
+  background-color: #ddd;
+}
+
+/* Style for the tab content */
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+
+/* Timeline container */
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch; /* Ensure all timeline items have equal height */
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Timeline horizontal line */
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: hotpink;
+  z-index: -1; 
+}
+
+/* Timeline item (each entry) */
+.timeline-item {
+  text-align: center;
+  position: relative;
+  min-height: 150px; /* Ensure uniform height for each item */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: stretch; 
+  box-sizing: border-box;
+  flex: 1; /* This makes each timeline item grow/shrink equally */
+  min-height: 150px; /* Ensure all items are at least this tall */
+}
+
+/* Work and education */
+.work,
+.education {
+  font-size: 20px;
+  font-weight: bold;
+  height: 100%;
+}
+
+.work {
+  margin-bottom: 2em;
+  flex: 1;
+}
+
+.education {
+  margin-top: 2em;
+  flex: 1;
+}
+
+/* Place (underneath work or education) */
+.place {
+  font-size: 16px; /* Slightly smaller font for place */
+  margin-bottom: 10px; /* Keeps spacing consistent */
+  color: #555; /* Lighter color for better visual distinction */
+}
+
+/* Year in the middle */
+.year {
+  font-size: 26px;
+  font-weight: bold;
+  color: hotpink;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 1; /* Ensure the year is above the line */
+}
+
+/* Media Query: On small screens, stack items vertically and move year on top */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin-bottom: 40px;
+    min-height: auto; /* Remove height restriction on mobile */
+  }
+
+  .timeline:before {
+    display: none; /* Hide the line on small screens */
+  }
+
+  .year {
+    order: -1; /* Move the year to the top on mobile */
+    position: static; /* Remove absolute positioning for stacking */
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .work, .education, .place {
+    text-align: center;
+  }
+}
+
 
 /* ============================= */
 /*      Contact Section         */
@@ -369,10 +525,82 @@ height: 100%;
 .instagram-media {
     box-shadow: 0 4px 10px hotpink !important;
     margin: 20px auto !important; /* Center the embed */
-    max-width: 600px; /* Set a reasonable max-width */
-    width: 100% !important; /* Responsive to screen size */
+    max-width: 200px; /* Set a reasonable max-width */
+    width: 20% !important; /* Responsive to screen size */
   }
   
+
+
+
+
+/* ============================= */
+/*      Fun Section         */
+/* ============================= */
+
+
+/* Container styling */
+.interview-container {
+  margin: 20px;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap; /* Allow flex items to wrap */
+  gap: 10px; /* Add some space between items */
+}
+
+.accordion-category__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Category header styling */
+.category-header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  flex: 1 1 calc(50% - 10px); /* Allow two items in a row, adjusting for the gap */
+  text-align: left;
+  font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+  border: none;
+  margin-bottom: 5px;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.category-header:hover {
+  background-color: #444;
+}
+
+/* Category content (hidden by default) */
+.category-content {
+  display: none;
+  padding: 10px 0;
+}
+
+/* Accordion item styling */
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+/* Accordion header (questions) styling */
+.accordion-header {
+  background-color: #f4f4f4;
+  padding: 10px;
+  cursor: pointer
+}
+
+
+#submitButton {
+  padding: 1em 3em;
+  border-radius: 1em;
+  border: none;
+}
+
+
+
+
+
+
 
 
 
@@ -384,23 +612,15 @@ height: 100%;
 /*         Button Styles         */
 /* ============================= */
 
-/* ============================= */
-/*          Media Queries        */
-/* ============================= */
 
-/* ============================= */
-/*         Utility Classes       */
-/* ============================= */
+
+
 
 /* ============================= */
 /*         Custom Animations     */
 /* ============================= */
 
 /* ============================= */
-/*          Tailwind CSS         */
+/*          Media Queries        */
 /* ============================= */
 
-/* ---------- Tailwind Layout Utilities ---------- */
-/* ---------- Tailwind Typography Utilities ---------- */
-/* ---------- Tailwind Color Utilities ---------- */
-/* ---------- Tailwind Component Utilities ---------- */
