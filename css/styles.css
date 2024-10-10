@@ -64,9 +64,45 @@ html, body {
 .about-me__section,
 .projects__section,
 .experience__section,
-.contact__section {
-  padding-top: 10em;
+.contact__section,
+.fun__section {
+  padding-top: 5em;
+  min-height: 100%;
 }
+
+.about-me__section h2,
+.projects__section h2,
+.experience__section h2,
+.contact__section h2,
+.fun__section h2{
+min-width: 100%;
+text-align: left;
+padding: 1em 0;
+font-family: var(--font-lora);
+font-size: var(--font-size-xl);
+}
+
+.about-me__section-content,
+.projects__section-content,
+.experience__section-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  max-width: 2000px;
+  align-items: center;
+}
+
+.about-me__section-content {
+  gap: 3em;
+}
+
+.projects__section-content {
+  gap: 1em;
+}
+
+
 
 
 #hero__section {
@@ -115,6 +151,7 @@ html, body {
     align-content: center;
     width: 90%;
     margin: auto;
+    max-width: 1800px;
 }
 
 .header__nav-menu {
@@ -174,16 +211,17 @@ html, body {
 }
 
 .cloud {
-    position: absolute;
-    background: url('/assets/icons/icons8-cloud-48.png') no-repeat center;
-    width: 150px; /* Adjust to fit the icon size */
-    height: 100px; /* Adjust to fit the icon size */
-    top: 50%; /* Ensures the cloud stays vertically centered */
-    transform: translateY(-50%); /* Center vertically */
-    z-index: 0;
-    transition: left 0.3s ease, width 0s ease;
-    background-size: contain;
+  position: absolute;
+  background: url('/assets/icons/icons8-cloud-48.png') no-repeat center;
+  width: 150px; /* Initial width */
+  height: 100px; /* Height based on cloud image size */
+  top: 50%; /* Vertically centered */
+  transform: translateY(-50%); /* Ensures vertical centering */
+  z-index: 0; /* Below the nav items */
+  transition: left 0.3s ease, width 0.3s ease; /* Smooth transition */
+  background-size: contain;
 }
+
 
 
 /* ============================= */
@@ -192,79 +230,17 @@ html, body {
 
 
 
-/* ============================= */
-/*      Projects Section         */
-/* ============================= */
-
-.projects-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  margin: auto;
-  padding-top: 5em;
-}
-
-.projects-container {
-  display: flex;
-  width: 90%;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: top;  
-  margin: auto;
-column-gap: 5%;
-row-gap: 5em;
-flex-wrap: wrap;
-}
-
-.project-card {
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  justify-content: flex-start;
-width: 30%;
-min-width: 250px;
-}
-.project-thumbnail {
-  height: auto;
-
-}
-.project-title {
-  font-family: var(--font-lora);
-  font-size: var(--font-size-xl);
-
-}
-.project-description {
-  font-family: var(--font-raleway);
-  font-size: var(--font-size-base);
-  flex: 1;
-
-}
-.project-links {
-  background-color: beige;
-  padding: 0.5em;
-  border-radius: 10px;
-  width: fit-content;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
-.project-links a {
-  padding: 1em;
-}
 
 /* ============================= */
 /*      About Section         */
 /* ============================= */
 
-.about-me__section-content {
-  display: flex;
-  gap: 1em;
-  justify-content: space-evenly;
-  flex-direction: column;
-  width: 80%;
+.about-me__section {
   margin: auto;
+
 }
+
+
 
 
 /* Slider container */
@@ -367,6 +343,79 @@ min-width: 250px;
 }
 
 
+/* ============================= */
+/*      Projects Section         */
+/* ============================= */
+
+.projects-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin: auto;
+  padding-top: 5em;
+}
+
+
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;  
+  margin: auto;
+flex-wrap: wrap;
+gap: 2em;
+width: 100%;
+}
+
+.project-card {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: flex-start;
+width: 30%;
+min-width: 300px;
+
+}
+.project-thumbnail {
+  height: auto;
+
+}
+.project-title {
+  font-family: var(--font-lora);
+  font-size: var(--font-size-xl);
+
+
+}
+.project-description {
+  font-family: var(--font-raleway);
+  font-size: var(--font-size-base);
+  flex: 1;
+
+
+}
+.project-links {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  font-family: var(--font-raleway);
+  line-height: 2;
+}
+.project-links a {
+  background-color: beige;
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+#github-mark-round-black {
+  width: 2em;
+  height: auto;
+  padding: 0;
+}
 
 
 /* ============================= */
@@ -379,7 +428,6 @@ min-width: 250px;
 .tabs {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 10px;
   width: 100%;
   border-radius: 10px;
 }
@@ -401,14 +449,54 @@ min-width: 250px;
 }
 
 .tab-link:hover {
-  background-color: #ddd;
+  background-color: lightyellow;
 }
 
-/* Style for the tab content */
 .tab-content {
-  padding: 20px;
-  border: 1px solid #ccc;
+  padding: 0 2rem;
+  background-color: #f9f9f9;
+  width: 100%;
 }
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.skill-section {
+  flex: 1 1 20%; /* Allows tables to shrink and grow */
+  min-width: 450px; /* Sets a minimum width to prevent tables from getting too small */
+}
+
+.skills-table {
+  border-collapse: collapse;
+  text-align: left;
+  table-layout: fixed;
+}
+
+.skills-table td {
+  padding: 1rem;
+width: 50%;
+vertical-align: left;
+}
+
+
+
+
+.icon-column {
+  text-align: left;            /* Center the icon horizontally */
+  vertical-align: middle;        /* Center the icon vertically */
+  width: auto;                   /* Set a reasonable width for the icon column */
+}
+
+.icon-column img {
+  height: 25px;                  /* Set the height for the icon */
+  display: inline-block;          /* Ensure the image is treated as inline content */
+  vertical-align: middle;         /* Align icon vertically within the cell */
+}
+
 
 
 /* Timeline container */

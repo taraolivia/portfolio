@@ -45,6 +45,7 @@ h5,
 h6 {
   overflow-wrap: break-word;
   font-weight: var(--font-weight-normal);
+  max-width: 60ch;
 }
 
 * {
@@ -89,7 +90,7 @@ h3 {
 
 
 p {
-  max-width: 60em;
+  max-width: 40em;
 }
 
 html {
