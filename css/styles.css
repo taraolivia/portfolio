@@ -541,15 +541,25 @@ min-width: 250px;
 /* Container styling */
 .interview-container {
   margin: 20px;
-  flex-direction: column;
   display: flex;
-  flex-wrap: wrap; /* Allow flex items to wrap */
-  gap: 10px; /* Add some space between items */
+  flex-direction: column;
+  gap: 20px; /* Adjust space between the wrapper and other content */
 }
 
+/* Wrapper for category headers */
 .accordion-category__wrapper {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  gap: 1em; /* Add space between the category headers */
+  width: 100%;
+}
+
+/* Category wrapper for flexible sizing */
+.accordion-category {
+  flex: 1 1 15em; /* Allow categories to grow and shrink with a min-width */
+  min-width: 15em; /* Ensure they don't shrink below this size */
+  box-sizing: border-box;
+  flex-grow: 1; /* Allows items to grow and fill available space */
 }
 
 /* Category header styling */
@@ -558,18 +568,18 @@ min-width: 250px;
   color: white;
   padding: 15px;
   cursor: pointer;
-  flex: 1 1 calc(50% - 10px); /* Allow two items in a row, adjusting for the gap */
   text-align: left;
   font-size: 1.2em;
   font-family: 'Raleway', sans-serif;
   border: none;
-  margin-bottom: 5px;
-  box-sizing: border-box; /* Ensures padding is included in the width */
+  box-sizing: border-box;
+  width: 100%; /* Ensure the header fills the accordion-category's width */
 }
 
 .category-header:hover {
   background-color: #444;
 }
+
 
 /* Category content (hidden by default) */
 .category-content {
@@ -580,13 +590,6 @@ min-width: 250px;
 /* Accordion item styling */
 .accordion-item {
   margin-bottom: 10px;
-}
-
-/* Accordion header (questions) styling */
-.accordion-header {
-  background-color: #f4f4f4;
-  padding: 10px;
-  cursor: pointer
 }
 
 
