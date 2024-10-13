@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     const cloud = document.querySelector('.cloud');
     const nameElement = document.querySelector('.header__name');
-    const heroSection = document.querySelector('#hero__section');
     const offset = 90;
 
     // Smooth scrolling for anchor links

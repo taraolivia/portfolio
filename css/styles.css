@@ -43,6 +43,10 @@
 /*          Header Styles        */
 /* ============================= */
 
+::selection {
+  background: #EAD3FD;
+}
+
 
 body, html {
   margin: 0;
@@ -95,7 +99,7 @@ body, html {
 .experience__section,
 .contact__section,
 .fun__section {
-  min-height: 50%;
+  min-height: 100dvh;
   margin-top: 1em;
 }
 
@@ -171,19 +175,28 @@ padding: 10em 0;
     align-items: center;
     justify-content: center;
     padding-top: 2em;
-    color: rgb(128, 128, 128); /* Transparent to show the background gradient */
+    color: rgb(128, 128, 128); 
 
 }
 
+/* Will remove glassmorphism glass and manually write css to avoid important */
 .header__nav {
     position:fixed;
     top: 0;
-    z-index: 10; /* Keep it above other elements */
+    z-index: 10; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 0.5%;
+    border-radius: 0px!important;
+}
+
+.header__nav:hover {
+  background-color: rgba(255, 255, 255, 0.5)!important; 
+  backdrop-filter: blur(30px) saturate(250%)!important;
+  -webkit-backdrop-filter: blur(30px) saturate(180%)!important;
+  box-shadow: 0 6px 50px rgba(0, 0, 0, 0.15);
 }
 
 .header__nav-content {
@@ -197,40 +210,46 @@ padding: 10em 0;
 font-size: var(--font-size-xl);
 }
 
-.header__nav-menu {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: fit-content;
-
-}
-
 .header__name {
   opacity: 0;
   transition: opacity 0.3s ease;
-  font-size: 30px;
-  text-decoration: none;
-  color: inherit;
+  cursor: pointer;
+
 }
 
 .header__name.visible {
   opacity: 1;
-  font-size: 20px;
+  font-size: var(--font-size-xl);
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+  align-self: center;
 }
+
+
+.header__nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    gap: 3em;
+}
+
+
 
 
 .header__nav-menu li a {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: center;
   text-decoration: none;
   color: inherit;
   transition: color 0.3s;
-  padding: 10px;
+  padding: 1em;
   font-family: var(--font-lora);
 font-size: var(--font-size-l);
+min-width: 100px;
 }
 
 .header__nav:hover .header__nav-menu li a {
@@ -249,14 +268,14 @@ font-size: var(--font-size-l);
 /* Cloud styling (ensure z-index is properly managed) */
 .cloud {
   position: absolute;
-  background: url('/assets/icons/icons8-cloud-48.png') no-repeat center;
-  width: 150px;
+  background: url('/assets/icons/icons8-cloud-100.png') no-repeat center;
+  width: 100px;
   height: 100px;
   top: 50%;
   transform: translateY(-50%);
   z-index: -1; /* Behind links */
-  transition: left 0.5s ease, width 0.5s ease;
-  background-size: contain;
+  transition: left 0.5s ease, width 1s ease;
+  background-size: cover;
 }
 
 
@@ -472,7 +491,7 @@ width: 100%;
 }
 
 .tab-link {
-  background-color: rgb(207, 207, 254);
+  background-color: #EAD3FD;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -766,7 +785,7 @@ font-family: var(--font-lora);
 
 .contact-page-wrapper {
   display: flex;
-  width: clamp(50%, 90%, 800px);
+  width: clamp(40%, 90%, 800px);
   margin: auto;
   border-radius: 10px;
   flex-wrap: wrap;
@@ -775,7 +794,7 @@ font-family: var(--font-lora);
 
 .contact-page-section {
   padding: 5%;
-  min-width: 250px;
+  min-width: 300px;
   display: flex;
   flex-wrap: wrap;
   background-color: rgba(255, 255, 255, 0.6);
@@ -784,6 +803,13 @@ font-family: var(--font-lora);
   gap: 1em;
   justify-content: end;
   flex: 1;
+}
+
+.contact-page-section-primary {
+  font-family: var(--font-raleway);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+
 }
 
 
@@ -795,6 +821,11 @@ font-family: var(--font-lora);
   font-weight: 400;
 }
 
+.contact-info__icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+}
 
 
 .glassmorphism {
@@ -833,10 +864,6 @@ font-family: var(--font-lora);
   -webkit-backdrop-filter: blur(15px) saturate(180%);
 }
 
-.contact-info__icons {
-  display: flex;
-  justify-content: space-between;
-}
 
 
 
