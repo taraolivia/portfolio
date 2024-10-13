@@ -1,0 +1,36 @@
+.bg-container {
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    background-size: 150% 100%; /* Make the background twice as wide */
+    background-repeat: no-repeat;
+    background-position: center center; /* Start in the center */
+    animation: gradientAnimation 150s infinite alternate; 
+  }
+  
+  .normal {
+    background-image: url('/assets/background/background-holo-1.jpg');
+  }
+  
+  .flipped {
+    background-image: url('/assets/background/background-holo-2.jpg');
+  }
+  
+  @keyframes gradientAnimation {
+    25% {
+      background-position: 100% center; /* Move more to the right, but stay inside the container */
+      background-size: 150% 110%; /* Zoom in slightly */
+    }
+    50% {
+      background-position: center center; /* Return to center */
+      background-size: 100% 100%; /* Normal size */
+    }
+    75% {
+      background-position: 0% center; /* Move more to the left, but stay inside the container */
+      background-size: 150% 110%; /* Zoom in slightly */
+    }
+    100% {
+      background-position: center center; /* Return to center */
+      background-size: 100% 100%; /* Normal size */
+    }
+  }
+  
