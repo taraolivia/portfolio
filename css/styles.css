@@ -60,7 +60,7 @@ body, html {
   background-size: 150% 100%; /* Make the background twice as wide */
   background-repeat: no-repeat;
   background-position: center center; /* Start in the center */
-  animation: gradientAnimation 180s infinite alternate; 
+  animation: gradientAnimation 150s infinite alternate; 
 }
 
 .normal {
@@ -233,7 +233,6 @@ font-size: var(--font-size-xl);
     align-items: flex-end;
     justify-content: flex-end;
     position: relative;
-    gap: 3em;
 }
 
 
@@ -891,5 +890,93 @@ font-family: var(--font-lora);
 
   .border-radius-right {
     border-radius: 0px 0px 10px 10px;
+  }
+}
+
+
+
+
+/* For larger screens (desktop) */
+@media (min-width: 769px) {
+  .active-section {
+    display: none; /* Hide active section text on larger screens */
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger icon on larger screens */
+  }
+}
+
+/* For mobile screens (below 768px) */
+@media (max-width: 768px) {
+  .active-section {
+    display: block; /* Show active section text on mobile */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  .header__nav {
+    padding: 0.5rem;
+    flex-direction: column;
+  }
+
+  .header__nav-content {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  /* Show only the name, active section, and hamburger menu */
+  .active-section {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .header__name.visible {
+    font-size: 16px;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .header__nav-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  /* When active class is added, show the menu */
+  .header__nav-menu.active {
+    display: flex;
+    line-height: 30px;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+
+  }
+
+  /* Cloud adjustments for mobile */
+  .cloud {
+    width: 80px; /* Smaller cloud */
+    height: 40px;
+    margin: auto;
   }
 }

@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cloud.style.width = `${navItemRect.width}px`;
     }
 
+    // Show/Hide the name based on scroll position
     window.addEventListener('scroll', () => {
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
         const triggerPoint = 600; // Adjust this value for when you want the name to appear
@@ -57,6 +58,22 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             nameElement.classList.remove('visible');
         }
+
+        // Update the active section dynamically on mobile
+        const activeLink = document.querySelector('.header__nav-menu li.active a');
+        if (activeLink) {
+            const activeText = activeLink.textContent;
+            document.querySelector('.active-section').textContent = activeText;
+        }
     });
-    
+
+// Ensure this function is correctly defined
+function toggleMenu() {
+    const navMenu = document.querySelector('.header__nav-menu');
+    navMenu.classList.toggle('active'); // Toggle the "active" class to show/hide the menu
+}
+
+// Attach the event listener for the hamburger icon
+document.querySelector('.hamburger').addEventListener('click', toggleMenu);
+
 });

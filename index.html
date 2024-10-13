@@ -48,28 +48,22 @@
           <a href="#hero__section" class="header__name">
             <p class="ff-lora fw-700 fstyle-italic">Tara Olivia Bjørheim</p>
           </a>
+          <span class="active-section">Active Section</span> <!-- This will change dynamically -->
+          <div class="cloud"></div> <!-- Cloud behind active item -->
+          
+          <!-- Dropdown icon for mobile -->
+          <div class="hamburger" onclick="toggleMenu()">☰</div>
+      
+          <!-- Full navbar items hidden by default on mobile -->
           <ul class="header__nav-menu">
-            <li class="nav-dot">
-              <a href="#about-me__section" class="scroll-link">Me!</a>
-            </li>
-            <li class="nav-dot">
-              <a href="#my-projects__section" class="scroll-link"
-                >My projects</a
-              >
-            </li>
-            <li class="nav-dot">
-              <a href="#experience__section" class="scroll-link">Experience</a>
-            </li>
-            <li class="nav-dot">
-              <a href="#contact__section" class="scroll-link">Contact</a>
-            </li>
-            <!--             <li class="nav-dot"><a href="#fun__section" class="scroll-link">Fun</a></li>
- -->
+            <li class="nav-dot"><a href="#about-me__section">Me!</a></li>
+            <li class="nav-dot"><a href="#my-projects__section">My projects</a></li>
+            <li class="nav-dot"><a href="#experience__section">Experience</a></li>
+            <li class="nav-dot"><a href="#contact__section">Contact</a></li>
           </ul>
-          <div class="cloud"></div>
-          <!-- Cloud div that moves dynamically -->
         </div>
       </nav>
+      
 
       <!-- Main Content Sections -->
       <section class="scroll-div" id="hero__section">
