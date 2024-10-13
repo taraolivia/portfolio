@@ -1,42 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('.scroll-link');
-    const sections = document.querySelectorAll('.scroll-div');
+    const navLinks = document.querySelectorAll('.header__nav-menu li a');
+    const sections = document.querySelectorAll('section');
     const cloud = document.querySelector('.cloud');
-    const offset = 100;
+    const nameElement = document.querySelector('.header__name');
+    const heroSection = document.querySelector('#hero__section');
+    const offset = 90;
 
-    // Smooth scrolling for anchor links (unchanged)
+    // Smooth scrolling for anchor links
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1); // Get the ID without the #
+            const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             const sectionTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
 
             window.scrollTo({
-                top: sectionTop - offset, // Adjust based on nav height or desired offset
+                top: sectionTop - offset,
                 behavior: 'smooth'
             });
         });
     });
 
-    // Intersection Observer to detect section in view (modified)
+    // Intersection Observer to detect section in view
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // Remove 'active' class from all links
-                navLinks.forEach(link => link.classList.remove('active'));
+                navLinks.forEach(link => link.parentElement.classList.remove('active'));
 
                 // Add 'active' class to the current section's corresponding link
-                const activeLink = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+                const activeLink = document.querySelector(`.header__nav-menu li a[href="#${entry.target.id}"]`);
                 if (activeLink) {
-                    activeLink.classList.add('active');
-                    moveCloudToNavItem(activeLink); // Move the cloud to the active nav item
+                    activeLink.parentElement.classList.add('active');
+                    moveCloudToNavItem(activeLink);
                 }
             }
         });
     }, {
-        threshold: [0.05, 0.5], // You can tweak this for the section visibility
-        rootMargin: "-38% 0px -38% 0px" // Adjust based on your layout
+        threshold: 0.5
     });
 
     // Observe each section
@@ -47,5 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
         cloud.style.left = `${navItemRect.left}px`;
         cloud.style.width = `${navItemRect.width}px`;
     }
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        const triggerPoint = 600; // Adjust this value for when you want the name to appear
+    
+        if (scrollPosition >= triggerPoint) {
+            nameElement.classList.add('visible');
+        } else {
+            nameElement.classList.remove('visible');
+        }
+    });
     
 });

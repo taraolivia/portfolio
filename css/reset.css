@@ -46,6 +46,9 @@ h6 {
   overflow-wrap: break-word;
   font-weight: var(--font-weight-normal);
   max-width: 60ch;
+  max-width: 40em;
+  cursor: default;
+
 }
 
 * {
