@@ -1,3 +1,15 @@
+import { initializePortfolio } from './personalized-portfolio.mjs';
+import { initializeNavAndCloud } from './navbar.mjs';
+import { initializeImageSlider } from './aboutMeCarousel.mjs';
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  initializePortfolio();
+  initializeNavAndCloud();
+  initializeImageSlider();
+});
+
 function openTab(evt, tabName) {
   // Hide all tab contents
   let tabContent = document.querySelectorAll('.tab-content');
@@ -16,3 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize by showing the default active tab
   document.getElementById('skills').style.display = 'block';
 });
+
+
+

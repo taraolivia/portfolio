@@ -25,18 +25,22 @@
       onload="this.rel='stylesheet'"
     />
     <noscript><link rel="stylesheet" href="/css/preload.css" /></noscript>
-    <link rel="preload" href="/assets/background/background-holo-1.jpg" as="image">
-<link rel="preload" href="/assets/background/background-holo-2.jpg" as="image">
-
+    <link
+      rel="preload"
+      href="/assets/background/background-holo-1.jpg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="/assets/background/background-holo-2.jpg"
+      as="image"
+    />
 
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="/css/styles.css" />
 
     <!-- JavaScript Modules -->
-    <script async src="/js/navigation-aside.mjs"></script>
-    <script async src="/js/main.js"></script>
-    <script async src="/js/aboutMeCarousel.js"></script>
-    <script async src="/js/fun.js"></script>
+    <script type="module" src="/js/main.js"></script>
 
     <script>
       /* To prevent Firefox FOUC, this must be here */
@@ -51,22 +55,27 @@
           <a href="#hero__section" class="header__name">
             <p class="ff-lora fw-700 fstyle-italic">Tara Olivia Bjørheim</p>
           </a>
-          <span class="active-section">Active Section</span> <!-- This will change dynamically -->
-          <div class="cloud"></div> <!-- Cloud behind active item -->
-          
+          <span class="active-section">Active Section</span>
+          <!-- This will change dynamically -->
+          <div class="cloud"></div>
+          <!-- Cloud behind active item -->
+
           <!-- Dropdown icon for mobile -->
           <div class="hamburger" onclick="toggleMenu()">☰</div>
-      
+
           <!-- Full navbar items hidden by default on mobile -->
           <ul class="header__nav-menu">
             <li class="nav-dot"><a href="#about-me__section">Me!</a></li>
-            <li class="nav-dot"><a href="#my-projects__section">My projects</a></li>
-            <li class="nav-dot"><a href="#experience__section">Experience</a></li>
+            <li class="nav-dot">
+              <a href="#my-projects__section">My projects</a>
+            </li>
+            <li class="nav-dot">
+              <a href="#experience__section">Experience</a>
+            </li>
             <li class="nav-dot"><a href="#contact__section">Contact</a></li>
           </ul>
         </div>
       </nav>
-      
 
       <!-- Main Content Sections -->
       <section class="scroll-div" id="hero__section">
@@ -98,74 +107,74 @@
           >
             <div class="scrolling-text">
               <!-- Your original items -->
-              <div class="scrolling-text-item">D&D</div>
-              <div class="scrolling-text-item">Animals</div>
-              <div class="scrolling-text-item">My friends</div>
-              <div class="scrolling-text-item">Concerts</div>
-              <div class="scrolling-text-item">Electronic Music</div>
-              <div class="scrolling-text-item">My dogs</div>
-              <div class="scrolling-text-item">Forest hikes</div>
-              <div class="scrolling-text-item">Swimming</div>
-              <div class="scrolling-text-item">Lifting weights</div>
-              <div class="scrolling-text-item">Board Games</div>
-              <div class="scrolling-text-item">League of Legends</div>
-              <div class="scrolling-text-item">Traveling</div>
               <div class="scrolling-text-item">My family</div>
-              <div class="scrolling-text-item">CSS</div>
+              <div class="scrolling-text-item">Concerts</div>
+              <div class="scrolling-text-item">Camping</div>
+              <div class="scrolling-text-item">Notion</div>
+              <div class="scrolling-text-item">Volleyball</div>
+              <div class="scrolling-text-item">D&D</div>
               <div class="scrolling-text-item">House parties</div>
+              <div class="scrolling-text-item">Diablo IV</div>
+              <div class="scrolling-text-item">Lifting weights</div>
+              <div class="scrolling-text-item">Organizing</div>
+              <div class="scrolling-text-item">My friends</div>
+              <div class="scrolling-text-item">Dragons</div>
+              <div class="scrolling-text-item">Belgium</div>
+              <div class="scrolling-text-item">Electronic Music</div>
               <div class="scrolling-text-item">Cooking vegetarian food</div>
               <div class="scrolling-text-item">Reading</div>
               <div class="scrolling-text-item">Dancing</div>
-              <div class="scrolling-text-item">Spinning classes</div>
-              <div class="scrolling-text-item">Padel</div>
-              <div class="scrolling-text-item">Surfing</div>
-              <div class="scrolling-text-item">Volleyball</div>
-              <div class="scrolling-text-item">Fantasy</div>
-              <div class="scrolling-text-item">Organizing</div>
-              <div class="scrolling-text-item">Memes</div>
               <div class="scrolling-text-item">Baldurs Gate 3</div>
-              <div class="scrolling-text-item">Diablo IV</div>
-              <div class="scrolling-text-item">Belgium</div>
+              <div class="scrolling-text-item">Forest hikes</div>
               <div class="scrolling-text-item">Stavanger</div>
-              <div class="scrolling-text-item">Dragons</div>
-              <div class="scrolling-text-item">Camping</div>
+              <div class="scrolling-text-item">Spinning classes</div>
+              <div class="scrolling-text-item">Animals</div>
+              <div class="scrolling-text-item">Fantasy</div>
+              <div class="scrolling-text-item">Padel</div>
+              <div class="scrolling-text-item">League of Legends</div>
+              <div class="scrolling-text-item">Board Games</div>
+              <div class="scrolling-text-item">My dogs</div>
+              <div class="scrolling-text-item">Memes</div>
+              <div class="scrolling-text-item">CSS</div>
               <div class="scrolling-text-item">Pastel colors</div>
-              <div class="scrolling-text-item">Notion</div>
+              <div class="scrolling-text-item">Traveling</div>
+              <div class="scrolling-text-item">Surfing</div>
+              <div class="scrolling-text-item">Swimming</div>
 
               <!-- Duplicate the items to create the seamless loop -->
-              <div class="scrolling-text-item">D&D</div>
-              <div class="scrolling-text-item">Animals</div>
-              <div class="scrolling-text-item">My friends</div>
-              <div class="scrolling-text-item">Concerts</div>
-              <div class="scrolling-text-item">Electronic Music</div>
-              <div class="scrolling-text-item">My dogs</div>
-              <div class="scrolling-text-item">Forest hikes</div>
-              <div class="scrolling-text-item">Swimming</div>
-              <div class="scrolling-text-item">Lifting weights</div>
-              <div class="scrolling-text-item">Board Games</div>
-              <div class="scrolling-text-item">League of Legends</div>
-              <div class="scrolling-text-item">Traveling</div>
               <div class="scrolling-text-item">My family</div>
-              <div class="scrolling-text-item">CSS</div>
+              <div class="scrolling-text-item">Concerts</div>
+              <div class="scrolling-text-item">Camping</div>
+              <div class="scrolling-text-item">Notion</div>
+              <div class="scrolling-text-item">Volleyball</div>
+              <div class="scrolling-text-item">D&D</div>
               <div class="scrolling-text-item">House parties</div>
+              <div class="scrolling-text-item">Diablo IV</div>
+              <div class="scrolling-text-item">Lifting weights</div>
+              <div class="scrolling-text-item">Organizing</div>
+              <div class="scrolling-text-item">My friends</div>
+              <div class="scrolling-text-item">Dragons</div>
+              <div class="scrolling-text-item">Belgium</div>
+              <div class="scrolling-text-item">Electronic Music</div>
               <div class="scrolling-text-item">Cooking vegetarian food</div>
               <div class="scrolling-text-item">Reading</div>
               <div class="scrolling-text-item">Dancing</div>
-              <div class="scrolling-text-item">Spinning classes</div>
-              <div class="scrolling-text-item">Padel</div>
-              <div class="scrolling-text-item">Surfing</div>
-              <div class="scrolling-text-item">Volleyball</div>
-              <div class="scrolling-text-item">Fantasy</div>
-              <div class="scrolling-text-item">Organizing</div>
-              <div class="scrolling-text-item">Memes</div>
               <div class="scrolling-text-item">Baldurs Gate 3</div>
-              <div class="scrolling-text-item">Diablo IV</div>
-              <div class="scrolling-text-item">Belgium</div>
+              <div class="scrolling-text-item">Forest hikes</div>
               <div class="scrolling-text-item">Stavanger</div>
-              <div class="scrolling-text-item">Dragons</div>
-              <div class="scrolling-text-item">Camping</div>
+              <div class="scrolling-text-item">Spinning classes</div>
+              <div class="scrolling-text-item">Animals</div>
+              <div class="scrolling-text-item">Fantasy</div>
+              <div class="scrolling-text-item">Padel</div>
+              <div class="scrolling-text-item">League of Legends</div>
+              <div class="scrolling-text-item">Board Games</div>
+              <div class="scrolling-text-item">My dogs</div>
+              <div class="scrolling-text-item">Memes</div>
+              <div class="scrolling-text-item">CSS</div>
               <div class="scrolling-text-item">Pastel colors</div>
-              <div class="scrolling-text-item">Notion</div>
+              <div class="scrolling-text-item">Traveling</div>
+              <div class="scrolling-text-item">Surfing</div>
+              <div class="scrolling-text-item">Swimming</div>
             </div>
           </div>
         </div>
@@ -178,15 +187,23 @@
         </div>
         <div class="about-me__section-content glassmorphism glassmorphism-text">
           <p class="ff-raleway fs-base text-right">
-            My interest in technology and design led me to pursue a career in
-            front-end development. I enjoy building responsive, accessible
-            websites that focus on user experience, and I always try to come up
-            with interesting functionality. I take special interest in UI/UX
-            design, and I’m continuously pushing myself to learn new
-            technologies like React and Tailwind. My goal is to be a dev who
-            designs and creates web applications that not only look great, but
-            also provide seamless, interesting and intuitive experiences for all
-            users.
+            I'm a front-end developer with a passion for both technology and
+            design. My love for tech started with my Nintendo DS and our old
+            stationary PC at home, and now it’s all about my newer, fancier
+            setup and my Nintendo Switch. I love doing everything on my
+            computer—working, designing, playing, learning—the possibilities are
+            endless. My first discovery of front-end came after I spent months
+            customizing my Notion workspace, getting everything just right in
+            terms of both design and functionality. I had everything in there:
+            work and school notes, creative writing, habit and workout trackers,
+            and more. I remember telling my friend, 'I wish I could do this for
+            work—just making things on the computer all day that are both pretty
+            and functional.' He laughed and said, 'Well, you can. It's called
+            front-end development.' That was it for me. I fell down the rabbit
+            hole and couldn’t believe I had finally found what could be my dream
+            career. I started with a course on SheCodes and completely fell in
+            love. Now, I’m in the middle of my current studies and loving every
+            minute of it.
           </p>
         </div>
       </section>
@@ -321,6 +338,23 @@
  -->
               </div>
             </div>
+            <p class="ff-raleway fs-base">
+              Frontend-development is the perfect fit for me—creative,
+              challenging, and always something new to learn. Plus, there’s no
+              one 'right' answer, which means I get to experiment, explore
+              different approaches, and have fun with it. It's a space where no
+              two projects are ever the same, and that variety keeps me
+              energized and in flow. My projects reflect that excitement. My
+              first project, Game Hub, was a dream to build for a fellow gamer
+              audience. Designing different colored themes was a personal
+              highlight. Then came the Galaxy Garden Community Museum, where I
+              had the challenge of designing for both kids and families—creating
+              a fun, engaging space for children that didn’t feel condescending
+              to adults. I dove into color psychology and web design for kids,
+              balancing simplicity with depth. My latest project, Bloom, is all
+              about calm and minimalism—a clean, modern blog experience that
+              lets the content take center stage.
+            </p>
           </div>
         </div>
       </section>
@@ -328,18 +362,21 @@
       <section class="experience__section" id="experience__section">
         <div class="experience__section-content">
           <div class="tabs">
-            <!--             <button class="tab-link active" onclick="openTab(event, 'skills')">
+                         <button class="tab-link active" onclick="openTab(event, 'skills')">
               Skills
-            </button> -->
+            </button> 
             <button class="tab-link" onclick="openTab(event, 'work-education')">
               Work and Education
             </button>
-            <!--             <button class="tab-link" onclick="openTab(event, 'certifications')">
+                         <button class="tab-link" onclick="openTab(event, 'certifications')">
               Certifications and Courses
-            </button> -->
+            </button> 
           </div>
 
-          <!--           <div id="skills" class="tab-content glassmorphism-text border-radius-bottom">
+          <div
+            id="skills"
+            class="tab-content glassmorphism-text border-radius-bottom"
+          >
             <div class="skills-grid">
               <div class="skill-section">
                 <h4>Programming Languages and Frameworks</h4>
@@ -717,8 +754,22 @@
                   </tbody>
                 </table>
               </div>
+              <p>
+                I’ve always been endlessly curious, always wanting to know
+                more—whether it’s diving into new frameworks like React or
+                finding ways to make processes more efficient. I’m the type who
+                will happily spend an entire day learning a tool that might save
+                me five minutes in the future. A good example of that is at my
+                current job, where I wanted to remind my colleagues to update a
+                file every week. Sure, I could have just sent the same message
+                every Friday or scheduled it in Teams, but instead, I figured
+                out how to automate the whole process using Microsoft Power
+                Automate. Now, every Friday, they get a cheery message with the
+                exact link they need, and I never have to think about it again.
+                It’s little things like that which add up.
+              </p>
             </div>
-          </div> -->
+          </div>
 
           <div
             id="work-education"
@@ -726,20 +777,19 @@
             style="display: flex"
           >
             <div class="timeline">
-              <!-- Timeline item 1 -->
+              Timeline item 1
               <div class="timeline-item">
                 <div class="work">
                   Administrative Coordinator
                   <div class="place">
                     Stavangerregionens Europakontor, Brussels
                   </div>
-                  <!-- Name of the company -->
+                  Name of the company
                 </div>
                 <div class="year">Today</div>
                 <div class="education">
                   Frontend Development
                   <div class="place">Noroff School of Technology</div>
-                  <!-- Name of the school -->
                 </div>
               </div>
 
@@ -749,11 +799,9 @@
                 <div class="education">
                   Personal Training & Nutrition
                   <div class="place">Active Education</div>
-                  <!-- Name of the school -->
                 </div>
               </div>
 
-              <!-- Timeline item 2 -->
               <div class="timeline-item">
                 <div class="work">
                   First Secretary, Consultant & First Consultant
@@ -789,12 +837,29 @@
                 </div>
               </div>
             </div>
+            <p class="ff-raleway fs-base">
+              What really excites me is this mix of organization and creativity.
+              My career so far has been such a blend of both technical and
+              artistic work. I’ve taught at an art school for children, worked
+              at the Norwegian tax authorities, and now, as an administrative
+              coordinator, I jump between Excel spreadsheets and Canva designs
+              on a daily basis. I love getting lost in the technical side of
+              things—solving deep, complex problems—but I equally love the
+              creative freedom that comes with brainstorming ideas. In my
+              front-end work, I aim to bring that balance, designing web
+              applications that work seamlessly but also evoke a sense of ease,
+              satisfaction, and maybe even a bit of wonder.
+            </p>
           </div>
 
-          <!--           <div id="certifications" class="tab-content glassmorphism-text border-radius-bottom" style="display: none">
+          <div
+            id="certifications"
+            class="tab-content glassmorphism-text border-radius-bottom"
+            style="display: none"
+          >
             <h3>Certifications and Courses</h3>
             <p>Your certifications and courses go here.</p>
-          </div> -->
+          </div>
         </div>
       </section>
 
@@ -820,18 +885,20 @@
                 href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/"
                 ><img src="/assets/icons/contact/linkedin.png" alt="" />
               </a>
-              <a href="https://github.com/taraolivia">              <img src="/assets/icons/contact/github.png" alt="" />
-</a>
-              <a href="https://www.instagram.com/tara_bjo/">              <img src="/assets/icons/contact/instagram.png" alt="" />
-</a>
-<!--               <img src="/assets/icons/contact/behance.png" alt="" />
- -->            </div>
-<!--             <a href="linktree.com">My LinkTree</a>
- -->          </div>
+              <a href="https://github.com/taraolivia">
+                <img src="/assets/icons/contact/github.png" alt="" />
+              </a>
+              <a href="https://www.instagram.com/tara_bjo/">
+                <img src="/assets/icons/contact/instagram.png" alt="" />
+              </a>
+              <img src="/assets/icons/contact/behance.png" alt="" />
+            </div>
+            <a href="linktree.com">My LinkTree</a>
+          </div>
         </div>
       </section>
 
-      <!-- <section class="fun__section" id="fun__section">
+      <section class="fun__section" id="fun__section">
         <div class="interview-container">
           <div class="accordion-category__wrapper">
             <div class="accordion-category">
@@ -1095,10 +1162,9 @@
 
           <button id="submitButton">Generate Personalized Portfolio</button>
 
-          <section id="personalizedPortfolioContent">
-          </section>
+          <section id="personalizedPortfolioContent"></section>
         </div>
-      </section> -->
+      </section>
     </div>
   </body>
   <div class="bg-container flipped"></div>

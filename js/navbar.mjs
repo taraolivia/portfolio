@@ -1,9 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
+export function initializeNavAndCloud() {
     const navLinks = document.querySelectorAll('.header__nav-menu li a');
     const sections = document.querySelectorAll('section');
     const cloud = document.querySelector('.cloud');
     const nameElement = document.querySelector('.header__name');
     const offset = 90;
+
+    if (!navLinks || !sections || !cloud || !nameElement) {
+        console.error("Navigation elements not found");
+        return;
+    }
 
     // Smooth scrolling for anchor links
     navLinks.forEach(anchor => {
@@ -24,10 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Remove 'active' class from all links
                 navLinks.forEach(link => link.parentElement.classList.remove('active'));
 
-                // Add 'active' class to the current section's corresponding link
                 const activeLink = document.querySelector(`.header__nav-menu li a[href="#${entry.target.id}"]`);
                 if (activeLink) {
                     activeLink.parentElement.classList.add('active');
@@ -35,11 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-    }, {
-        threshold: 0.5
-    });
+    }, { threshold: 0.5 });
 
-    // Observe each section
     sections.forEach(section => observer.observe(section));
 
     function moveCloudToNavItem(navItem) {
@@ -51,15 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show/Hide the name based on scroll position
     window.addEventListener('scroll', () => {
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        const triggerPoint = 600; // Adjust this value for when you want the name to appear
-    
+        const triggerPoint = 600;
+
         if (scrollPosition >= triggerPoint) {
             nameElement.classList.add('visible');
         } else {
             nameElement.classList.remove('visible');
         }
 
-        // Update the active section dynamically on mobile
         const activeLink = document.querySelector('.header__nav-menu li.active a');
         if (activeLink) {
             const activeText = activeLink.textContent;
@@ -67,13 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-// Ensure this function is correctly defined
-function toggleMenu() {
+    // Toggle Hamburger Menu
+    const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.header__nav-menu');
-    navMenu.classList.toggle('active'); // Toggle the "active" class to show/hide the menu
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
 }
-
-// Attach the event listener for the hamburger icon
-document.querySelector('.hamburger').addEventListener('click', toggleMenu);
-
-});

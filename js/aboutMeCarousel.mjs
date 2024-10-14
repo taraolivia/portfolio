@@ -1,6 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // IMAGE SLIDER LOGIC
+export function initializeImageSlider() {
     const sliderList = document.querySelector('.slider-list');
+    if (!sliderList) {
+        console.error('Slider list not found!');
+        return;
+    }
     const imageFolderPath = 'assets/me/about-me-carousel/'; // Path to the image folder
 
     const imageFilenames = [
@@ -41,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     shuffleArray(imageFilenames); // Randomize the images
 
-    // Create and append the images dynamically to the slider list
-    imageFilenames.forEach((filename, index) => {
+    // Function to create and append images lazily
+    function createAndAppendImage(filename, index) {
         const sliderItem = document.createElement('div');
         sliderItem.classList.add('slider-list-item');
         sliderItem.setAttribute('style', `--position: ${index + 1}`);
@@ -50,18 +53,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = document.createElement('img');
         img.src = `${imageFolderPath}${filename}`;
         img.alt = `Image ${filename}`;
+        img.loading = 'lazy'; // Lazy load images for performance
 
         sliderItem.appendChild(img);
         sliderList.appendChild(sliderItem);
-    });
+    }
 
-    // Duplicate slider items for infinite scrolling effect (images)
+    // Append images dynamically to the slider list
+    imageFilenames.forEach(createAndAppendImage);
+
+    // Check the width of the slider list after images load
+    function updateSliderWidth() {
+        console.log('Slider scroll width:', sliderList.scrollWidth);
+    }
+    window.addEventListener('load', updateSliderWidth);
+
+    // Duplicate slider items for infinite scrolling effect
     const sliderItems = Array.from(sliderList.children);
     sliderItems.forEach(item => {
         const clone = item.cloneNode(true);
         sliderList.appendChild(clone);
     });
 
+    // Scroll logic
     let scrollPosition = 0;
     const scrollSpeed = 0.5;
     let animationId;
@@ -71,31 +85,48 @@ document.addEventListener('DOMContentLoaded', () => {
         sliderList.style.transform = `translateX(${scrollPosition}px)`;
 
         if (Math.abs(scrollPosition) >= sliderList.scrollWidth / 2) {
-            scrollPosition = 0; // Reset the image scroll position for infinite loop
+            scrollPosition = 0; // Reset scroll position for infinite loop
         }
 
         animationId = requestAnimationFrame(scrollSlider);
     }
 
-    animationId = requestAnimationFrame(scrollSlider);
+    // Start scrolling animation
+    function startScroll() {
+        if (!animationId) {
+            animationId = requestAnimationFrame(scrollSlider);
+        }
+    }
 
-    sliderList.addEventListener('mouseenter', () => {
-        cancelAnimationFrame(animationId);
-    });
+    // Stop scrolling animation
+    function stopScroll() {
+        if (animationId) {
+            cancelAnimationFrame(animationId);
+            animationId = null;
+        }
+    }
 
-    sliderList.addEventListener('mouseleave', () => {
-        animationId = requestAnimationFrame(scrollSlider);
-    });
+    startScroll(); // Start the scroll initially
 
-    // Hover effect to grayscale other images
-    sliderItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            sliderItems.forEach(sibling => sibling.classList.add('grayscale'));
-            item.classList.remove('grayscale'); // Remove grayscale from hovered item
+    // Stop scrolling on hover and resume after
+    sliderList.addEventListener('mouseenter', stopScroll);
+    sliderList.addEventListener('mouseleave', startScroll);
+
+    // Hover effect for grayscale images
+    function applyGrayscaleEffect() {
+        const items = Array.from(sliderList.children); // Get both original and cloned items
+        items.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                items.forEach(sibling => sibling.classList.add('grayscale'));
+                item.classList.remove('grayscale'); // Remove grayscale from hovered item
+            });
+
+            item.addEventListener('mouseleave', () => {
+                items.forEach(sibling => sibling.classList.remove('grayscale'));
+            });
         });
+    }
 
-        item.addEventListener('mouseleave', () => {
-            sliderItems.forEach(sibling => sibling.classList.remove('grayscale'));
-        });
-    });
-});
+    // Re-apply hover effect after duplicating elements
+    applyGrayscaleEffect();
+}

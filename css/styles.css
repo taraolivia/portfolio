@@ -522,6 +522,11 @@ vertical-align: left;
 }
 
 
+#work-education {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Timeline container */
 .timeline {
