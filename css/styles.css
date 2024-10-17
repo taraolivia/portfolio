@@ -730,8 +730,39 @@ font-family: var(--font-lora);
 
 
 /* ============================= */
-/*          Forms Styling        */
+/*          Project page        */
 /* ============================= */
+
+
+
+.project-page__section {
+display: flex;
+gap: 3em;
+justify-content: center;
+align-content: center;
+flex-wrap: wrap;
+margin: auto;
+}
+
+.project-page__section img{
+height: auto;
+max-width: 40%;
+}
+
+.project-page__section div{
+  align-items: center;
+  max-width: 600px;
+  }
+
+
+  
+
+
+
+
+
+
+
 
 /* ============================= */
 /*         Button Styles         */
