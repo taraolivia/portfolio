@@ -50,22 +50,26 @@ html {
   height: 100%;
 }
 
+
+
+
 .about-me__section,
 .projects__section,
 .experience__section,
 .contact__section,
 .fun__section {
-  min-height: 100dvh;
-  margin-top: 1em;
+  margin-top: 3em;
+  margin-bottom: 2em;
 }
 
-.experience__section,
+/* .experience__section,
 .contact__section {
-  padding: 10em 0;
-}
+  padding: 2em 0;
+} */
 
 .projects__section-content,
-.experience__section-content {
+.experience__section-content,
+.end-notes__section {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -94,7 +98,6 @@ html {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  color: rgb(173, 106, 255);
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -103,23 +106,11 @@ html {
 
 #hero__section h1 {
   font-size: 9vw;
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(
-    90deg,
-    #00000054 30%,
-    #00000081 50%,
-    #c0c0c02a 70%
-  );
-  background-size: 200% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent; /* Hide the base text color to show the gradient */
-  animation: shimmerDiagonal 6s infinite; /* 1-second shimmer, 5-second gap */
+  color: rgba(0, 0, 0, 0.267);
 }
 
 .hero__section-h2 {
-  font-size: 18px;
+  font-size: var(--font-size-l);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -132,7 +123,6 @@ html {
   color: rgb(128, 128, 128);
 }
 
-/* Will remove glassmorphism glass and manually write css to avoid important */
 .header__nav {
   position: fixed;
   top: 0;
@@ -159,8 +149,6 @@ html {
   width: 80%;
   margin: auto;
   max-width: 1800px;
-  font-family: var(--font-lora);
-  font-size: var(--font-size-xl);
 }
 
 .header__name {
@@ -195,8 +183,9 @@ html {
   transition: color 0.3s;
   padding: 1em;
   font-family: var(--font-lora);
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-base);
   min-width: 100px;
+  opacity: 0.6;
 }
 
 .header__nav:hover .header__nav-menu li a {
@@ -208,19 +197,6 @@ html {
   opacity: 1; /* Always fully visible */
   color: rgb(255, 0, 128);
   transition: opacity 0.3s ease, color 0.3s ease;
-}
-
-/* Cloud styling (ensure z-index is properly managed) */
-.cloud {
-  position: absolute;
-  background: url("/assets/icons/icons8-cloud-100.png") no-repeat center;
-  width: 100px;
-  height: 100px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1; /* Behind links */
-  transition: left 0.5s ease, width 1s ease;
-  background-size: cover;
 }
 
 /* ============================= */
@@ -402,11 +378,11 @@ html {
 
 .projects__section-content-description {
   display: flex;
+  column-gap: 5%;
 }
 
 .projects__section-content-description p {
-  flex: 0.8;
-  row-gap: 5%;
+  flex: 1;
 }
 
 /* ============================= */
@@ -422,22 +398,37 @@ html {
 }
 
 .tab-link {
-  background-color: #ead3fd;
+  background-color: var(--color-primary-lighter);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: var(--font-size-l); /* 18px */
+  font-weight: 500; /* Medium weight for tabs */
   transition: background-color 0.3s;
   width: 100%;
   border-radius: 10px 10px 0px 0px;
+  font-family: var(--font-lora);
 }
 
 .tab-link.active {
-  background-color: lavenderblush;
+  background-color: lightyellow;
 }
 
 .tab-link:hover {
-  background-color: lightyellow;
+  background-color: lavenderblush;
+}
+
+.close-tab-button {
+  font-family: var(--font-raleway);
+  font-size: var(--font-size-s); /* 20px */
+  line-height: 1.6;
+  padding: 10px 20px;
+  background-color: lavenderblush;
+  margin-top: 1em;
+}
+
+.close-tab-button:hover {
+  cursor: pointer;
 }
 
 .tab-content {
@@ -446,157 +437,237 @@ html {
   width: 100%;
   border-radius: 0 0 10px 10px;
   backdrop-filter: blur(10px);
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tab-content-inner {
+  width: 100%;
+  margin: auto;
+}
+
+.tab-content-flex {
+    display: flex;
+  justify-content: space-between;
+  gap: 3em;
+  width: 100%;
+  margin: auto;
+}
+
+.flex-wrapper {
+  width: 100%;
+}
+
+.tab-content__paragraph {
+  position: sticky;
+  top: 8em;
+  z-index: 10; 
+  height: fit-content;
+  padding-top: 3em;
+  padding-bottom: 1em;
+}
+
+.tab-content__paragraph p{
+font-family: var(--font-raleway);
+font-size: var(--font-size-base);
+margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Display the active tab content */
+.tab-content.active {
+  display: block;
+}
+
+.skills-section {
+  margin: 2em auto;
+}
+
+.skills-section h3{
+  margin: 1em auto;
 }
 
 .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid layout */
+  gap: 10px; /* Reduce space between skill cards */
+}
+
+.skill-card {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
+  justify-content: space-between; /* Text on the left, icon on the right */
+  align-items: center; /* Vertically center items */
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  backdrop-filter: blur(5px);
+  padding: 10px 15px; /* Less padding */
+  text-align: left; /* Align text to the left */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Make the card longer horizontally */
+  min-height: 50px; /* Shorter height */
 }
 
-.skill-section {
-  flex: 1 1 20%; /* Allows tables to shrink and grow */
-  min-width: 450px; /* Sets a minimum width to prevent tables from getting too small */
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slight shadow on hover */
 }
 
-.skills-table {
-  border-collapse: collapse;
+.skill-card h4 {
+  font-size: var(--font-size-s); /* 18px */
+  font-weight: 500; /* Medium for skill titles */
+  margin: 0;
+}
+
+.skill-card img {
+  height: 25px; /* Smaller icon size */
+  width: auto;
+  margin-left: 10px; /* Space between text and icon */
+}
+
+.category {
+  flex: 1;
+  min-width: 200px;
+}
+
+.category h3 {
+  font-size: var(--font-size-l); /* 24px */
+  font-weight: 700; /* Bold for main headings */
+  margin: 2em 0 1em 0;
+  color: var(--color-text); /* You can adjust this */
   text-align: left;
-  table-layout: fixed;
 }
 
-.skills-table td {
-  padding: 1rem;
-  width: 50%;
-  vertical-align: left;
+
+.certifications-list h4 {
+  font-size: var(--font-size-l); /* 20px */
+  font-weight: 500; /* Medium for subheadings */
+  margin-bottom: 10px;
 }
 
-.icon-column {
-  text-align: left; /* Center the icon horizontally */
-  vertical-align: middle; /* Center the icon vertically */
-  width: auto; /* Set a reasonable width for the icon column */
+
+.certifications-list p,
+.place,
+.work,
+.education {
+  font-size: var(--font-size-base); /* 18px */
+  line-height: 1.6; /* Ensures good readability */
+  color: var(--color-secondary-darkest); /* Slightly lighter for body text */
 }
 
-.icon-column img {
-  height: 25px; /* Set the height for the icon */
-  display: inline-block; /* Ensure the image is treated as inline content */
-  vertical-align: middle; /* Align icon vertically within the cell */
+.certifications-list a {
+  font-size: var(--font-size-l); /* 18px */
+  font-weight: 500; /* Medium for links */
+  line-height: 1.6; /* Ensures good readability */
+
+}
+.certifications-list li {
+  list-style: none;
+  list-style-type: none;
+  padding-bottom: 1.5em;
 }
 
-#work-education {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.certifications-list {
+line-height: 2;
 }
 
-/* Timeline container */
+.certifications-list a:hover {
+  text-decoration: underline;
+  color: hotpink;
+
+}
+
+
+
+/* Timeline Structure */
 .timeline {
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch; /* Ensure all timeline items have equal height */
-  width: 100%;
-  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr; /* Education | Timeline | Work */
+  gap: 1em;
   position: relative;
-  padding: 5em 0;
+  padding: 2em 0;
+  margin: 2em auto;
 }
 
-/* Timeline horizontal line */
 .timeline:before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: rgba(255, 105, 180, 0.2);
-  z-index: 1;
-}
-
-/* Timeline item (each entry) */
-.timeline-item {
-  text-align: center;
-  position: relative;
-  min-height: 150px; /* Ensure uniform height for each item */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-content: stretch;
-  box-sizing: border-box;
-  flex: 1; /* This makes each timeline item grow/shrink equally */
-  min-height: 150px; /* Ensure all items are at least this tall */
-}
-
-/* Work and education */
-.work,
-.education {
-  font-size: var(--font-size-base);
-  font-family: var(--font-lora);
-  font-weight: bold;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
   height: 100%;
+  background-color: rgba(255, 105, 180, 0.479); /* Vertical timeline */
+}
+
+.timeline-item {
+  display: contents; /* Allows each item to flow naturally into the grid columns */
+}
+
+.education, .work {
+  padding: 1em;
+  font-family: var(--font-lora);
+  font-size: var(--font-size-l);
+  color: #333;
+}
+
+.place {
+  font-family: var(--font-raleway);
+  font-size: var(--font-size-base);
+}
+
+.education {
+  grid-column: 1; /* Place in the first column (left) */
+  text-align: right;
 }
 
 .work {
-  margin-bottom: 2em;
-  flex: 1;
+  grid-column: 3; /* Place in the third column (right) */
+  text-align: left;
 }
 
-.education {
-  margin-top: 2em;
-  flex: 1;
-}
-
-/* Place (underneath work or education) */
-.place {
-  font-size: var(--font-size-s);
-  font-family: var(--font-lora);
-  margin-bottom: 10px; /* Keeps spacing consistent */
-  color: #555; /* Lighter color for better visual distinction */
-  font-style: normal;
-  font-weight: 200;
-}
-
-/* Year in the middle */
 .year {
-  font-size: 26px;
-  font-weight: bold;
+  grid-column: 2; /* Place in the center column */
+  text-align: center;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
   color: hotpink;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1; /* Ensure the year is above the line */
 }
 
-/* Media Query: On small screens, stack items vertically and move year on top */
-@media (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-  }
 
-  .timeline-item {
-    width: 100%;
-    margin-bottom: 40px;
-    min-height: auto; /* Remove height restriction on mobile */
-  }
 
-  .timeline:before {
-    display: none; /* Hide the line on small screens */
-  }
 
-  .year {
-    order: -1; /* Move the year to the top on mobile */
-    position: static; /* Remove absolute positioning for stacking */
-    transform: none;
-    margin-bottom: 10px;
-  }
 
-  .work,
-  .education,
-  .place {
-    text-align: center;
-  }
-}
 
 /* ============================= */
 /*      Contact Section         */
@@ -607,12 +678,6 @@ html {
   flex-direction: column;
 }
 
-.instagram-media {
-  box-shadow: 0 4px 10px hotpink !important;
-  margin: 20px auto !important; /* Center the embed */
-  max-width: 200px; /* Set a reasonable max-width */
-  width: 20% !important; /* Responsive to screen size */
-}
 
 /* ============================= */
 /*      Fun Section         */
@@ -698,6 +763,12 @@ html {
 .project-page__section div {
   align-items: center;
   max-width: 600px;
+}
+
+
+
+.end-notes__section p{
+padding: 0.5em 0;
 }
 
 /* ============================= */
@@ -795,7 +866,7 @@ html {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Light shadow to define edges without being too strong */
   padding: 3%; /* Increase padding for more breathing room around text */
   transition: all 0.3s ease;
-  color: rgb(0, 0, 0); /* Ensure strong contrast with text */
+  color: var(--color-text); /* Ensure strong contrast with text */
 }
 
 .glassmorphism-text:hover {
@@ -822,6 +893,25 @@ html {
   border-radius: 0px 0px 10px 10px;
 }
 
+
+@media (max-width: 1100px) {
+  .tab-content-flex {
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: auto;
+  }
+
+  .tab-content__paragraph {
+    padding-top: 0;
+    margin: auto;
+  }
+
+  
+  .timeline {
+    padding-bottom: 0;
+  }
+}
+
 @media (max-width: 670px) {
   .border-radius-left {
     border-radius: 10px 10px 0px 0px;
@@ -842,9 +932,43 @@ html {
     display: none; /* Hide hamburger icon on larger screens */
   }
 }
-
-/* For mobile screens (below 768px) */
+/* Mobile Layout: Stack everything vertically */
 @media (max-width: 768px) {
+
+  .projects__section-content-description {
+    flex-wrap: wrap;
+}
+
+.projects__section-content-description p {
+  min-width: 300px;
+  padding-bottom: 1em;
+}
+
+  .timeline {
+    display: block; /* Stack items in a single column */
+  }
+
+  .timeline:before {
+    display: none; /* Remove the vertical line */
+  }
+
+  .timeline-item {
+    display: flex;
+    flex-direction: column; /* Stack each element vertically */
+    align-items: center;
+    width: 100%;
+  }
+
+  .education, .work, .year {
+    text-align: center;
+    width: 100%; /* Full width for all items */
+  }
+
+  .year {
+    font-size: var(--font-size-l); /* Slightly smaller year font for mobile */
+    display: block; /* Ensure the year is shown */
+  }
+
   .active-section {
     display: block; /* Show active section text on mobile */
   }
@@ -866,8 +990,9 @@ html {
   /* Show only the name, active section, and hamburger menu */
   .active-section {
     display: block;
-    font-size: 18px;
+    font-size: var(--font-size-base);
     text-align: center;
+    line-height: 3em;
   }
 
   .header__name.visible {
@@ -908,10 +1033,5 @@ html {
     align-content: center;
   }
 
-  /* Cloud adjustments for mobile */
-  .cloud {
-    width: 80px; /* Smaller cloud */
-    height: 40px;
-    margin: auto;
-  }
 }
+

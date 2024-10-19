@@ -7,34 +7,14 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      as="style"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
 
     <!-- Preload and Load Critical CSS -->
-    <link
-      rel="preload"
-      href="/css/preload.css"
-      as="style"
-      onload="this.rel='stylesheet'"
-    />
+    <link rel="preload" href="/css/preload.css" as="style" onload="this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/css/preload.css" /></noscript>
-    <link
-      rel="preload"
-      href="/assets/background/background-holo-1.jpg"
-      as="image"
-    />
-    <link
-      rel="preload"
-      href="/assets/background/background-holo-2.jpg"
-      as="image"
-    />
+    <link rel="preload" href="/assets/background/background-holo-1.jpg" as="image" />
+    <link rel="preload" href="/assets/background/background-holo-2.jpg" as="image" />
 
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="/css/styles.css" />
@@ -53,12 +33,10 @@
       <nav class="header__nav glassmorphism">
         <div class="header__nav-content">
           <a href="#hero__section" class="header__name">
-            <p class="ff-lora fw-700 fstyle-italic">Tara Olivia Bjørheim</p>
+            <p class="ff-lora fw-500 fstyle-italic">Tara Olivia Bjørheim</p>
           </a>
           <span class="active-section">Active Section</span>
           <!-- This will change dynamically -->
-          <div class="cloud"></div>
-          <!-- Cloud behind active item -->
 
           <!-- Dropdown icon for mobile -->
           <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -89,22 +67,10 @@
 
       <section class="about-me__section" id="about-me__section">
         <div class="about-me__section-content glassmorphism glassmorphism-text">
-          <p class="ff-raleway fs-base">
-            Hello! I'm Tara, a front-end developer originally from Stavanger,
-            Norway, I’ve lived in many places, including Costa Rica, Tanzania,
-            and under the northern lights in Bodø. Currently, I’m based in
-            Brussels, Belgium, where I work as an administrative coordinator and
-            continue to expand my skills in web development. Talking about
-            everything I love doing would take hours, so I've included some
-            photos and honorable mentions below :)
-          </p>
+          <p class="ff-raleway fs-base">Hello! I'm Tara, a front-end developer with a passion for technology and design. I'm originally from Stavanger, Norway, but I’ve lived in many places, including Costa Rica, Tanzania, and under the northern lights in Bodø. Currently, I’m based in Brussels, Belgium, where I work as an administrative coordinator and continue to expand my skills in web development. Talking about everything I love doing would take hours, so I've included some photos and honorable mentions below :)</p>
         </div>
         <div class="scrolling-text-container">
-          <div
-            class="scrolling-text-inner"
-            style="--marquee-speed: 150s; --direction: scroll-right"
-            role="marquee"
-          >
+          <div class="scrolling-text-inner" style="--marquee-speed: 150s; --direction: scroll-right" role="marquee">
             <div class="scrolling-text">
               <!-- Your original items -->
               <div class="scrolling-text-item">My family</div>
@@ -186,25 +152,12 @@
           </div>
         </div>
         <div class="about-me__section-content glassmorphism glassmorphism-text">
-          <p class="ff-raleway fs-base text-right">
-            I'm a front-end developer with a passion for both technology and
-            design. My love for tech started with my Nintendo DS and our old
-            stationary PC at home, and now it’s all about my newer setup and my
-            Nintendo Switch. My first discovery of front-end was after I spent
-            months customizing my Notion workspace, getting everything just
-            right in terms of both design and functionality. I had everything in
-            there: work and school notes, creative writing, habit and workout
-            trackers, and more. I remember telling my friend, 'I wish I could do
-            this for work — make things on the computer all day that are both
-            pretty and functional.' He laughed and said, 'Well, you can. It's
-            called front-end development.' That was it for me. I fell down the
-            rabbit hole and couldn’t believe I had finally found what could be
-            my dream career. I signed up for a course on
-            <a href="https://www.shecodes.io/workshops" class="fw-700"
-              >SheCodes</a
-            >
-            an fell in love. Now, I’m in the middle of frontend-degree and
-            loving every minute of it.
+          <p class="ff-raleway fs-base text-left">
+            My love for tech started with my pink Nintendo DS <img src="assets/icons/random/ds.png" class="inline-icon" alt="" /> and our old stationary PC at home, and now it’s all about my newer setup and my Nintendo Switch <img src="assets/icons/random/switch.png" class="inline-icon" alt="" />. My first discovery of front-end was after I spent months customizing my Notion workspace, getting everything just right in terms of both design and functionality. I had everything in there: work and school notes, creative writing, habit and workout trackers, and more. I remember telling my friend,
+            <span class="fstyle-italic fw-500">"I wish I could do this for work — make things on the computer all day that are both pretty and functional."</span>
+            He laughed and said, "Well, you can. It's called front-end development." I fell down the rabbit hole and couldn’t believe I had finally found my dream career. I signed up for a course on
+            <a href="https://www.shecodes.io/workshops" class="fw-500">SheCodes</a>
+            and fell in love. <span class="underline-colored"> Now, I’m in the middle of my frontend-degree and loving every minute of it.</span>
           </p>
         </div>
       </section>
@@ -214,93 +167,35 @@
           <div class="projects-container">
             <div class="project-card glassmorphism-text">
               <div class="project-thumbnail">
-                <a
-                  href="https://bloom-lifestyle-blog.netlify.app/"
-                  target="_blank"
-                >
-                  <img
-                    src="/assets/projects/bloom-hero.png"
-                    alt="Bloom Lifestyle Blog Hero Image"
-                  />
+                <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank">
+                  <img src="/assets/projects/bloom-hero.png" alt="Bloom Lifestyle Blog Hero Image" />
                 </a>
               </div>
               <div class="project-title">Bloom Lifestyle Blog</div>
               <div class="project-description">
-                Bloom is a responsive blog platform targeting users interested
-                in lifestyle and self-care, offering a modern and clean
-                interface. It is developed using
-                <span class="fw-500">HTML</span>,
-                <span class="fw-500">CSS</span> and
-                <span class="fw-500">JavaScript</span>, with an
-                <span class="fw-500">API integration</span> to manage dynamic
-                blog posts. The site features a carousel for the 3 latest posts,
-                a responsive grid displaying all posts, and
-                <span class="fw-500">admin functionality</span> for
-                registration, login, and post management.
+                Bloom is a responsive blog platform targeting users interested in lifestyle and self-care, offering a modern and clean interface. It is developed using
+                <span class="fw-500">HTML</span>, <span class="fw-500">CSS</span> and <span class="fw-500">JavaScript</span>, with an <span class="fw-500">API integration</span> to manage dynamic blog posts. The site features a carousel for the 3 latest posts, a responsive grid displaying all posts, and <span class="fw-500">admin functionality</span> for registration, login, and post management.
               </div>
               <div class="project-links">
-                <a
-                  href="https://github.com/NoroffFEU/FED1-PE1-taraolivia"
-                  target="_blank"
-                  class="glassmorphism"
-                  ><img
-                    src="/assets/icons/github-mark.png"
-                    alt="Github mark logo in black"
-                    id="github-mark-round-black"
-                /></a>
+                <a href="https://github.com/NoroffFEU/FED1-PE1-taraolivia" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
-                <a
-                  href="https://bloom-lifestyle-blog.netlify.app/"
-                  target="_blank"
-                  class="glassmorphism"
-                  >View Live</a
-                >
-                <a href="/html/bloom.html" target="_blank" class="glassmorphism"
-                  >Read more</a
-                >
+                <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" class="glassmorphism">View Live</a>
+                <a href="/html/bloom.html" target="_blank" class="glassmorphism">Read more</a>
               </div>
             </div>
 
             <div class="project-card glassmorphism-text">
               <div class="project-thumbnail">
-                <a
-                  href="https://game-hub-with-themes.netlify.app/index.html"
-                  target="_blank"
-                >
-                  <img
-                    src="/assets/projects/game-hub-hero.png"
-                    alt="Game Hub Hero Image"
-                  />
+                <a href="https://game-hub-with-themes.netlify.app/index.html" target="_blank">
+                  <img src="/assets/projects/game-hub-hero.png" alt="Game Hub Hero Image" />
                 </a>
               </div>
               <div class="project-title">Game Hub: The Universe of Games</div>
-              <div class="project-description">
-                Game Hub is an interactive online targeted at gamers store built
-                using <span class="fw-500">HTML</span>,
-                <span class="fw-500">CSS</span> and
-                <span class="fw-500">JavaScript</span>, showcasing video games
-                through an <span class="fw-500">API</span>. Users can filter
-                games by genre, view detailed game information, and simulate
-                buying games. The platform includes dynamic reviews, similar
-                game suggestions, and a theme switcher with 8 different themes.
-              </div>
+              <div class="project-description">Game Hub is an interactive online targeted at gamers store built using <span class="fw-500">HTML</span>, <span class="fw-500">CSS</span> and <span class="fw-500">JavaScript</span>, showcasing video games through an <span class="fw-500">API</span>. Users can filter games by genre, view detailed game information, and simulate buying games. The platform includes dynamic reviews, similar game suggestions, and a theme switcher with 8 different themes.</div>
               <div class="project-links">
-                <a
-                  href="https://github.com/NoroffFEU/GameHub-taraolivia-js_integration-rework"
-                  target="_blank"
-                  class="glassmorphism"
-                  ><img
-                    src="/assets/icons/github-mark.png"
-                    alt="Github mark logo in black"
-                    id="github-mark-round-black"
-                /></a>
+                <a href="https://github.com/NoroffFEU/GameHub-taraolivia-js_integration-rework" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
-                <a
-                  href="https://taraolivia.github.io/GameHub-taraolivia-js_integration/index.html"
-                  target="_blank"
-                  class="glassmorphism"
-                  >View Live</a
-                >
+                <a href="https://taraolivia.github.io/GameHub-taraolivia-js_integration/index.html" target="_blank" class="glassmorphism">View Live</a>
                 <a href="" target="_blank">Read more</a>
               </div>
             </div>
@@ -308,65 +203,26 @@
             <div class="project-card glassmorphism-text">
               <div class="project-thumbnail">
                 <a href="https://galaxygarden.netlify.app/" target="_blank">
-                  <img
-                    src="/assets/projects/galaxy-garden-hero.png"
-                    alt="Galaxy Garden Hero Image"
-                    class="glassmorphism"
-                  />
+                  <img src="/assets/projects/galaxy-garden-hero.png" alt="Galaxy Garden Hero Image" class="glassmorphism" />
                 </a>
               </div>
               <div class="project-title">Galaxy Garden Community Museum</div>
               <div class="project-description">
                 The Galaxy Garden Community Museum website was developed using
-                <span class="fw-500">HTML</span> and
-                <span class="fw-500">CSS</span> to create a modern, responsive
-                site aimed at children and their families. The project is tested
-                across browsers and devices, offering an engaging, educational
-                experience that sparks curiosity about science in an exciting,
-                age-appropriate way.
+                <span class="fw-500">HTML</span> and <span class="fw-500">CSS</span> to create a modern, responsive site aimed at children and their families. The project is tested across browsers and devices, offering an engaging, educational experience that sparks curiosity about science in an exciting, age-appropriate way.
               </div>
               <span class="fw-500"></span>
               <div class="project-links">
-                <a
-                  href="https://github.com/taraolivia/semester-project-tara-bjorheim"
-                  target="_blank"
-                  class="glassmorphism"
-                  ><img
-                    src="/assets/icons/github-mark.png"
-                    alt="Github mark logo in black"
-                    id="github-mark-round-black"
-                /></a>
+                <a href="https://github.com/taraolivia/semester-project-tara-bjorheim" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
-                <a
-                  href="https://galaxygarden.netlify.app/"
-                  target="_blank"
-                  class="glassmorphism"
-                  >View Live</a
-                >
+                <a href="https://galaxygarden.netlify.app/" target="_blank" class="glassmorphism">View Live</a>
                 <a href="" target="_blank">Read more</a>
               </div>
             </div>
             <div class="projects__section-content-description">
-            <p class="ff-raleway fs-base">
-              Frontend-development is the perfect fit for me—creative,
-              challenging, and always something new to learn. Plus, there’s no
-              one 'right' answer, which means I get to experiment, explore
-              different approaches, and have fun with it. It's a space where no
-              two projects are ever the same, and that variety keeps me
-              energized and in flow.
-            </p>
-            <p class="ff-raleway fs-base">
-              My first project, Game Hub, was a dream to build for a fellow
-              gamer audience. Designing different colored themes was a personal
-              highlight. Then came the Galaxy Garden Community Museum, where I
-              had the challenge of designing for both kids and families—creating
-              a fun, engaging space for children that didn’t feel condescending
-              to adults. I dove into color psychology and web design for kids,
-              balancing simplicity with depth. My latest project, Bloom, is all
-              about calm and minimalism—a clean, modern blog experience that
-              lets the content take center stage.
-            </p>
-          </div>
+              <p class="ff-raleway fs-base">My first project, Game Hub <img src="assets/icons/random/icons8-controller-50.png" class="inline-icon" alt="" /> was a dream to build for a fellow gamer audience. Designing different colored themes was a personal highlight. Then came the Galaxy Garden Community Museum <img src="assets/icons/random/icons8-test-tube-48.png" class="inline-icon" alt="" /> where I had the challenge of designing for both kids and families—creating a fun, engaging space for children that didn’t feel condescending to adults. I dove into color psychology and web design for kids, balancing simplicity with depth. My latest project, Bloom <img src="assets/icons/random/icons8-camellia-48.png" class="inline-icon" alt="" /> is all about calm and minimalism—a clean, modern blog experience that lets the content take center stage.</p>
+              <p class="ff-raleway fs-base">Frontend-development is the perfect fit for me—creative, challenging, and there's always something new to learn. Plus, there’s no one 'right' answer, which means I get to experiment, explore different approaches, and have fun with it. It's a space where no two projects are ever the same, and that variety keeps me energized and in flow.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -374,595 +230,468 @@
       <section class="experience__section" id="experience__section">
         <div class="experience__section-content">
           <div class="tabs">
-            <button class="tab-link active" onclick="openTab(event, 'skills')">
-              Skills
-            </button>
-            <button class="tab-link" onclick="openTab(event, 'work-education')">
-              Work and Education
-            </button>
-            <button class="tab-link" onclick="openTab(event, 'certifications')">
-              Certifications and Courses
-            </button>
+            <button class="tab-link" data-tab="skills">Skills</button>
+            <button class="tab-link" data-tab="work-education">Work and Education</button>
+            <button class="tab-link" data-tab="certifications">Certifications and Courses</button>
           </div>
 
-          <div
-            id="skills"
-            class="tab-content glassmorphism-text border-radius-bottom"
-          >
-            <div class="skills-grid">
-              <div class="skill-section">
-                <h4>Programming Languages and Frameworks</h4>
-                <table class="skills-table">
-                  <tbody>
-                    <tr>
-                      <td>HTML</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-html-5-50.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>CSS</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-css3-50.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>JavaScript</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-javascript-logo-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>C (beginner)</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-c-50.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tailwind CSS (beginner)</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-tailwind-css-24.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="skill-section">
-                <h4>Tools</h4>
-                <table class="skills-table">
-                  <tbody>
-                    <tr>
-                      <td>GitHub</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/github-mark.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Figma</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-figma-50.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Canva</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-canva-app-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>WordPress</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-wordpress-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>SharePoint</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-microsoft-sharepoint-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Power Automate</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-microsoft-power-automate-2020-48.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tiny MCE</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-paste-as-text-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Visual Studio Code</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-visual-studio-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Netlify</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-cms-50.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Slack</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-slack-50.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>npm</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-npm-32.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Postman</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-api-30.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Decap CMS</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-dashboard-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="skill-section">
-                <h4>Design</h4>
-                <table class="skills-table">
-                  <tbody>
-                    <tr>
-                      <td>Responsive design</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-responsive-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>UX/UI</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-designer-48.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>High-fidelity wireframes</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-wireframe-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Prototyping</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-prototype-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>User flows</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-user-flow-67.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="skill-section">
-                <h4>Methodologies</h4>
-                <table class="skills-table">
-                  <tbody>
-                    <tr>
-                      <td>Agile/Scrum</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-agile-32.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Project management</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-project-management-30.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Process automation</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-automation-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="skill-section">
-                <h4>Technologies</h4>
-                <table class="skills-table">
-                  <tbody>
-                    <tr>
-                      <td>API integration</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-api-30.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>WCAG accessibility standards</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-accessibility-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>SEO optimization</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-seo-50.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Version control</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-ctrl-50.png" alt="" />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="skill-section">
-                <h4>Languages (Fluency)</h4>
-                <table class="skills-table">
-                  <tbody>
-                    <tr>
-                      <td>Norwegian (native)</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/star-yellow.png" alt="" /><img
-                          src="/assets/icons/star-yellow.png"
-                          alt=""
-                        /><img src="/assets/icons/star-yellow.png" alt="" /><img
-                          src="/assets/icons/star-yellow.png"
-                          alt=""
-                        /><img src="/assets/icons/star-yellow.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>English (fluent)</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/star-yellow.png" alt="" /><img
-                          src="/assets/icons/star-yellow.png"
-                          alt=""
-                        /><img src="/assets/icons/star-yellow.png" alt="" /><img
-                          src="/assets/icons/star-yellow.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Spanish (intermediate)</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/star-yellow.png" alt="" /><img
-                          src="/assets/icons/star-yellow.png"
-                          alt=""
-                        /><img src="/assets/icons/star-yellow.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>French (intermediate)</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/star-yellow.png" alt="" /><img
-                          src="/assets/icons/star-yellow.png"
-                          alt=""
-                        /><img src="/assets/icons/star-yellow.png" alt="" />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="skill-section">
-                <h4>Next up</h4>
-                <table class="skills-table">
-                  <tbody>
-                    <tr>
-                      <td>Bootstrap</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-bootstrap-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Sass</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-sass-avatar-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>React</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-react-30.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Vue.js</td>
-                      <td class="icon-column">
-                        <img src="/assets/icons/icons8-vuejs-50.png" alt="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Information architecture</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-information-48.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>TypeScript</td>
-                      <td class="icon-column">
-                        <img
-                          src="/assets/icons/icons8-typescript-50.png"
-                          alt=""
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p>
-                I’ve always been endlessly curious, always wanting to know
-                more—whether it’s diving into new frameworks like React or
-                finding ways to make processes more efficient. I’m the type who
-                will happily spend an entire day learning a tool that might save
-                me five minutes in the future. A good example of that is at my
-                current job, where I wanted to remind my colleagues to update a
-                file every week. Sure, I could have just sent the same message
-                every Friday or scheduled it in Teams, but instead, I figured
-                out how to automate the whole process using Microsoft Power
-                Automate. Now, every Friday, they get a cheery message with the
-                exact link they need, and I never have to think about it again.
-                It’s little things like that which add up.
-              </p>
-            </div>
+          <div id="noTabsMessage" class="tab-content glassmorphism-text border-radius-bottom" style="display: none">
+            <p>Open a tab to learn more</p>
           </div>
 
-          <div
-            id="work-education"
-            class="tab-content glassmorphism-text border-radius-bottom"
-            style="display: flex"
-          >
-            <div class="timeline">
-              Timeline item 1
-              <div class="timeline-item">
-                <div class="work">
-                  Administrative Coordinator
-                  <div class="place">
-                    Stavangerregionens Europakontor, Brussels
+          <div id="skills" class="tab-content glassmorphism-text border-radius-bottom">
+            <div class="tab-content-inner tab-content-flex">
+              <div class="flex-wrapper">
+                <!-- Programming Languages and Frameworks -->
+                <div class="skills-section">
+                  <h3>Programming Languages and Frameworks</h3>
+                  <div class="skills-grid">
+                    <div class="skill-card">
+                      <h4>HTML</h4>
+                      <img src="/assets/icons/icons8-html-5-50.png" alt="HTML icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>CSS</h4>
+                      <img src="/assets/icons/icons8-css3-50.png" alt="CSS icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>JavaScript</h4>
+                      <img src="/assets/icons/icons8-javascript-logo-50.png" alt="JavaScript icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>C (Beginner)</h4>
+                      <img src="/assets/icons/icons8-c-50.png" alt="C icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Tailwind CSS (Beginner)</h4>
+                      <img src="/assets/icons/icons8-tailwind-css-24.png" alt="Tailwind CSS icon" />
+                    </div>
                   </div>
-                  Name of the company
                 </div>
-                <div class="year">Today</div>
-                <div class="education">
-                  Frontend Development
-                  <div class="place">Noroff School of Technology</div>
+
+                <!-- Tools -->
+                <div class="skills-section">
+                  <h3>Tools</h3>
+                  <div class="skills-grid">
+                    <div class="skill-card">
+                      <h4>GitHub</h4>
+                      <img src="/assets/icons/github-mark.png" alt="GitHub icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Figma</h4>
+                      <img src="/assets/icons/icons8-figma-50.png" alt="Figma icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Canva</h4>
+                      <img src="/assets/icons/icons8-canva-app-50.png" alt="Canva icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>WordPress</h4>
+                      <img src="/assets/icons/icons8-wordpress-50.png" alt="WordPress icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>SharePoint</h4>
+                      <img src="/assets/icons/icons8-microsoft-sharepoint-50.png" alt="SharePoint icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Power Automate</h4>
+                      <img src="/assets/icons/icons8-microsoft-power-automate-2020-48.png" alt="Power Automate icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Tiny MCE</h4>
+                      <img src="/assets/icons/icons8-paste-as-text-50.png" alt="Tiny MCE icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Visual Studio Code</h4>
+                      <img src="/assets/icons/icons8-visual-studio-50.png" alt="Visual Studio Code icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Netlify</h4>
+                      <img src="/assets/icons/icons8-cms-50.png" alt="Netlify icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Slack</h4>
+                      <img src="/assets/icons/icons8-slack-50.png" alt="Slack icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>npm</h4>
+                      <img src="/assets/icons/icons8-npm-32.png" alt="npm icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Postman</h4>
+                      <img src="/assets/icons/icons8-api-30.png" alt="Postman icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Decap CMS</h4>
+                      <img src="/assets/icons/icons8-dashboard-50.png" alt="Decap CMS icon" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Design -->
+                <div class="skills-section">
+                  <h3>Design</h3>
+                  <div class="skills-grid">
+                    <div class="skill-card">
+                      <h4>Responsive Design</h4>
+                      <img src="/assets/icons/icons8-responsive-50.png" alt="Responsive Design icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>UX/UI</h4>
+                      <img src="/assets/icons/icons8-designer-48.png" alt="UX/UI icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>High-fidelity Wireframes</h4>
+                      <img src="/assets/icons/icons8-wireframe-50.png" alt="Wireframes icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Prototyping</h4>
+                      <img src="/assets/icons/icons8-prototype-50.png" alt="Prototyping icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>User Flows</h4>
+                      <img src="/assets/icons/icons8-user-flow-67.png" alt="User Flows icon" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Methodologies -->
+                <div class="skills-section">
+                  <h3>Methodologies</h3>
+                  <div class="skills-grid">
+                    <div class="skill-card">
+                      <h4>Agile/Scrum</h4>
+                      <img src="/assets/icons/icons8-agile-32.png" alt="Agile/Scrum icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Project Management</h4>
+                      <img src="/assets/icons/icons8-project-management-30.png" alt="Project Management icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Process Automation</h4>
+                      <img src="/assets/icons/icons8-automation-50.png" alt="Process Automation icon" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="skills-section">
+                  <h3>Technologies</h3>
+                  <div class="skills-grid">
+                    <div class="skill-card">
+                      <h4>API Integration</h4>
+                      <img src="/assets/icons/icons8-api-30.png" alt="API icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>WCAG Accessibility Standards</h4>
+                      <img src="/assets/icons/icons8-accessibility-50.png" alt="WCAG icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>SEO Optimization</h4>
+                      <img src="/assets/icons/icons8-seo-50.png" alt="SEO icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Version Control</h4>
+                      <img src="/assets/icons/icons8-ctrl-50.png" alt="Version Control icon" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="skills-section">
+                  <h3>Languages (Fluency)</h3>
+                  <div class="skills-grid">
+                    <div class="skill-card">
+                      <h4>Norwegian (Native)</h4>
+                      <img src="/assets/icons/star-yellow.png" alt="5 stars for fluency" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>English (Fluent)</h4>
+                      <img src="/assets/icons/star-yellow.png" alt="4 stars for fluency" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Spanish (Intermediate)</h4>
+                      <img src="/assets/icons/star-yellow.png" alt="3 stars for fluency" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>French (Intermediate)</h4>
+                      <img src="/assets/icons/star-yellow.png" alt="3 stars for fluency" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Next Up -->
+                <div class="skills-section">
+                  <h3>Next Up</h3>
+                  <div class="skills-grid">
+                    <div class="skill-card">
+                      <h4>Bootstrap</h4>
+                      <img src="/assets/icons/icons8-bootstrap-50.png" alt="Bootstrap icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Sass</h4>
+                      <img src="/assets/icons/icons8-sass-avatar-50.png" alt="Sass icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>React</h4>
+                      <img src="/assets/icons/icons8-react-30.png" alt="React icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Vue.js</h4>
+                      <img src="/assets/icons/icons8-vuejs-50.png" alt="Vue.js icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>Information Architecture</h4>
+                      <img src="/assets/icons/icons8-information-48.png" alt="Information Architecture icon" />
+                    </div>
+                    <div class="skill-card">
+                      <h4>TypeScript</h4>
+                      <img src="/assets/icons/icons8-typescript-50.png" alt="TypeScript icon" />
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div class="timeline-item">
-                <div class="work"></div>
-                <div class="year"></div>
-                <div class="education">
-                  Personal Training & Nutrition
-                  <div class="place">Active Education</div>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="work">
-                  First Secretary, Consultant & First Consultant
-                  <div class="place">Skatteetaten, Stavanger</div>
-                  <!-- Name of the company -->
-                </div>
-                <div class="year"></div>
-                <div class="education"></div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="work"></div>
-                <div class="year"></div>
-                <div class="education">
-                  Spanish Studies
-                  <div class="place">EF school of Costa Rica</div>
-                  <!-- School name -->
-                </div>
-              </div>
-
-              <!-- Timeline item 3 -->
-              <div class="timeline-item">
-                <div class="work">
-                  Assistant at Art School
-                  <div class="place">Pippis Kunstskole, Stavanger</div>
-                  <!-- Name of the company -->
-                </div>
-                <div class="year">2016</div>
-                <div class="education">
-                  General Studies
-                  <div class="place">St. Olav High School, Stavanger</div>
-                  <!-- School name -->
-                </div>
+              <div class="flex-wrapper tab-content__paragraph">
+                <p>I’ve always been endlessly curious, always wanting to know more—whether it’s diving into new frameworks like React or finding ways to make processes more efficient. I’m the type who will happily spend an entire day learning a tool that might save me five minutes in the future, lol. A good example of that is at my current job, where I wanted to remind my colleagues to update a file every week. Sure, I could have just sent the same message every Friday or scheduled it in Teams, but instead, I figured out how to automate the whole process using Microsoft Power Automate. Now, every Friday, they get a cheery message with the exact link they need, and I never have to think about it again. It’s little things like that which add up.</p>
+                <button class="close-tab-button glassmorphism">Close Tab</button>
               </div>
             </div>
-            <p class="ff-raleway fs-base">
-              What really excites me is this mix of organization and creativity.
-              My career so far has been such a blend of both technical and
-              artistic work. I’ve taught at an art school for children, worked
-              at the Norwegian tax authorities, and now, as an administrative
-              coordinator, I jump between Excel spreadsheets and Canva designs
-              on a daily basis. I love getting lost in the technical side of
-              things—solving deep, complex problems—but I equally love the
-              creative freedom that comes with brainstorming ideas. In my
-              front-end work, I aim to bring that balance, designing web
-              applications that work seamlessly but also evoke a sense of ease,
-              satisfaction, and maybe even a bit of wonder.
-            </p>
           </div>
 
-          <div
-            id="certifications"
-            class="tab-content glassmorphism-text border-radius-bottom"
-            style="display: none"
-          >
-            <h3>Certifications and Courses</h3>
-            <p>Your certifications and courses go here.</p>
+          <div id="work-education" class="tab-content glassmorphism-text border-radius-bottom">
+            <div class="tab-content-flex">
+              <div class="flex-wrapper">
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="year">Today</div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="education">
+                      Frontend Development
+                      <div class="place">Noroff School of Technology</div>
+                    </div>
+                    <div class="year"></div>
+                    <div class="work">
+                      Administrative Coordinator
+                      <div class="place">Stavangerregionens Europakontor, Brussels</div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="education">
+                      Personal Training & Nutrition
+                      <div class="place">Active Education</div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="work">
+                      First Secretary, Consultant & First Consultant
+                      <div class="place">Skatteetaten, Stavanger</div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="education">
+                      Spanish Studies
+                      <div class="place">EF school of Costa Rica</div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="education">
+                      General Studies
+                      <div class="place">St. Olav High School, Stavanger</div>
+                    </div>
+                    <div class="year"></div>
+                    <div class="work">
+                      Assistant at Art School
+                      <div class="place">Pippis Kunstskole, Stavanger</div>
+                    </div>
+                  </div>
+                  <div class="timeline-item"></div>
+                  <div class="year">2015</div>
+                </div>
+              </div>
+
+              <div class="flex-wrapper tab-content__paragraph">
+                <p class="ff-raleway fs-base">What really excites me is this mix of organization and creativity. My career so far has been such a blend of both technical and artistic work. I’ve taught at an art school for children, worked at the Norwegian tax authorities, and now, as an administrative coordinator, I jump between Excel spreadsheets and Canva designs on a daily basis. I love getting lost in the technical side of things—solving deep, complex problems—but I equally love the creative freedom that comes with brainstorming ideas. In my front-end work, I aim to bring that balance, designing web applications that work seamlessly but also evoke a sense of ease, satisfaction, and maybe even a bit of wonder.</p>
+                <button class="close-tab-button glassmorphism">Close Tab</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="certifications" class="tab-content glassmorphism-text border-radius-bottom tab-content-flex">
+            <div class="tab-content-inner tab-content-flex">
+              <!-- Development Section -->
+              <div class="category">
+                <h3>Development, Design, etc</h3>
+                <ul class="certifications-list">
+                  <li>
+                    <h4>
+                      <a href="https://cssday.nl/2024" target="_blank"> CSS Day 2024</a>
+                    </h4>
+                    <p>Amsterdam | 2024</p>
+                  </li>
+                  <li>
+                    <h4>
+                      <a href="https://www.linkedin.com/learning/javascript-essential-training?u=43268076" target="_blank"> JavaScript Essential Training </a>
+                    </h4>
+                    <p>LinkedIn Learning | 2024</p>
+                  </li>
+                  <li>
+                    <h4>
+                      <a href="https://www.linkedin.com/learning/introduction-to-web-apis-22019269?u=43268076" target="_blank"> Introduction to Web APIs </a>
+                    </h4>
+                    <p>LinkedIn Learning | 2024</p>
+                  </li>
+                  <li>
+                    <h4>
+                      <a href="https://www.shecodes.io/workshops#features" target="_blank"> SheCodes Basics </a>
+                    </h4>
+                    <p>SheCodes | 2022</p>
+                  </li>
+                  <li>
+                    <h4>
+                      <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science" target="_blank"> CS50: Introduction to Computer Science </a>
+                    </h4>
+                    <p>Harvard School of Engineering and Applied Sciences | Ongoing</p>
+                  </li>
+                  <li>
+                    <h4>
+                      <a href="https://www.linkedin.com/learning/figma-essential-training-the-basics?u=43268076" target="_blank"> Figma Essential Training: The Basics </a>
+                    </h4>
+                    <p>LinkedIn Learning | 2023</p>
+                  </li>
+                  <li>
+                    <h4>
+                      <a href="https://www.linkedin.com/learning/introduction-to-graphic-design-concepts-2021?u=43268076" target="_blank"> Introduction to Graphic Design Concepts </a>
+                    </h4>
+                    <p>LinkedIn Learning | 2023</p>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Project Management Section -->
+              <div class="category">
+                <h3>Other</h3>
+                <ul class="certifications-list">
+                  <li>
+                    <h4>
+                      <a href="https://www.linkedin.com/learning/scrum-the-basics?u=43268076" target="_blank"> Scrum: The Basics </a>
+                    </h4>
+                    <p>LinkedIn Learning | 2024</p>
+                  </li>
+                  <li>
+                    <h4>
+                      <a href="https://www.linkedin.com/learning/how-to-regain-control-of-your-time-energy-and-priorities?u=43268076" target="_blank"> How to Regain Control of Your Time, Energy, and Priorities </a>
+                    </h4>
+                    <p>LinkedIn Learning | 2023</p>
+                  </li>
+                  <li>
+                    <h4>Advanced Personal Trainer (AE L5)</h4>
+                    <p>Active Education | 2022</p>
+                  </li>
+                  <li>
+                    <h4>Certified Nutrition Coach (AE L4)</h4>
+                    <p>Active Education | 2022</p>
+                  </li>
+                  <li>
+                    <h4>Certified Weight Management Exercise Specialist (AE L5)</h4>
+                    <p>Active Education | 2022</p>
+                  </li>
+                  <li>
+                    <h4>
+                      <a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank"> Learning How to Learn </a>
+                    </h4>
+                    <p>Coursera | 2023</p>
+                  </li>
+                  <li>
+                    <h4>Basic course in CrossFit</h4>
+                    <p>Rapida Bodø | 2022</p>
+                  </li>
+                  <li>
+                    <h4>
+                     Spanish (B2 Level)
+                    </h4>
+                    <p>EF School of Costa Rica | 2020</p>
+                  </li>
+                  <li>
+                    <h4>
+                      French (B1 Level)
+                    </h4>
+                    <p>CLL Brussels | 2024</p>
+                  </li>
+                  <button class="close-tab-button glassmorphism">Close Tab</button>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="contact__section" id="contact__section">
         <div class="contact-page-wrapper">
-          <div
-            class="contact-page-section contact-page-section-secondary border-radius-left glassmorphism-text"
-          >
+          <div class="contact-page-section contact-page-section-secondary border-radius-left glassmorphism-text">
             <p>Need a Creative Partner?</p>
             <p>I’m In!</p>
           </div>
 
-          <div
-            class="contact-page-section contact-page-section-primary border-radius-right"
-          >
+          <div class="contact-page-section contact-page-section-primary border-radius-right">
             <p>E-mail me at:</p>
-            <a href="mailto:your-email@example.com" class="fw-700"
-              >tara.bjorheim@outlook.com</a
-            >
+            <a href="mailto:your-email@example.com" class="fw-700">tara.bjorheim@outlook.com</a>
             <p>And let's connect on</p>
             <div class="contact-info__icons">
-              <a
-                href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/"
-                ><img src="/assets/icons/contact/linkedin.png" alt="" />
-              </a>
+              <a href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/"><img src="/assets/icons/contact/linkedin.png" alt="" /> </a>
               <a href="https://github.com/taraolivia">
                 <img src="/assets/icons/contact/github.png" alt="" />
               </a>
               <a href="https://www.instagram.com/tara_bjo/">
                 <img src="/assets/icons/contact/instagram.png" alt="" />
               </a>
-              <img src="/assets/icons/contact/behance.png" alt="" />
+              <!--               <img src="/assets/icons/contact/behance.png" alt="" />
+ -->
             </div>
-            <a href="linktree.com">My LinkTree</a>
+            <!--             <a href="linktree.com">My LinkTree</a>
+ -->
           </div>
         </div>
       </section>
 
-      <section class="fun__section" id="fun__section">
+      <section class="end-notes__section">
+        <div class="glassmorphism-text">
+          <h2 class="ff-lora fstyle-italic padding-bottom-1em">End note</h2>
+          <p>Thank you for making it this far!</p>
+            <p> This page was designed and built by me, <span class="underline-colored">Tara Olivia Bjørheim.</span> </p>
+            <p> It's built with HTML, CSS, and vanilla JavaScript. Version control is handled through GitHub. The page is deployed through <a href="https://www.netlify.com/" target="_blank" class="fw-500">Netlify</a>. Stay tuned for more updates as I incorporate more of my ideas!</p>
+            <p>All the photos on this site are personal and close to my heart. I kindly ask that they not be used without permission. Thank you for understanding!</p>
+            <p>The icons are from <a href="https://icons8.com/" class="fw-700">icons8.</a></p>
+          <p>Got any ideas or feedback? Don't hesitate to <a href="#contact__section" class="fw-500">send me a message :)</a></p>
+          <p>&copy; 2024 Tara Olivia Bjørheim. All rights reserved.</p>
+        </div>
+      </section>
+
+      <!--       <section class="fun__section" id="fun__section">
         <div class="interview-container">
           <div class="accordion-category__wrapper">
             <div class="accordion-category">
               <button class="category-header">Work</button>
               <div class="category-content">
                 <div class="accordion-item">
-                  <label
-                    ><input type="checkbox" name="work" value="currentJob" />
-                    What do you currently do for work?</label
-                  >
+                  <label><input type="checkbox" name="work" value="currentJob" /> What do you currently do for work?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="work"
-                      value="professionalExperience"
-                    />
-                    How has your professional experience shaped your approach to
-                    front-end development?</label
-                  >
+                  <label><input type="checkbox" name="work" value="professionalExperience" /> How has your professional experience shaped your approach to front-end development?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="work"
-                      value="careerChallenge"
-                    />
-                    What has been your biggest challenge in your career so
-                    far?</label
-                  >
+                  <label><input type="checkbox" name="work" value="careerChallenge" /> What has been your biggest challenge in your career so far?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="work"
-                      value="alternativeCareer"
-                    />
-                    If you weren’t a developer, what would you be doing?</label
-                  >
+                  <label><input type="checkbox" name="work" value="alternativeCareer" /> If you weren’t a developer, what would you be doing?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="work"
-                      value="workingInBrussels"
-                    />
-                    What’s your favorite part of working in Brussels?</label
-                  >
+                  <label><input type="checkbox" name="work" value="workingInBrussels" /> What’s your favorite part of working in Brussels?</label>
                 </div>
               </div>
             </div>
@@ -971,57 +700,19 @@
               <button class="category-header">Education</button>
               <div class="category-content">
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="education"
-                      value="interestInDev"
-                    />
-                    What sparked your interest in front-end development?</label
-                  >
+                  <label><input type="checkbox" name="education" value="interestInDev" /> What sparked your interest in front-end development?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="education"
-                      value="futureLearning"
-                    />
-                    Are there any new skills or technologies you’re looking to
-                    learn?</label
-                  >
+                  <label><input type="checkbox" name="education" value="futureLearning" /> Are there any new skills or technologies you’re looking to learn?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="education"
-                      value="travelInfluence"
-                    />
-                    How has traveling influenced your learning and
-                    development?</label
-                  >
+                  <label><input type="checkbox" name="education" value="travelInfluence" /> How has traveling influenced your learning and development?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="education"
-                      value="wishLearnedEarlier"
-                    />
-                    What’s one thing you wish you had learned earlier in your
-                    career?</label
-                  >
+                  <label><input type="checkbox" name="education" value="wishLearnedEarlier" /> What’s one thing you wish you had learned earlier in your career?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="education"
-                      value="motivatingYourself"
-                    />
-                    How do you stay motivated to keep learning?</label
-                  >
+                  <label><input type="checkbox" name="education" value="motivatingYourself" /> How do you stay motivated to keep learning?</label>
                 </div>
               </div>
             </div>
@@ -1030,56 +721,19 @@
               <button class="category-header">Projects</button>
               <div class="category-content">
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="projects"
-                      value="proudProject"
-                    />
-                    Which project are you most proud of and why?</label
-                  >
+                  <label><input type="checkbox" name="projects" value="proudProject" /> Which project are you most proud of and why?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="projects"
-                      value="projectChallenge"
-                    />
-                    What’s been the biggest challenge you’ve faced in a
-                    project?</label
-                  >
+                  <label><input type="checkbox" name="projects" value="projectChallenge" /> What’s been the biggest challenge you’ve faced in a project?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="projects"
-                      value="futureProject"
-                    />
-                    Do you have any future projects in mind?</label
-                  >
+                  <label><input type="checkbox" name="projects" value="futureProject" /> Do you have any future projects in mind?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="projects"
-                      value="creatingFromScratch"
-                    />
-                    How do you approach creating something from scratch?</label
-                  >
+                  <label><input type="checkbox" name="projects" value="creatingFromScratch" /> How do you approach creating something from scratch?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="projects"
-                      value="desiredFeature"
-                    />
-                    What’s one feature you’d love to include in your future
-                    projects?</label
-                  >
+                  <label><input type="checkbox" name="projects" value="desiredFeature" /> What’s one feature you’d love to include in your future projects?</label>
                 </div>
               </div>
             </div>
@@ -1088,47 +742,16 @@
               <button class="category-header">Personal Life</button>
               <div class="category-content">
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="personal"
-                      value="workLifeBalance"
-                    />
-                    How do you maintain a good work-life balance as a
-                    developer?</label
-                  >
+                  <label><input type="checkbox" name="personal" value="workLifeBalance" /> How do you maintain a good work-life balance as a developer?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="personal"
-                      value="adviceForDevelopers"
-                    />
-                    What advice would you give to someone just starting out in
-                    web development?</label
-                  >
+                  <label><input type="checkbox" name="personal" value="adviceForDevelopers" /> What advice would you give to someone just starting out in web development?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="personal"
-                      value="personalMotto"
-                    />
-                    Do you have a personal motto that guides your work or
-                    life?</label
-                  >
+                  <label><input type="checkbox" name="personal" value="personalMotto" /> Do you have a personal motto that guides your work or life?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="personal"
-                      value="futureTravelGoal"
-                    />
-                    What’s your next big travel goal and why?</label
-                  >
+                  <label><input type="checkbox" name="personal" value="futureTravelGoal" /> What’s your next big travel goal and why?</label>
                 </div>
               </div>
             </div>
@@ -1137,36 +760,13 @@
               <button class="category-header">Hobbies and Interests</button>
               <div class="category-content">
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="hobbies"
-                      value="creativeHobbies"
-                    />
-                    How do your creative hobbies inspire your work?</label
-                  >
+                  <label><input type="checkbox" name="hobbies" value="creativeHobbies" /> How do your creative hobbies inspire your work?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="hobbies"
-                      value="gamingInfluence"
-                    />
-                    Does your love for gaming influence your approach to
-                    development?</label
-                  >
+                  <label><input type="checkbox" name="hobbies" value="gamingInfluence" /> Does your love for gaming influence your approach to development?</label>
                 </div>
                 <div class="accordion-item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="hobbies"
-                      value="unexpectedLesson"
-                    />
-                    What’s one unexpected thing you’ve learned from your
-                    hobbies?</label
-                  >
+                  <label><input type="checkbox" name="hobbies" value="unexpectedLesson" /> What’s one unexpected thing you’ve learned from your hobbies?</label>
                 </div>
               </div>
             </div>
@@ -1176,15 +776,10 @@
 
           <section id="personalizedPortfolioContent"></section>
         </div>
-      </section>
+      </section> -->
     </div>
   </body>
   <div class="bg-container flipped"></div>
   <div class="bg-container normal"></div>
-  <div class="bg-container flipped"></div>
-  <div class="bg-container normal"></div>
-  <div class="bg-container flipped"></div>
-  <div class="bg-container normal"></div>
-  <div class="bg-container flipped"></div>
-  <div class="bg-container normal"></div>
+
 </html>

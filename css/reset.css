@@ -1,3 +1,13 @@
+/* ============================= */
+/* Imports
+
+/* Import variables */
+@import url("variables.css");
+
+/* Import utilities */
+@import url("utilities.css");
+
+
 *,
 *:before,
 *:after {
@@ -12,13 +22,12 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   margin: 0;
-  line-height: 1.5;
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: var(--font-primary);
+  font-family: var(--font-raleway);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-400);
 }
 
 html,
@@ -48,7 +57,7 @@ h6 {
   max-width: 60ch;
   max-width: 40em;
   cursor: default;
-
+  line-height: 1.5;
 }
 
 * {
@@ -88,12 +97,6 @@ h2,
 h3 {
   font-variant-ligatures: common-ligatures;
   font-kerning: normal;
-}
-
-
-
-p {
-  max-width: 40em;
 }
 
 html {
