@@ -7,34 +7,14 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      as="style"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
 
     <!-- Preload and Load Critical CSS -->
-    <link
-      rel="preload"
-      href="/css/preload.css"
-      as="style"
-      onload="this.rel='stylesheet'"
-    />
+    <link rel="preload" href="/css/preload.css" as="style" onload="this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/css/preload.css" /></noscript>
-    <link
-      rel="preload"
-      href="/assets/background/background-holo-1.jpg"
-      as="image"
-    />
-    <link
-      rel="preload"
-      href="/assets/background/background-holo-2.jpg"
-      as="image"
-    />
+    <link rel="preload" href="/assets/background/background-holo-1.jpg" as="image" />
+    <link rel="preload" href="/assets/background/background-holo-2.jpg" as="image" />
 
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="/css/styles.css" />
@@ -48,143 +28,172 @@
     </script>
   </head>
 
-<body>
-  <!-- Background Container -->
-  <div class="bg-container normal">
+  <body>
+    <!-- Background Container -->
+    <div class="bg-container normal">
+      <!-- Navigation -->
+      <nav class="header__nav glassmorphism" role="navigation">
+        <div class="header__nav-content padding-top-bottom-1em">
+          <a href="/index.html" aria-label="Go back to homepage"> Go back </a>
+          <p class="ff-lora fw-500 fstyle-italic">Tara Olivia Bjørheim</p>
+        </div>
+      </nav>
 
-  <!-- Navigation -->
-  <nav class="header__nav glassmorphism">
-    <div class="header__nav-content">
-      <a href="#hero__section">
-        <p class="ff-lora fw-700 fstyle-italic">Tara Olivia Bjørheim</p>
-      </a>
-      <span class="active-section">Bloom Lifestyle Blog</span>
+      <main role="main">
+        <section class="project-page__section glassmorphism-text project-page__section-heading">
+          <div class="project-page__section-heading-left">
+            <h1 class="ff-lora fs-xxl fw-500 fstyle-italic padding-top-bottom-1em">Bloom Lifestyle Blog</h1>
+            <p class="ff-raleway padding-bottom-1em">The aim: Modern, Clean, and Inspiring</p>
+            <p class="ff-raleway padding-bottom-1em">A responsive blog platform focused on lifestyle and self-care.</p>
+            <!-- Key Technologies -->
+            <div class="key-tech-list">
+              <li class="tech-item glassmorphism-text">HTML, CSS, JavaScript</li>
+              <li class="tech-item glassmorphism-text">Figma and Canva</li>
+              <li class="tech-item glassmorphism-text">API Integration</li>
+              <li class="tech-item glassmorphism-text">User Authentication</li>
+              <li class="tech-item glassmorphism-text">TinyMCE WYSIWYG Editor</li>
+              <li class="tech-item glassmorphism-text">CSS Variables & Utility Classes</li>
+              <li class="tech-item glassmorphism-text">Netlify (Deployment)</li>
+              <li class="tech-item glassmorphism-text">GitHub (Version Control and Projects)</li>
+            </div>
+          </div>
+          <img src="/assets/projects/Bloom-hero.png" alt="Bloom Lifestyle Blog Hero Section showing the responsive design" />
+        </section>
 
+        <section class="project-page__section glassmorphism-text wrap-reverse">
+          <img src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.35.50.png" alt="Detailed view of a blog post titled 'How to Spot Wild Animals: Tips for Observing Wildlife in Nature,' with clear typography, a sidebar showing the author, and a 'copy link' button" />
+          <div>
+            <h2 class="padding-top-bottom-1em">My Role in the Project</h2>
+            <p>The Bloom Lifestyle Blog was developed as part of my final exam for the FED year 1 program. The exam brief required the creation of a fully responsive blog platform that integrates dynamic content through an API and provides both a public-facing interface and admin features. I was responsible for every aspect of the project, including:</p>
+            <ul>
+              <li><span class="fw-700">Design and Branding:</span> Using Figma, I created high-fidelity wireframes and a style guide to establish the aesthetic and branding of the site. I also created the logo and other visual elements in Canva.</li>
+              <li><span class="fw-700">Front-End Development:</span> I implemented the front-end using HTML, CSS, and JavaScript, ensuring a responsive and accessible design that works across all devices.</li>
+              <li><span class="fw-700">Admin and User Features:</span> I developed an admin page that allows the owner to create, edit, and delete blog posts. Users need to register and log in to access this. I integrated TinyMCE for post formatting, ensuring user-friendly content creation.</li>
+              <li>
+                <p><span class="fw-700">Testing and Accessibility:</span> The project underwent extensive testing, including responsiveness, performance, and accessibility. I followed WCAG guidelines and used ARIA attributes to ensure that the site is accessible to users with disabilities, including screen reader support. Testing was also conducted across multiple devices and browsers to ensure a consistent and inclusive user experience.</p>
+              </li>
+              <li><span class="fw-700">Deployment:</span> I deployed the project on Netlify, handling the version control via GitHub. The site is live and fully functional.</li>
+            </ul>
+            <p class="padding-bottom-1em">This project allowed me to practice managing a full development lifecycle, from planning and design through to implementation, testing, and deployment.</p>
+          </div>
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Technical Challenges</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">API Integration for Dynamic Content:</span> Managing API requests and asynchronous data flow involved creating reliable error handling and ensuring performance stayed optimized while dynamically fetching blog posts.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Responsive Design Across Devices:</span> Designing a layout that adapts to mobile, tablet, and desktop devices required mastering CSS media queries and flexible grid layouts, especially ensuring the carousel worked flawlessly on all screen sizes.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Secure User Authentication:</span> Implementing secure login and logout features was crucial, especially handling user sessions and preventing unauthorized access to admin features while ensuring a smooth user experience.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Loading Screens and Preloading:</span> Implementing custom loading screens and using preloading techniques for assets ensured a smoother user experience by reducing perceived load times. This approach helped maintain a polished user interface and ensured that key assets were ready as soon as the user needed them.</p>
+              </li>
+              
+              <li>
+                <p><span class="fw-700">Using CSS Variables & Utility Classes for Efficiency:</span> Implementing CSS variables and utility classes helped ensure design consistency throughout the project. By defining reusable styles and theme variables, I was able to easily maintain and update colors, font sizes, and spacing, improving the maintainability and scalability of the codebase.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Modular JavaScript:</span> I structured the JavaScript code in a modular way, splitting it into distinct modules for easier management and debugging. This approach ensured better code organization and made future updates or feature additions simpler to implement.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">No Frameworks, Vanilla JS:</span> The entire project was built using vanilla JavaScript without relying on frameworks. This required a deep understanding of JavaScript fundamentals to handle complex tasks like DOM manipulation, event handling, and asynchronous operations efficiently.</p>
+              </li>
+            </ul>
+          </div>
+          <img src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.35.12.png" alt="Carousel showcasing the post 'Why You Should Prioritize Yourself and Not Feel Guilty About It,' followed by a grid of blog posts like 'DIY Bath Recipes for a Relaxing Spa Experience at Home." />
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Features</h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <p><span class="fw-700">Interactive Carousel for Latest Blog Posts</span> Displays the three most recent posts in an eye-catching carousel, optimized for performance with smooth transitions and lazy loading for images.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Dynamic Blog Post Management</span> Integrated with an API that fetches blog posts dynamically, enabling real-time content updates and easy management of posts on the admin side.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Search and Pagination for Blog Posts:</span> Users can search blog posts by tags or keywords, and pagination ensures they can easily navigate through older content without being overwhelmed by too many posts at once.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Responsive Design</span> The site adapts seamlessly to various screen sizes, from mobile phones to desktops, providing an optimized and consistent experience across all devices.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Admin Page and Banner for Blog Post Management</span> Allows authenticated users to create, edit, and manage blog posts easily with a user-friendly interface, including TinyMCE integration for rich text editing.</p>
+              </div>
+            </div>
+          </div>
+          <img src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.32.34.png" alt="Bloom's login screen with fields for email and password, accompanied by a floral background and the Bloom logo at the top." />
+          <img src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.32.41.png" alt="Bloom's custom loading screen with the Bloom logo centered against a dark background, featuring floral accents." />
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">What I Learned</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">Login, Registration, and CMS Implementation:</span> I gained hands-on experience in implementing secure login and registration processes, as well as managing user sessions. Developing the CMS functionality for blog post creation and editing was one of the most valuable aspects of this project.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Using TinyMCE for the First Time:</span> I integrated TinyMCE to provide a rich text editor for the admin, enabling intuitive blog post creation. This helped me understand how to customize and implement third-party libraries effectively.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Manual Deployment During the Exam:</span> I learned how to manually deploy the project while the exam was ongoing, which taught me a lot about handling version control, deployment processes, and troubleshooting on the fly.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">New CSS Techniques:</span> Throughout the project, I picked up new CSS tricks, from creating more efficient layouts to refining hover effects, improving both the aesthetic and functional aspects of the design.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Performance Focus:</span> By optimizing image loading and improving performance, including implementing preloading techniques for the first time, I learned to balance functionality with speed, which ultimately enhanced the user experience.</p>
+              </li>
+            </ul>
+          </div>
+          <img src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.34.16.png" alt="Admin overview screen of Bloom, displaying a blog post management system where users can edit or delete posts and write new ones." />
+        </section>
+
+        <section class="project-page__section glassmorphism-text wrap-reverse">
+          <img src="/assets/projects/bloom/figma.png" alt="Screenshot of Bloom’s design wireframe created in Figma, showcasing the layout and visual structure." />
+          <div>
+            <h2 class="padding-top-bottom-1em">Future Improvements</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">Adding Tags to Search Features:</span> One key improvement I plan to implement is adding the ability to search by tags, allowing users to find content more easily by specific categories.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">DRY CSS Principles:</span> Through the project, I learned the importance of keeping my CSS as maintainable and DRY (Don't Repeat Yourself). I aim to refactor parts of the code to achieve even more efficiency in my styling.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Fine-Tuning Design and Functionality:</span> While the design and functionality are fully implemented, there are a few areas I plan to revisit to improve user interaction, specifically around minor UI elements and refining responsiveness for certain layouts.</p>
+              </li>
+            </ul>
+            <p class="padding-bottom-1em">These improvements reflect my ongoing commitment to refining both the functionality and design of the Bloom platform.</p>
+          </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Explore Bloom</h2>
+            <div class="project-links">
+              <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" class="glassmorphism-text">View Live</a>
+
+              <a href="https://github.com/NoroffFEU/FED1-PE1-taraolivia" target="_blank" aria-label="Go to GitHub repository" class="project-page-github">
+                <img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
+              </a>
+            </div>
+            <p class="padding-top-bottom-1em">Check out the live version of the Bloom platform or explore the source code on GitHub to see how it's built.</p>
+          </div>
+        </section>
+      </main>
     </div>
-  </nav>
-
-  <main>
-
-  <!-- Hero Section -->
-    <h1 class="ff-lora fw-700 fstyle-italic padding-top-bottom-2em">Bloom Lifestyle Blog</h1>
-    <h2 class="ff-lora fw-200">Modern, Clean, and Inspiring</h2>
-    <p class="ff-raleway fs-base">A responsive blog platform focused on lifestyle and self-care.</p>
-
-  <!-- Project Overview Section -->
-    <h2 class="heading2">Project Overview</h2>
-    <p class="body-text">Bloom is a responsive blog platform targeting users interested in lifestyle and self-care, offering a modern and clean interface. Developed using HTML, CSS, and JavaScript, the site integrates an API to manage dynamic blog posts. Key features include a carousel for the 3 latest posts, a responsive grid displaying all posts, and admin functionality for registration, login, and post management.</p>
-    
-    <!-- Key Technologies -->
-    <h3 class="heading3">Key Technologies</h3>
-    <ul class="body-text">
-      <li>HTML, CSS, JavaScript</li>
-      <li>API Integration</li>
-      <li>Responsive Grid Layout</li>
-      <li>User Authentication</li>
-      <li>Admin Dashboard</li>
-    </ul>
-
-  <!-- Technical Challenges Section -->
-   <div class="project-page__section glassmorphism-text">
-    <img src="/assets/projects/Bloom-hero.png" alt="">
-    <div>
-    <h2 class="heading2">Technical Challenges</h2>
-    <p class="body-text">Here, you can describe any issues faced during the development of Bloom, for example:</p>
-    <ul class="body-text">
-      <li>Integrating the API for dynamic blog posts</li>
-      <li>Ensuring responsiveness across different devices</li>
-      <li>Managing user authentication and data security</li>
-      <li>Optimizing the carousel for performance</li>
-    </ul>
-    <p class="body-text">Explain how you tackled each challenge, providing technical insights.</p>
-    </div>
-   </div>
-
-
-<!-- Project Features Section -->
-<div class="project-page__section glassmorphism-text">
-    <div>
-      <h2 class="heading2">Features</h2>
-      <ul class="body-text">
-        <li>Carousel of the latest blog posts</li>
-        <li>Dynamic blog post management with API</li>
-        <li>Responsive design for seamless experience on any device</li>
-        <li>Admin functionalities for creating, editing, and managing posts</li>
-      </ul>
-      <p class="body-text">Here, you can describe how each feature enhances the user experience and what technologies were used to implement them.</p>
-    </div>
-        <img src="/assets/projects/Bloom-features.png" alt="Screenshot of Bloom Features">
-
-  </div>
-  
-
-<!-- Learning & Takeaways Section -->
-<div class="project-page__section glassmorphism-text">
-    <img src="/assets/projects/Bloom-learning.png" alt="Screenshot of Bloom Learning & Takeaways">
-    <div>
-      <h2 class="heading2">What I Learned</h2>
-      <p class="body-text">Here, describe what you learned while building the Bloom platform, such as:</p>
-      <ul class="body-text">
-        <li>Mastering responsive design for modern devices</li>
-        <li>Implementing secure authentication features</li>
-        <li>Working with API integrations and dynamic content</li>
-        <li>Improving performance for better user experience</li>
-      </ul>
-      <p class="body-text">Add any other insights or growth you experienced during this project, whether technical or related to project management.</p>
-    </div>
-  </div>
-  
-
-<!-- Screenshots or Media Section -->
-<div class="project-page__section glassmorphism-text">
-    <img src="/assets/projects/Bloom-screenshots.png" alt="Screenshots of Bloom Project">
-    <div>
-      <h2 class="heading2">Screenshots</h2>
-      <div class="image-gallery">
-        <img src="/assets/projects/bloom-hero.png" alt="Bloom Project Screenshot" class="glassmorphism" />
-        <!-- Add more screenshots as needed -->
-      </div>
-      <p class="body-text">Showcase multiple screenshots that highlight different features and designs of the Bloom platform.</p>
-    </div>
-  </div>
-  
-
-<!-- Call to Action Section -->
-<div class="glassmorphism-text">
-    <img src="/assets/projects/Bloom-cta.png" alt="Explore Bloom">
-    <div>
-      <h2 class="heading2">Explore Bloom</h2>
-      <div class="project-links">
-        <a
-          href="https://github.com/NoroffFEU/FED1-PE1-taraolivia"
-          target="_blank"
-          class="glassmorphism"
-          ><img
-            src="/assets/icons/github-mark.png"
-            alt="Github mark logo in black"
-            id="github-mark-round-black"
-        /></a>
-
-        <a
-          href="https://bloom-lifestyle-blog.netlify.app/"
-          target="_blank"
-          class="glassmorphism"
-          >View Live</a
-        >
-      </div>
-    </div>
-      <p class="body-text">Check out the live version of the Bloom platform or explore the source code on GitHub to see how it's built.</p>
-    </div>
-  </div>
-  
-
-
-</main>
-
-
-
-</div>
-</body>
+  </body>
   <!-- Background Containers for Visual Design -->
   <div class="bg-container flipped"></div>
   <div class="bg-container normal"></div>

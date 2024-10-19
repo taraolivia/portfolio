@@ -3,7 +3,7 @@ export function initializeNavAndCloud() {
     const sections = document.querySelectorAll('section');
     const nameElement = document.querySelector('.header__name');
     const activeSectionDisplay = document.querySelector('.active-section');
-    const offset = 90;
+    const offset = 60;
 
     if (!navLinks.length || !sections.length || !nameElement || !activeSectionDisplay) {
         console.error("Navigation elements not found");

@@ -51,7 +51,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+li,
+span {
   overflow-wrap: break-word;
   font-weight: var(--font-weight-normal);
   max-width: 60ch;
