@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tara Olivia Bjørheim | Game Hub</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
+
+    <!-- Preload and Load Critical CSS -->
+    <link rel="preload" href="/css/preload.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/css/preload.css" /></noscript>
+    <link rel="preload" href="/assets/background/background-holo-1.jpg" as="image" />
+    <link rel="preload" href="/assets/background/background-holo-2.jpg" as="image" />
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- JavaScript Modules -->
+    <script type="module" src="/js/main.js"></script>
+
+    <script>
+      /* To prevent Firefox FOUC, this must be here */
+      let FF_FOUC_FIX;
+    </script>
+  </head>
+
+  <body>
+    <!-- Background Container -->
+    <div class="bg-container normal">
+      <!-- Navigation -->
+      <nav class="header__nav glassmorphism">
+        <div class="header__nav-content padding-top-bottom-1em">
+          <a href="/index.html" aria-label="Go back to homepage"> Go back </a>
+          <p class="ff-lora fw-500 fstyle-italic">Tara Olivia Bjørheim</p>
+        </div>
+      </nav>
+
+      <main role="main">
+        <section class="project-page__section glassmorphism-text project-page__section-heading">
+          <div class="project-page__section-heading-left">
+            <h1 class="ff-lora fs-xxl fw-500 fstyle-italic padding-top-bottom-1em">Game Hub</h1>
+            <p class="ff-raleway padding-bottom-1em">The universe of games</p>
+            <p class="ff-raleway padding-bottom-1em">An interactive online store focused on providing an immersive gaming experience.</p>
+            <!-- Key Technologies -->
+            <div class="key-tech-list">
+              <li class="tech-item glassmorphism-text">HTML, CSS, JavaScript</li>
+              <li class="tech-item glassmorphism-text">API Integration</li>
+              <li class="tech-item glassmorphism-text">Theme Switching</li>
+              <li class="tech-item glassmorphism-text">Modular JavaScript</li>
+              <li class="tech-item glassmorphism-text">GitHub (Version Control)</li>
+              <li class="tech-item glassmorphism-text">CSS Variables & Utility Classes</li>
+            </div>
+          </div>
+          <img src="/assets/projects/gamehub-hero.png" alt="Game Hub Hero Section" />
+        </section>
+
+        <section class="project-page__section glassmorphism-text wrap-reverse">
+          <img src="/assets/projects/gamehub-details.png" alt="Detailed view of a single game page in Game Hub, showing a dynamically generated review section" />
+          <div>
+            <h2 class="padding-top-bottom-1em">My Role in the Project</h2>
+            <p>Game Hub was developed as part of my first JavaScript project. I was responsible for every aspect of the project, including:</p>
+            <ul>
+              <li><span class="fw-700">Design and Development:</span> This was my first full HTML, CSS, and JavaScript project, including the design of multiple interactive elements such as a theme switcher and dynamic review system.</li>
+              <li><span class="fw-700">JavaScript Logic:</span> The store dynamically fetches game data from the GameHub API and uses JavaScript to handle filtering, cart management, and random review generation.</li>
+              <li>
+                <p><span class="fw-700">Testing and Accessibility:</span> I followed WCAG guidelines and used ARIA attributes to ensure that the site is accessible, including for the theme switcher and cart functionality. Testing was done across multiple devices and browsers.</p>
+              </li>
+              <li><span class="fw-700">Deployment:</span> The project was deployed on GitHub Pages, handling version control via GitHub.</li>
+            </ul>
+            <p class="padding-bottom-1em">This project allowed me to develop my skills in JavaScript logic, API usage, and front-end development.</p>
+          </div>
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Technical Challenges</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">API Integration for Dynamic Game Data:</span> Managing API requests and handling dynamic content from the GameHub API required asynchronous programming and troubleshooting response data.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Responsive Design Across Devices:</span> Ensuring that the game grid and single game pages adapted seamlessly across all devices was a major focus during development.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Theme Switcher & Accessibility:</span> I built a theme switcher with 8 color schemes, focusing on making each theme accessible to users based on WCAG guidelines.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Performance Optimization:</span> I used CSS variables for theme management and optimized image loading to improve overall performance and user experience.</p>
+              </li>
+            </ul>
+          </div>
+          <img src="/assets/projects/gamehub-screenshot.png" alt="Game Hub product page, showcasing theme switcher and dynamic reviews" />
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Features</h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <p><span class="fw-700">Dynamic Product Display</span> The product grid dynamically displays games fetched from the GameHub API, allowing for real-time updates.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Cart and Checkout Functionality</span> Users can add games to their cart and proceed to a checkout simulation with a live summary of items.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Theme Switching</span> Users can switch between 8 different themes, with theme preferences stored for the session.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Dynamic Review Generator</span> A random review is generated for each game, with dynamic icons, ratings, and review text.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Responsive Design</span> The site adapts seamlessly to various screen sizes, from mobile phones to desktops, ensuring an optimized experience.</p>
+              </div>
+            </div>
+          </div>
+          <img src="/assets/projects/gamehub-cart.png" alt="Game Hub checkout page with a summary of games in the cart" />
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">What I Learned</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">Working with JavaScript:</span> This project was my first time writing JavaScript from scratch, allowing me to deepen my understanding of DOM manipulation, event handling, and async programming.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Using CSS Variables:</span> I implemented CSS variables for theme switching, making it easier to manage and update the color schemes across the site.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Error Handling & API Debugging:</span> I learned a lot about debugging API-related issues and implementing user-friendly error messages.</p>
+              </li>
+            </ul>
+          </div>
+          <img src="/assets/projects/gamehub-learning.png" alt="Game Hub learning and takeaways" />
+        </section>
+
+        <section class="project-page__section glassmorphism-text wrap-reverse">
+          <img src="/assets/projects/gamehub-figma.png" alt="Game Hub wireframes in Figma showcasing the visual design process" />
+          <div>
+            <h2 class="padding-top-bottom-1em">Future Improvements</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">Rewrite Code for Efficiency:</span> Now that I have learned more, I plan to refactor the code for better structure and maintainability.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Improve Loading Screen:</span> I want to implement a more interactive loading screen to enhance the user experience.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Fix Bugs:</span> There are a few minor bugs I need to fix, especially regarding the theme switcher and cart functionality.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Implement Preferred Data Theme Recognition:</span> I plan to update the theme switcher so it can recognize and automatically apply the user's preferred theme from their device settings.</p>
+              </li>
+            </ul>
+            <p class="padding-bottom-1em">These improvements reflect my commitment to continuously improving the Game Hub platform.</p>
+          </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Explore Game Hub</h2>
+            <div class="project-links">
+              <a href="https://taraolivia.github.io/GameHub-taraolivia-js_integration/index.html" target="_blank" class="glassmorphism-text">View Live</a>
+
+              <a href="https://github.com/NoroffFEU/FED1-PE1-taraolivia" target="_blank" aria-label="Go to GitHub repository" class="project-page-github">
+                <img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
+              </a>
+            </div>
+            <p class="padding-top-bottom-1em">Check out the live version of the Game Hub platform or explore the source code on GitHub to see how it's built.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+  <!-- Background Containers for Visual Design -->
+  <div class="bg-container flipped"></div>
+  <div class="bg-container normal"></div>
+  <div class="bg-container flipped"></div>
+  <div class="bg-container normal"></div>
+</html>
