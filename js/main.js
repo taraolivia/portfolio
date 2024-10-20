@@ -52,7 +52,7 @@ function adjustBackgroundContainers() {
   const contentHeight = document.body.scrollHeight; // Total height of the content
   const viewportHeight = window.innerHeight; // Height of the viewport
   const bgContainerHeight = viewportHeight; // Each bg-container is 100vh
-  const requiredContainers = Math.ceil(contentHeight / bgContainerHeight + 1); // Add 1 extra container to ensure coverage
+  const requiredContainers = Math.ceil(contentHeight / bgContainerHeight) +1; 
 
   const bgContainerParent = document.body;
   

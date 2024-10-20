@@ -51,6 +51,9 @@ html {
 }
 
 
+body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
 
 
 
