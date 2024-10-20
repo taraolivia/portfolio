@@ -1,6 +1,12 @@
 import { initializeNavAndCloud } from './navbar.mjs';
 import { initializeImageSlider } from './aboutMeCarousel.mjs';
 
+window.onload = function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  loadingScreen.classList.add('hide'); // Add the class to hide the loading screen
+};
+
+
 document.addEventListener('DOMContentLoaded', () => {
   initializeNavAndCloud();
   initializeImageSlider();
@@ -46,10 +52,12 @@ function adjustBackgroundContainers() {
   const contentHeight = document.body.scrollHeight; // Total height of the content
   const viewportHeight = window.innerHeight; // Height of the viewport
   const bgContainerHeight = viewportHeight; // Each bg-container is 100vh
-  const requiredContainers = Math.ceil(contentHeight / bgContainerHeight) + 1; // Add 1 extra container to ensure coverage
+  const requiredContainers = Math.ceil(contentHeight / bgContainerHeight + 1); // Add 1 extra container to ensure coverage
 
-  const bgContainerParent = document.body; // Assuming bg-containers are directly under body
-  let existingContainers = document.querySelectorAll('.bg-container');
+  const bgContainerParent = document.body;
+  
+  // Select all bg-containers, excluding the loading screen
+  let existingContainers = Array.from(document.querySelectorAll('.bg-container')).filter(container => container.id !== 'loading-screen');
   const currentContainers = existingContainers.length;
 
   // Add more containers if there aren't enough
@@ -76,6 +84,8 @@ function adjustBackgroundContainers() {
     }
   }
 }
+
+
 
 
 

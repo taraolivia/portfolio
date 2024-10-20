@@ -34,3 +34,40 @@
     }
   }
   
+  /* Loading screen styling */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 9999; /* Ensure it's on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 150% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: gradientAnimation 20s infinite alternate;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+#loading-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Add this to your CSS */
+.no-scroll {
+  overflow: hidden;
+}
+
+
+.loading-indicator {
+  font-family: var(--font-lora);
+  font-size: var(--font-size-xl);
+  margin: auto;
+  color: hotpink;
+}

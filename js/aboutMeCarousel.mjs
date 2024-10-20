@@ -79,38 +79,45 @@ export function initializeImageSlider() {
 
     shuffleArray(imageFilenames); // Randomize the images
 
-    // Set up IntersectionObserver for lazy loading
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src; // Load image when in view
-                observer.unobserve(img); // Stop observing once the image is loaded
-            }
-        });
-    }, { rootMargin: '50px' });
+// Create a loading indicator
+const loadingIndicator = document.createElement('div');
+loadingIndicator.classList.add('loading-indicator');
+loadingIndicator.innerText = 'Cute pictures loading!'; // You can use a spinner or other indicator
+sliderList.appendChild(loadingIndicator);
 
-    // Function to create and append images lazily
-    function createAndAppendImage(filename, index) {
-        const sliderItem = document.createElement('div');
-        sliderItem.classList.add('slider-list-item');
-        sliderItem.setAttribute('style', `--position: ${index + 1}`);
+// Add an event listener to hide the loading indicator once all images have loaded
+let imagesLoaded = 0;
+
+function createAndAppendImage(filename, index) {
+    const sliderItem = document.createElement('div');
+    sliderItem.classList.add('slider-list-item');
+    sliderItem.setAttribute('style', `--position: ${index + 1}`);
+
+    const img = document.createElement('img');
+    img.src = `${imageFolderPath}${filename}`; // Load the image immediately
+    img.alt = `Image ${filename}`;
+
+    // Disable right-click for this specific image
+    img.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    });
+    img.draggable = false;
+
+    img.onload = () => {
+        imagesLoaded++;
+        if (imagesLoaded === imageFilenames.length) {
+            loadingIndicator.style.display = 'none'; // Hide loading indicator when all images are loaded
+        }
+    };
+
+    sliderItem.appendChild(img);
+    sliderList.appendChild(sliderItem);
+}
+
+// Append images dynamically to the slider list
+imageFilenames.forEach(createAndAppendImage);
+
     
-        const img = document.createElement('img');
-        img.dataset.src = `${imageFolderPath}${filename}`; // Set data-src for lazy loading
-        img.alt = `Image ${filename}`;
-        observer.observe(img); // Observe image for lazy loading
-
-                // Disable right-click for this specific image
-                img.addEventListener('contextmenu', (e) => {
-                    e.preventDefault();
-                });
-                img.draggable = false;
-
-    
-        sliderItem.appendChild(img);
-        sliderList.appendChild(sliderItem);
-    }
 
     // Append images dynamically to the slider list
     imageFilenames.forEach(createAndAppendImage);
