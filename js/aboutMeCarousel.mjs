@@ -1,7 +1,6 @@
 export function initializeImageSlider() {
     const sliderList = document.querySelector('.slider-list');
     if (!sliderList) {
-        console.error('Slider list not found!');
         return;
     }
 

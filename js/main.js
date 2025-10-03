@@ -1,10 +1,18 @@
 import { initializeNavAndCloud } from './navbar.mjs';
 import { initializeImageSlider } from './aboutMeCarousel.mjs';
 
-window.onload = function() {
-  const loadingScreen = document.getElementById('loading-screen');
-  loadingScreen.classList.add('hide'); // Add the class to hide the loading screen
-};
+// Prevent scrolling during loading
+document.body.classList.add('no-scroll');
+
+// Use DOMContentLoaded instead of window.onload for faster loading
+document.addEventListener('DOMContentLoaded', function() {
+  // Small delay to ensure smooth transition
+  setTimeout(() => {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.classList.add('hide');
+    document.body.classList.remove('no-scroll');
+  }, 500);
+});
 
 
 document.addEventListener('DOMContentLoaded', () => {

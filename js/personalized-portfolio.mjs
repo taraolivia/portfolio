@@ -4,7 +4,6 @@ export function initializePortfolio() {
     const portfolioContent = document.getElementById('personalizedPortfolioContent');
 
     if (!categoryHeaders || !submitButton || !portfolioContent) {
-        console.error("Portfolio elements not found");
         return;
     }
 

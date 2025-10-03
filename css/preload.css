@@ -68,6 +68,9 @@
 .loading-indicator {
   font-family: var(--font-lora);
   font-size: var(--font-size-xl);
-  margin: auto;
   color: hotpink;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
 }

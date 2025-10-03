@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tara Olivia Bjørheim | HeartBids</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
+
+    <!-- Preload and Load Critical CSS -->
+    <link rel="preload" href="../css/preload.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="../css/preload.css" /></noscript>
+    <link rel="preload" href="../assets/background/background-holo-1.jpg" as="image" />
+    <link rel="preload" href="../assets/background/background-holo-2.jpg" as="image" />
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- JavaScript Modules -->
+    <script type="module" src="../js/main.js"></script>
+
+    <script>
+      /* To prevent Firefox FOUC, this must be here */
+      let FF_FOUC_FIX;
+    </script>
+  </head>
+
+  <body>
+    <div id="loading-screen" class="bg-container normal">
+      <section id="hero__section">
+        <h1 class="ff-lora fw-700 fstyle-italic">Tara Olivia Bjørheim</h1>
+        <div class="hero__section-h2">
+          <h2 class="ff-lora fw-200">Front-End Developer</h2>
+          <h2 class="ff-lora fw-500 fstyle-italic">Passionate</h2>
+          <h2 class="ff-lora fw-200">Aspiring UI/UX Designer</h2>
+        </div>
+        <div class="loading-indicator">Loading...</div>
+      </section>
+    </div>
+    <!-- Background Container -->
+    <div class="bg-container normal">
+      <!-- Navigation -->
+      <nav class="header__nav glassmorphism" role="navigation">
+        <div class="header__nav-content padding-top-bottom-1em">
+          <a href="../index.html" aria-label="Go back to homepage"> Go back </a>
+          <p class="ff-lora fw-500 fstyle-italic">Tara Olivia Bjørheim</p>
+        </div>
+      </nav>
+
+      <main role="main">
+        <section class="project-page__section glassmorphism-text project-page__section-heading">
+          <div class="project-page__section-heading-left">
+            <h1 class="ff-lora fs-xxl fw-500 fstyle-italic padding-top-bottom-1em">HeartBids - Auctions for a Cause</h1>
+            <p class="ff-raleway padding-bottom-1em">Built to empower giving. Designed for seamless bidding.</p>
+            <p class="ff-raleway padding-bottom-1em">An auction platform where users can donate, bid, and win items to support charitable causes.</p>
+            <!-- Key Technologies -->
+            <div class="key-tech-list">
+              <li class="tech-item glassmorphism-text">React + TypeScript</li>
+              <li class="tech-item glassmorphism-text">Tailwind CSS</li>
+              <li class="tech-item glassmorphism-text">Noroff Auction API</li>
+              <li class="tech-item glassmorphism-text">Firebase API</li>
+              <li class="tech-item glassmorphism-text">React Context</li>
+              <li class="tech-item glassmorphism-text">Vite</li>
+              <li class="tech-item glassmorphism-text">Netlify (Deployment)</li>
+            </div>
+          </div>
+          <img src="../assets/projects/heartbids-hero.png" alt="HeartBids auction platform showing the modern React interface" />
+        </section>
+
+        <section class="project-page__section glassmorphism-text wrap-reverse">
+          <img src="../assets/projects/heartbids/auction-listings.png" alt="HeartBids auction listings page showing filtering and search functionality" />
+          <div>
+            <h2 class="padding-top-bottom-1em">My Role in the Project</h2>
+            <p>HeartBids was developed as my final exam project for FED Year 2, showcasing advanced React development skills. I was responsible for every aspect of the project, including:</p>
+            <ul>
+              <li><span class="fw-700">Full-Stack Development:</span> Built the entire frontend using React with TypeScript, integrating with both the Noroff Auction API and a custom Firebase API for enhanced functionality.</li>
+              <li><span class="fw-700">Design and UX:</span> Created comprehensive design prototypes in Figma, including style guides and user flow diagrams to ensure a cohesive user experience.</li>
+              <li><span class="fw-700">API Integration:</span> Implemented dual API architecture - Noroff API for core auction functionality and Firebase API for charity integrations and additional user data.</li>
+              <li><span class="fw-700">State Management:</span> Developed React Context providers for user authentication and filtering states, ensuring efficient data flow throughout the application.</li>
+              <li><span class="fw-700">Project Management:</span> Utilized Gantt charts and Kanban boards in Notion to track progress and manage development milestones.</li>
+            </ul>
+            <p class="padding-bottom-1em">This project demonstrated my ability to build complex React applications with multiple API integrations while maintaining clean code architecture and user-centered design.</p>
+          </div>
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Technical Challenges</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">Dual API Architecture:</span> Managing data flow between the Noroff Auction API and custom Firebase API required careful state management and error handling to ensure data consistency.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Real-time Bidding System:</span> Implementing live auction updates and bid tracking while maintaining optimal performance across different user sessions and auction states.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">TypeScript Integration:</span> Ensuring type safety across complex data structures from multiple APIs while maintaining development efficiency and code readability.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Credit System Logic:</span> Building a robust credit management system that tracks user earnings from sales and spending from bids, with proper validation and error handling.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Charity Integration:</span> Creating a seamless charity selection system that dynamically updates user profiles with charity logos and information from the Firebase API.</p>
+              </li>
+            </ul>
+          </div>
+          <img src="../assets/projects/heartbids/profile-page.png" alt="HeartBids user profile showing charity integration and bidding history" />
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Features</h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <p><span class="fw-700">User Authentication & Profiles:</span> Secure login with stud.noroff.no emails, customizable avatars, and comprehensive profile management with bidding history tracking.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Auction Management:</span> Create, edit, and delete auction listings with image galleries, detailed descriptions, and deadline management.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Real-time Bidding System:</span> Place bids, track bid history, and view real-time updates on auction status with automatic credit management.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Advanced Filtering & Search:</span> Dynamic filtering by category, price range, and auction status with real-time search functionality.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Charity Integration:</span> Select and support charities with logos displayed on profiles, powered by the custom Firebase API.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Credit System:</span> Earn credits by selling items, spend credits on bidding, with transparent transaction tracking.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">What I Learned</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">Advanced React Patterns:</span> Mastered React Context for state management, custom hooks for reusable logic, and component composition for maintainable code architecture.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">TypeScript in Practice:</span> Gained deep experience with TypeScript for type-safe API integrations, complex data structures, and improved development workflow.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Multi-API Integration:</span> Learned to manage data flow between multiple APIs while maintaining consistency and handling edge cases effectively.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Firebase Integration:</span> Implemented custom Firebase API for enhanced functionality beyond the provided Noroff API, including real-time data updates.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Project Planning:</span> Utilized professional project management tools (Gantt charts, Kanban boards) to track progress and meet exam deadlines.</p>
+              </li>
+            </ul>
+          </div>
+          <img src="../assets/projects/heartbids/create-listing.png" alt="HeartBids create listing page showing form validation and image upload" />
+        </section>
+
+        <section class="project-page__section glassmorphism-text wrap-reverse">
+          <img src="../assets/projects/heartbids/figma-design.png" alt="HeartBids Figma design prototype showing the complete design system" />
+          <div>
+            <h2 class="padding-top-bottom-1em">Future Improvements</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">Enhanced Charity Features:</span> Expand charity integration with donation tracking, impact metrics, and charity-specific auction categories.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Mobile App Development:</span> Create a React Native version for mobile users to participate in auctions on-the-go.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Advanced Analytics:</span> Implement user dashboards with bidding analytics, success rates, and personalized auction recommendations.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Social Features:</span> Add user following, auction sharing, and community features to increase engagement.</p>
+              </li>
+            </ul>
+            <p class="padding-bottom-1em">These improvements reflect my vision for HeartBids as a comprehensive platform that combines auction excitement with meaningful charitable impact.</p>
+          </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Explore HeartBids</h2>
+            <div class="project-links">
+              <a href="https://heartbids.netlify.app/" target="_blank" class="glassmorphism-text">View Live</a>
+
+              <a href="https://github.com/taraolivia/heartbids-with-react" target="_blank" aria-label="Go to GitHub repository" class="project-page-github">
+                <img src="../assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
+              </a>
+            </div>
+            <p class="padding-top-bottom-1em">Experience the platform where every bid supports a cause, or explore the source code to see the React and TypeScript implementation.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

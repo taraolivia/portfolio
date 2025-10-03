@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Front-end developer and aspiring UI/UX designer based in Brussels. Passionate about creating beautiful, functional web experiences with HTML, CSS, and JavaScript." />
+    <meta name="author" content="Tara Olivia Bjørheim" />
+    <meta property="og:title" content="Tara Olivia Bjørheim | Front-End Developer Portfolio" />
+    <meta property="og:description" content="Front-end developer and aspiring UI/UX designer based in Brussels. View my projects and experience." />
+    <meta property="og:type" content="website" />
     <title>Tara Olivia Bjørheim | Portfolio</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
@@ -37,6 +42,7 @@
           <h2 class="ff-lora fw-500 fstyle-italic">Passionate</h2>
           <h2 class="ff-lora fw-200">Aspiring UI/UX Designer</h2>
         </div>
+        <div class="loading-indicator">Loading...</div>
       </section>
     </div>
     
@@ -48,12 +54,13 @@
           </a>
           <span class="active-section">Active Section</span>
           <!-- This will change dynamically -->
-
+          
           <!-- Dropdown icon for mobile -->
           <div class="hamburger" onclick="toggleMenu()">☰</div>
 
           <!-- Full navbar items hidden by default on mobile -->
           <ul class="header__nav-menu">
+            <div class="cloud"></div> <!-- Cloud behind active item -->
             <li class="nav-dot"><a href="#about-me__section">Me!</a></li>
             <li class="nav-dot">
               <a href="#my-projects__section">My projects</a>
@@ -164,7 +171,7 @@
         </div>
         <div class="about-me__section-content glassmorphism glassmorphism-text">
           <p class="ff-raleway fs-base text-left">
-            My love for tech started with my pink Nintendo DS <img src="assets/icons/random/ds.png" class="inline-icon" alt="" /> and our old stationary PC at home, and now it’s all about my newer setup and my Nintendo Switch <img src="assets/icons/random/switch.png" class="inline-icon" alt="" />. My first discovery of front-end was after I spent months customizing my Notion workspace, getting everything just right in terms of both design and functionality. I had everything in there: work and school notes, creative writing, habit and workout trackers, and more. I remember telling my friend,
+            My love for tech started with my pink Nintendo DS <img src="/assets/icons/random/ds.png" class="inline-icon" alt="Nintendo DS icon" /> and our old stationary PC at home, and now it’s all about my newer setup and my Nintendo Switch <img src="/assets/icons/random/switch.png" class="inline-icon" alt="Nintendo Switch icon" />. My first discovery of front-end was after I spent months customizing my Notion workspace, getting everything just right in terms of both design and functionality. I had everything in there: work and school notes, creative writing, habit and workout trackers, and more. I remember telling my friend,
             <span class="fstyle-italic fw-500">"I wish I could do this for work — make things on the computer all day that are both pretty and functional."</span>
             He laughed and said, "Well, you can. It's called front-end development." I fell down the rabbit hole and couldn’t believe I had finally found my dream career. I signed up for a course on
             <a href="https://www.shecodes.io/workshops" class="fw-500">SheCodes</a>
@@ -191,7 +198,7 @@
                 <a href="https://github.com/NoroffFEU/FED1-PE1-taraolivia" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
                 <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" class="glassmorphism">View Live</a>
-                <a href="/html/bloom.html" target="_blank" class="glassmorphism">Read more</a>
+                <a href="/html/bloom.html" class="glassmorphism">Read more</a>
               </div>
             </div>
 
@@ -207,7 +214,61 @@
                 <a href="https://github.com/NoroffFEU/GameHub-taraolivia-js_integration-rework" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
                 <a href="https://game-hub-with-themes.netlify.app/" target="_blank" class="glassmorphism">View Live</a>
-                <a href="/html/game-hub.html" target="_blank" class="glassmorphism">Read more</a>
+                <a href="/html/game-hub.html" class="glassmorphism">Read more</a>
+              </div>
+            </div>
+
+            <div class="project-card glassmorphism-text">
+              <div class="project-thumbnail">
+                <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank">
+                  <img src="/assets/projects/petagram-hero.png" alt="Petagram Social Media Hero Image"/>
+                </a>
+              </div>
+              <div class="project-title">Petagram - Social Media App</div>
+              <div class="project-description">
+                <p>Petagram is a social media platform built with <span class="fw-500">Vanilla JavaScript</span> and <span class="fw-500">Tailwind CSS</span>. Features include user authentication, post creation and management, following/unfollowing users, commenting, and emoji reactions. Built with <span class="fw-500">Vite</span> and integrated with the <span class="fw-500">Noroff Social API</span>.</p>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/NoroffFEU/js2-ca-tara-and-jenny" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+
+                <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank" class="glassmorphism">View Live</a>
+                <a href="/html/petagram.html" class="glassmorphism">Read more</a>
+              </div>
+            </div>
+
+            <div class="project-card glassmorphism-text">
+              <div class="project-thumbnail">
+                <a href="https://nova-e-commerce.vercel.app/" target="_blank">
+                  <img src="/assets/projects/nova-hero.png" alt="Nova eCommerce Hero Image"/>
+                </a>
+              </div>
+              <div class="project-title">Nova - eCommerce Store</div>
+              <div class="project-description">
+                <p>Nova is a modern eCommerce platform built with <span class="fw-500">Next.js</span> and <span class="fw-500">React</span>. Features include product browsing, search functionality, shopping cart, checkout process, and contact forms with validation. The project showcases animated color blobs in the product carousel and responsive design throughout.</p>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/taraolivia/nova_e-commerce" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+
+                <a href="https://nova-e-commerce.vercel.app/" target="_blank" class="glassmorphism">View Live</a>
+                <a href="/html/nova.html" class="glassmorphism">Read more</a>
+              </div>
+            </div>
+
+            <div class="project-card glassmorphism-text">
+              <div class="project-thumbnail">
+                <a href="https://heartbids.netlify.app/" target="_blank">
+                  <img src="/assets/projects/heartbids-hero.png" alt="HeartBids Hero Image"/>
+                </a>
+              </div>
+              <div class="project-title">HeartBids - Auctions for a Cause</div>
+              <div class="project-description">
+                <p>HeartBids is an auction platform built with <span class="fw-500">React</span> and <span class="fw-500">TypeScript</span>, where users can donate, bid, and win items to support charitable causes. Features include user authentication, real-time bidding, credit system, and charity integration with both <span class="fw-500">Noroff API</span> and custom <span class="fw-500">Firebase API</span>.</p>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/taraolivia/heartbids-with-react" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+
+                <a href="https://heartbids.netlify.app/" target="_blank" class="glassmorphism">View Live</a>
+                <a href="/html/heartbids.html" class="glassmorphism">Read more</a>
               </div>
             </div>
 
@@ -227,11 +288,11 @@
                 <a href="https://github.com/taraolivia/semester-project-tara-bjorheim" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
                 <a href="https://galaxygarden.netlify.app/" target="_blank" class="glassmorphism">View Live</a>
-                <a href="/html/galaxy-garden.html" target="_blank" class="glassmorphism">Read more</a>
+                <a href="/html/galaxy-garden.html" class="glassmorphism">Read more</a>
               </div>
             </div>
             <div class="projects__section-content-description">
-              <p class="ff-raleway fs-base glassmorphism-text">My first project, Game Hub <img src="assets/icons/random/icons8-controller-50.png" class="inline-icon" alt="" /> was a dream to build for a fellow gamer audience. Designing different colored themes was a personal highlight. Then came the Galaxy Garden Community Museum <img src="assets/icons/random/icons8-test-tube-48.png" class="inline-icon" alt="" /> where I had the challenge of designing for both kids and families—creating a fun, engaging space for children that didn’t feel condescending to adults. I dove into color psychology and web design for kids, balancing simplicity with depth. My latest project, Bloom <img src="assets/icons/random/icons8-camellia-48.png" class="inline-icon" alt="" /> is all about calm and minimalism—a clean, modern blog experience that lets the content take center stage.</p>
+              <p class="ff-raleway fs-base glassmorphism-text">My first project, Game Hub <img src="/assets/icons/random/icons8-controller-50.png" class="inline-icon" alt="Game controller icon" /> was a dream to build for a fellow gamer audience. Designing different colored themes was a personal highlight. Then came the Galaxy Garden Community Museum <img src="/assets/icons/random/icons8-test-tube-48.png" class="inline-icon" alt="Science test tube icon" /> where I had the challenge of designing for both kids and families—creating a fun, engaging space for children that didn’t feel condescending to adults. I dove into color psychology and web design for kids, balancing simplicity with depth. My latest project, Bloom <img src="/assets/icons/random/icons8-camellia-48.png" class="inline-icon" alt="Flower icon" /> is all about calm and minimalism—a clean, modern blog experience that lets the content take center stage.</p>
               <p class="ff-raleway fs-base glassmorphism-text">Frontend-development is the perfect fit for me—creative, challenging, and there's always something new to learn. Plus, there’s no one 'right' answer, which means I get to experiment, explore different approaches, and have fun with it. It's a space where no two projects are ever the same, and that variety keeps me energized and in flow.</p>
             </div>
           </div>
@@ -259,23 +320,23 @@
                   <div class="skills-grid">
                     <div class="skill-card">
                       <h4>HTML</h4>
-                      <img src="/assets/icons/icons8-html-5-50.png" alt="HTML icon" />
+                      <img src="assets/icons/icons8-html-5-50.png" alt="HTML icon" />
                     </div>
                     <div class="skill-card">
                       <h4>CSS</h4>
-                      <img src="/assets/icons/icons8-css3-50.png" alt="CSS icon" />
+                      <img src="assets/icons/icons8-css3-50.png" alt="CSS icon" />
                     </div>
                     <div class="skill-card">
                       <h4>JavaScript</h4>
-                      <img src="/assets/icons/icons8-javascript-logo-50.png" alt="JavaScript icon" />
+                      <img src="assets/icons/icons8-javascript-logo-50.png" alt="JavaScript icon" />
                     </div>
                     <div class="skill-card">
                       <h4>C (Beginner)</h4>
-                      <img src="/assets/icons/icons8-c-50.png" alt="C icon" />
+                      <img src="assets/icons/icons8-c-50.png" alt="C icon" />
                     </div>
                     <div class="skill-card">
                       <h4>Tailwind CSS (Beginner)</h4>
-                      <img src="/assets/icons/icons8-tailwind-css-24.png" alt="Tailwind CSS icon" />
+                      <img src="assets/icons/icons8-tailwind-css-24.png" alt="Tailwind CSS icon" />
                     </div>
                   </div>
                 </div>
@@ -654,12 +715,12 @@
             <a href="mailto:tara.bjorheim@outlook.com" class="fw-700">tara.bjorheim@outlook.com</a>
             <p>And let's connect on</p>
             <div class="contact-info__icons">
-              <a href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/"><img src="/assets/icons/contact/linkedin.png" alt="" /> </a>
+              <a href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/"><img src="/assets/icons/contact/linkedin.png" alt="LinkedIn profile" /> </a>
               <a href="https://github.com/taraolivia">
-                <img src="/assets/icons/contact/github.png" alt="" />
+                <img src="/assets/icons/contact/github.png" alt="GitHub profile" />
               </a>
               <a href="https://www.instagram.com/tara_bjo/">
-                <img src="/assets/icons/contact/instagram.png" alt="" />
+                <img src="/assets/icons/contact/instagram.png" alt="Instagram profile" />
               </a>
               <!--               <img src="/assets/icons/contact/behance.png" alt="" />
  -->
@@ -681,7 +742,7 @@
           <p>Got any ideas or feedback? Don't hesitate to <a href="#contact__section" class="fw-500">send me a message :)</a></p>
           <p>&copy; 2024 Tara Olivia Bjørheim. All rights reserved.</p></div>
           <div class="end-notes__section-image">
-          <img src="/assets/me/about-me-carousel/(48).jpg" alt=""></div>
+          <img src="/assets/me/about-me-carousel/(48).jpg" alt="Tara Olivia Bjørheim"></div>
       </section>
 
 

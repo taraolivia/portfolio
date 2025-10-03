@@ -1,12 +1,12 @@
 export function initializeNavAndCloud() {
     const navLinks = document.querySelectorAll('.header__nav-menu li a');
     const sections = document.querySelectorAll('section');
+    const cloud = document.querySelector('.cloud');
     const nameElement = document.querySelector('.header__name');
     const activeSectionDisplay = document.querySelector('.active-section');
     const offset = 60;
 
     if (!navLinks.length || !sections.length || !nameElement || !activeSectionDisplay) {
-        console.error("Navigation elements not found");
         return;
     }
 
@@ -37,22 +37,35 @@ export function initializeNavAndCloud() {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Clear all active states
                 navLinks.forEach(link => link.parentElement.classList.remove('active'));
-
+                cloud.classList.remove('active');
+                
                 const activeLink = document.querySelector(`.header__nav-menu li a[href="#${entry.target.id}"]`);
                 
-                // Only show the current active section, otherwise display nothing
                 if (activeLink) {
                     activeLink.parentElement.classList.add('active');
-                    activeSectionDisplay.textContent = activeLink.textContent; // Set active section text
+                    activeSectionDisplay.textContent = activeLink.textContent;
+                    moveCloudToNavItem(activeLink);
                 } else {
-                    activeSectionDisplay.textContent = ''; // Clear text if no matching section
+                    activeSectionDisplay.textContent = '';
                 }
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     sections.forEach(section => observer.observe(section));
+
+    function moveCloudToNavItem(navItem) {
+        if (cloud && navItem) {
+            const navItemRect = navItem.getBoundingClientRect();
+            const navRect = document.querySelector('.header__nav-menu').getBoundingClientRect();
+            
+            cloud.style.left = `${navItemRect.left - navRect.left - 20}px`;
+            cloud.style.width = `${navItemRect.width + 40}px`;
+            cloud.classList.add('active');
+        }
+    }
 
     // Show/Hide the name based on scroll position
     window.addEventListener('scroll', () => {
@@ -66,12 +79,16 @@ export function initializeNavAndCloud() {
         }
     });
 
+    // Make toggleMenu globally accessible
+    window.toggleMenu = function() {
+        const navMenu = document.querySelector('.header__nav-menu');
+        navMenu.classList.toggle('active');
+    };
+
     // Toggle Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.header__nav-menu');
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+        hamburger.addEventListener('click', window.toggleMenu);
     }
 }

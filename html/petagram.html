@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tara Olivia Bjørheim | Petagram</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
+
+    <!-- Preload and Load Critical CSS -->
+    <link rel="preload" href="../css/preload.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="../css/preload.css" /></noscript>
+    <link rel="preload" href="../assets/background/background-holo-1.jpg" as="image" />
+    <link rel="preload" href="../assets/background/background-holo-2.jpg" as="image" />
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- JavaScript Modules -->
+    <script type="module" src="../js/main.js"></script>
+
+    <script>
+      /* To prevent Firefox FOUC, this must be here */
+      let FF_FOUC_FIX;
+    </script>
+  </head>
+
+  <body>
+    <div id="loading-screen" class="bg-container normal">
+      <section id="hero__section">
+        <h1 class="ff-lora fw-700 fstyle-italic">Tara Olivia Bjørheim</h1>
+        <div class="hero__section-h2">
+          <h2 class="ff-lora fw-200">Front-End Developer</h2>
+          <h2 class="ff-lora fw-500 fstyle-italic">Passionate</h2>
+          <h2 class="ff-lora fw-200">Aspiring UI/UX Designer</h2>
+        </div>
+        <div class="loading-indicator">Loading...</div>
+      </section>
+    </div>
+    <!-- Background Container -->
+    <div class="bg-container normal">
+      <!-- Navigation -->
+      <nav class="header__nav glassmorphism" role="navigation">
+        <div class="header__nav-content padding-top-bottom-1em">
+          <a href="../index.html" aria-label="Go back to homepage"> Go back </a>
+          <p class="ff-lora fw-500 fstyle-italic">Tara Olivia Bjørheim</p>
+        </div>
+      </nav>
+
+      <main role="main">
+        <section class="project-page__section glassmorphism-text project-page__section-heading">
+          <div class="project-page__section-heading-left">
+            <h1 class="ff-lora fs-xxl fw-500 fstyle-italic padding-top-bottom-1em">Petagram - Social Media App</h1>
+            <p class="ff-raleway padding-bottom-1em">Connect, Share, and Engage</p>
+            <p class="ff-raleway padding-bottom-1em">A full-featured social media platform with posts, comments, reactions, and user following.</p>
+            <!-- Key Technologies -->
+            <div class="key-tech-list">
+              <li class="tech-item glassmorphism-text">Vanilla JavaScript</li>
+              <li class="tech-item glassmorphism-text">Tailwind CSS</li>
+              <li class="tech-item glassmorphism-text">Vite (MPA)</li>
+              <li class="tech-item glassmorphism-text">Noroff Social API</li>
+              <li class="tech-item glassmorphism-text">Unit Testing</li>
+              <li class="tech-item glassmorphism-text">CRUD Operations</li>
+              <li class="tech-item glassmorphism-text">Netlify (Deployment)</li>
+            </div>
+          </div>
+          <img src="../assets/projects/petagram-hero.png" alt="Petagram social media platform showing the feed and user interface" />
+        </section>
+
+        <section class="project-page__section glassmorphism-text wrap-reverse">
+          <img src="../assets/projects/petagram/feed-page.png" alt="Petagram feed page showing posts, search functionality, and create post form" />
+          <div>
+            <h2 class="padding-top-bottom-1em">My Role in the Project</h2>
+            <p>Petagram was developed as a JavaScript 2 course assignment, focusing on advanced JavaScript concepts and social media functionality. Working with a partner, I was responsible for:</p>
+            <ul>
+              <li><span class="fw-700">Frontend Development:</span> Built the complete social media interface using Vanilla JavaScript and Tailwind CSS, implementing all required pages and functionality.</li>
+              <li><span class="fw-700">API Integration:</span> Connected the application to the Noroff Social API for user authentication, post management, and social interactions.</li>
+              <li><span class="fw-700">CRUD Operations:</span> Implemented full Create, Read, Update, and Delete functionality for user posts with proper error handling and validation.</li>
+              <li><span class="fw-700">Social Features:</span> Developed following/unfollowing system, commenting functionality, and emoji reactions for posts.</li>
+              <li><span class="fw-700">Testing:</span> Worked with unit tests to ensure code quality and functionality, using the provided test suite for development feedback.</li>
+              <li><span class="fw-700">Responsive Design:</span> Utilized Tailwind CSS to create a mobile-first, responsive design that works across all devices.</li>
+            </ul>
+            <p class="padding-bottom-1em">This collaborative project enhanced my skills in advanced JavaScript, API integration, and working with CSS frameworks.</p>
+          </div>
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Technical Challenges</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">Advanced JavaScript Logic:</span> Implementing complex social media functionality using only Vanilla JavaScript without frameworks like React or Vue.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Multi-page Application (MPA):</span> Managing state and navigation across multiple HTML pages while maintaining user experience and data consistency.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">API State Management:</span> Handling user authentication, post data, and social interactions across different pages without a centralized state management system.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Tailwind CSS Learning Curve:</span> First time using Tailwind CSS utility classes, learning to build responsive layouts with utility-first approach.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Collaborative Development:</span> Working with a partner on the same codebase, managing git workflows, and coordinating feature development.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Unit Testing Integration:</span> Understanding and working with the provided test suite to ensure code quality and functionality.</p>
+              </li>
+            </ul>
+          </div>
+          <img src="../assets/projects/petagram/profile-page.png" alt="Petagram user profile page showing user posts and follow functionality" />
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Features</h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <p><span class="fw-700">User Authentication:</span> Secure login and registration system with form validation and session management across the application.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Post Management:</span> Create, edit, and delete posts with image uploads, descriptions, and proper CRUD operations.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Social Interactions:</span> Follow/unfollow users, comment on posts, and react with emoji responses for full social engagement.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Feed & Search:</span> Dynamic feed with search functionality, sorting options, and real-time post updates.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Profile Management:</span> Customizable user profiles with profile images, post history, and follower/following displays.</p>
+              </div>
+              <div class="feature-item">
+                <p><span class="fw-700">Responsive Design:</span> Mobile-first design using Tailwind CSS that adapts seamlessly across all device sizes.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">What I Learned</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">Advanced JavaScript:</span> Deepened understanding of JavaScript fundamentals, DOM manipulation, and asynchronous programming without framework dependencies.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Tailwind CSS Mastery:</span> Learned utility-first CSS approach, responsive design patterns, and efficient styling workflows.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">API Integration:</span> Gained experience with complex API operations including authentication, CRUD operations, and social media functionality.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Collaborative Development:</span> Improved skills in git workflows, code reviews, and coordinating development tasks with a partner.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Testing Practices:</span> Learned to work with unit tests and use testing feedback to improve code quality and functionality.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Vite Build Tool:</span> Gained experience with modern build tools and multi-page application configuration.</p>
+              </li>
+            </ul>
+          </div>
+          <img src="../assets/projects/petagram/authentication.png" alt="Petagram login and registration forms with validation" />
+        </section>
+
+        <section class="project-page__section glassmorphism-text wrap-reverse">
+          <img src="../assets/projects/petagram/mobile-responsive.png" alt="Petagram mobile responsive design showing the app on different screen sizes" />
+          <div>
+            <h2 class="padding-top-bottom-1em">Future Improvements</h2>
+            <ul>
+              <li>
+                <p><span class="fw-700">Real-time Updates:</span> Implement WebSocket connections for live post updates, comments, and notifications without page refreshes.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Enhanced Media Support:</span> Add support for video uploads, multiple image galleries, and media optimization.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Advanced Social Features:</span> Implement direct messaging, story features, and group functionality for enhanced user engagement.</p>
+              </li>
+              <li>
+                <p><span class="fw-700">Performance Optimization:</span> Add lazy loading, infinite scroll, and caching strategies for better performance with large datasets.</p>
+              </li>
+            </ul>
+            <p class="padding-bottom-1em">This project provided excellent experience in building complex social media functionality with modern web technologies.</p>
+          </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="project-page__section glassmorphism-text">
+          <div>
+            <h2 class="padding-top-bottom-1em">Explore Petagram</h2>
+            <div class="project-links">
+              <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank" class="glassmorphism-text">View Live</a>
+
+              <a href="https://github.com/NoroffFEU/js2-ca-tara-and-jenny" target="_blank" aria-label="Go to GitHub repository" class="project-page-github">
+                <img src="../assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
+              </a>
+            </div>
+            <p class="padding-top-bottom-1em">Experience the social media platform or explore the Vanilla JavaScript and Tailwind CSS implementation on GitHub.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
