@@ -13,6 +13,12 @@
 /* Import prelaod */
 @import url("preload.css");
 
+/* Import skip link */
+@import url("skip-link.css");
+
+/* Import accessibility */
+@import url("accessibility.css");
+
 /* ============================= */
 
 /* ============================= */
@@ -378,7 +384,13 @@ body {
 }
 
 .project-thumbnail {
+  width: 100%;
+}
+
+.project-thumbnail img {
+  width: 100%;
   height: auto;
+  display: block;
 }
 .project-title {
   font-family: var(--font-lora);

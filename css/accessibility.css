@@ -1,0 +1,65 @@
+/* Accessibility Enhancements */
+
+/* Focus styles for keyboard navigation */
+*:focus {
+  outline: 3px solid #ff69b4;
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 3px solid #ff69b4;
+  outline-offset: 2px;
+}
+
+/* Reduced motion for users with vestibular disorders */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .slider-list {
+    animation: none !important;
+  }
+  
+  .scrolling-text-inner > div {
+    animation: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .glassmorphism,
+  .glassmorphism-text {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid #000 !important;
+  }
+}
+
+/* Ensure text remains visible during font loading */
+@font-face {
+  font-display: swap;
+}
+
+/* Enhanced focus for project cards and images */
+.project-thumbnail a:focus,
+.project-thumbnail a:focus-visible {
+  outline: 3px solid #ff69b4;
+  outline-offset: 4px;
+  border-radius: 5px;
+  display: block;
+}
+
+.project-thumbnail a:focus img,
+.project-thumbnail a:focus-visible img {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}

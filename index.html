@@ -13,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" /></noscript>
 
     <!-- Preload and Load Critical CSS -->
     <link rel="preload" href="/css/preload.css" as="style" onload="this.rel='stylesheet'" />
@@ -45,22 +46,24 @@
         <div class="loading-indicator">Loading...</div>
       </section>
     </div>
-    
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="bg-container normal">
-      <nav class="header__nav glassmorphism">
+      <nav class="header__nav glassmorphism" aria-label="Main navigation">
         <div class="header__nav-content">
           <a href="#hero__section" class="header__name">
             <p class="ff-lora fw-500 fstyle-italic">Tara Olivia Bjørheim</p>
           </a>
           <span class="active-section">Active Section</span>
           <!-- This will change dynamically -->
-          
+
           <!-- Dropdown icon for mobile -->
-          <div class="hamburger" onclick="toggleMenu()">☰</div>
+          <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
 
           <!-- Full navbar items hidden by default on mobile -->
-          <ul class="header__nav-menu">
-            <div class="cloud"></div> <!-- Cloud behind active item -->
+          <ul class="header__nav-menu" role="list">
+            <div class="cloud"></div>
+            <!-- Cloud behind active item -->
             <li class="nav-dot"><a href="#about-me__section">Me!</a></li>
             <li class="nav-dot">
               <a href="#my-projects__section">My projects</a>
@@ -74,678 +77,735 @@
       </nav>
 
       <!-- Main Content Sections -->
-      <section class="scroll-div" id="hero__section">
-        <h1 class="ff-lora fw-700 fstyle-italic">Tara Olivia Bjørheim</h1>
-        <div class="hero__section-h2">
-          <h2 class="ff-lora fw-200">Front-End Developer</h2>
-          <h2 class="ff-lora fw-500 fstyle-italic">Passionate</h2>
-          <h2 class="ff-lora fw-200">Aspiring UI/UX Designer</h2>
-        </div>
-      </section>
+      <main id="main-content">
+        <section class="scroll-div" id="hero__section" aria-label="Hero Section">
+          <h1 class="ff-lora fw-700 fstyle-italic">Tara Olivia Bjørheim</h1>
+          <div class="hero__section-h2">
+            <h2 class="ff-lora fw-200">Front-End Developer</h2>
+            <h2 class="ff-lora fw-500 fstyle-italic">Passionate</h2>
+            <h2 class="ff-lora fw-200">Aspiring UI/UX Designer</h2>
+          </div>
+        </section>
 
-      <section class="about-me__section" id="about-me__section">
-        <div class="about-me__section-content glassmorphism glassmorphism-text">
-          <p class="ff-raleway fs-base">Hello! I'm Tara, a front-end developer with a passion for technology and design. I'm originally from Stavanger, Norway, but I’ve lived in many places, including Costa Rica, Tanzania, and under the northern lights in Bodø. Currently, I’m based in Brussels, Belgium, where I work as an administrative coordinator and continue to expand my skills in web development. Talking about everything I love doing would take hours, so I've included some photos and honorable mentions below :)</p>
-        </div>
-        <div class="scrolling-text-container">
-          <div class="scrolling-text-inner" style="--marquee-speed: 150s; --direction: scroll-right" role="marquee">
-            <div class="scrolling-text">
-              <!-- Your original items -->
-              <div class="scrolling-text-item">My family</div>
-              <div class="scrolling-text-item">Concerts</div>
-              <div class="scrolling-text-item">Camping</div>
-              <div class="scrolling-text-item">Notion</div>
-              <div class="scrolling-text-item">Volleyball</div>
-              <div class="scrolling-text-item">D&D</div>
-              <div class="scrolling-text-item">House parties</div>
-              <div class="scrolling-text-item">Diablo IV</div>
-              <div class="scrolling-text-item">Lifting weights</div>
-              <div class="scrolling-text-item">Organizing</div>
-              <div class="scrolling-text-item">My friends</div>
-              <div class="scrolling-text-item">Dragons</div>
-              <div class="scrolling-text-item">Belgium</div>
-              <div class="scrolling-text-item">Electronic Music</div>
-              <div class="scrolling-text-item">Cooking vegetarian food</div>
-              <div class="scrolling-text-item">Reading</div>
-              <div class="scrolling-text-item">Dancing</div>
-              <div class="scrolling-text-item">Baldurs Gate 3</div>
-              <div class="scrolling-text-item">Forest hikes</div>
-              <div class="scrolling-text-item">Stavanger</div>
-              <div class="scrolling-text-item">Spinning classes</div>
-              <div class="scrolling-text-item">Animals</div>
-              <div class="scrolling-text-item">Fantasy</div>
-              <div class="scrolling-text-item">Padel</div>
-              <div class="scrolling-text-item">League of Legends</div>
-              <div class="scrolling-text-item">Board Games</div>
-              <div class="scrolling-text-item">My dogs</div>
-              <div class="scrolling-text-item">Memes</div>
-              <div class="scrolling-text-item">CSS</div>
-              <div class="scrolling-text-item">Pastel colors</div>
-              <div class="scrolling-text-item">Traveling</div>
-              <div class="scrolling-text-item">Surfing</div>
-              <div class="scrolling-text-item">Swimming</div>
+        <section class="about-me__section" id="about-me__section" aria-labelledby="about-heading">
+          <div class="about-me__section-content glassmorphism glassmorphism-text">
+            <p class="ff-raleway fs-base">Hello! I'm Tara, a front-end developer with a passion for technology and design. I'm originally from Stavanger, Norway, but I’ve lived in many places, including Costa Rica, Tanzania, and under the northern lights in Bodø. Until this year, I’ve been based in Brussels, Belgium, where I worked as an administrative coordinator and continued to expand my skills in web development. This year, I’ve returned home to Norway to begin my career as a full-time developer. Currently based in Stavanger, I work as a Frontend Developer at TagHub – Smart Management AS. Talking about everything I love doing would take hours, so I've included some photos and honorable mentions below :)</p>
+          </div>
+          <div class="scrolling-text-container">
+            <div class="scrolling-text-inner" style="--marquee-speed: 150s; --direction: scroll-right" role="marquee">
+              <div class="scrolling-text">
+                <!-- Your original items -->
+                <div class="scrolling-text-item">My family</div>
+                <div class="scrolling-text-item">Concerts</div>
+                <div class="scrolling-text-item">Camping</div>
+                <div class="scrolling-text-item">Notion</div>
+                <div class="scrolling-text-item">Volleyball</div>
+                <div class="scrolling-text-item">D&D</div>
+                <div class="scrolling-text-item">House parties</div>
+                <div class="scrolling-text-item">Diablo IV</div>
+                <div class="scrolling-text-item">Lifting weights</div>
+                <div class="scrolling-text-item">Organizing</div>
+                <div class="scrolling-text-item">My friends</div>
+                <div class="scrolling-text-item">Dragons</div>
+                <div class="scrolling-text-item">Belgium</div>
+                <div class="scrolling-text-item">Electronic Music</div>
+                <div class="scrolling-text-item">Cooking vegetarian food</div>
+                <div class="scrolling-text-item">Reading</div>
+                <div class="scrolling-text-item">Dancing</div>
+                <div class="scrolling-text-item">Baldurs Gate 3</div>
+                <div class="scrolling-text-item">Forest hikes</div>
+                <div class="scrolling-text-item">Stavanger</div>
+                <div class="scrolling-text-item">Spinning classes</div>
+                <div class="scrolling-text-item">Animals</div>
+                <div class="scrolling-text-item">Fantasy</div>
+                <div class="scrolling-text-item">Padel</div>
+                <div class="scrolling-text-item">League of Legends</div>
+                <div class="scrolling-text-item">Board Games</div>
+                <div class="scrolling-text-item">My dogs</div>
+                <div class="scrolling-text-item">Memes</div>
+                <div class="scrolling-text-item">CSS</div>
+                <div class="scrolling-text-item">Pastel colors</div>
+                <div class="scrolling-text-item">Traveling</div>
+                <div class="scrolling-text-item">Surfing</div>
+                <div class="scrolling-text-item">Swimming</div>
+                <div class="scrolling-text-item">Strong Viking</div>
+                <div class="scrolling-text-item">Road trips</div>
+                <div class="scrolling-text-item">Halloween</div>
+                <div class="scrolling-text-item">Themed parties</div>
+                <div class="scrolling-text-item">Book club</div>
+                <div class="scrolling-text-item">Learning languages</div>
+                <div class="scrolling-text-item">Traveling</div>
+                <div class="scrolling-text-item">Vinyl records</div>
+                <div class="scrolling-text-item">Late-night coding</div>
+                <div class="scrolling-text-item">Sunsets</div>
+                <div class="scrolling-text-item">Making playlists</div>
+                <div class="scrolling-text-item">Journaling</div>
+                <div class="scrolling-text-item">Stormy days</div>
 
-              <!-- Duplicate the items to create the seamless loop -->
-              <div class="scrolling-text-item">My family</div>
-              <div class="scrolling-text-item">Concerts</div>
-              <div class="scrolling-text-item">Camping</div>
-              <div class="scrolling-text-item">Notion</div>
-              <div class="scrolling-text-item">Volleyball</div>
-              <div class="scrolling-text-item">D&D</div>
-              <div class="scrolling-text-item">House parties</div>
-              <div class="scrolling-text-item">Diablo IV</div>
-              <div class="scrolling-text-item">Lifting weights</div>
-              <div class="scrolling-text-item">Organizing</div>
-              <div class="scrolling-text-item">My friends</div>
-              <div class="scrolling-text-item">Dragons</div>
-              <div class="scrolling-text-item">Belgium</div>
-              <div class="scrolling-text-item">Electronic Music</div>
-              <div class="scrolling-text-item">Cooking vegetarian food</div>
-              <div class="scrolling-text-item">Reading</div>
-              <div class="scrolling-text-item">Dancing</div>
-              <div class="scrolling-text-item">Baldurs Gate 3</div>
-              <div class="scrolling-text-item">Forest hikes</div>
-              <div class="scrolling-text-item">Stavanger</div>
-              <div class="scrolling-text-item">Spinning classes</div>
-              <div class="scrolling-text-item">Animals</div>
-              <div class="scrolling-text-item">Fantasy</div>
-              <div class="scrolling-text-item">Padel</div>
-              <div class="scrolling-text-item">League of Legends</div>
-              <div class="scrolling-text-item">Board Games</div>
-              <div class="scrolling-text-item">My dogs</div>
-              <div class="scrolling-text-item">Memes</div>
-              <div class="scrolling-text-item">CSS</div>
-              <div class="scrolling-text-item">Pastel colors</div>
-              <div class="scrolling-text-item">Traveling</div>
-              <div class="scrolling-text-item">Surfing</div>
-              <div class="scrolling-text-item">Swimming</div>
+                <!-- Duplicate the items to create the seamless loop -->
+                <div class="scrolling-text-item">My family</div>
+                <div class="scrolling-text-item">Concerts</div>
+                <div class="scrolling-text-item">Camping</div>
+                <div class="scrolling-text-item">Notion</div>
+                <div class="scrolling-text-item">Volleyball</div>
+                <div class="scrolling-text-item">D&D</div>
+                <div class="scrolling-text-item">House parties</div>
+                <div class="scrolling-text-item">Diablo IV</div>
+                <div class="scrolling-text-item">Lifting weights</div>
+                <div class="scrolling-text-item">Organizing</div>
+                <div class="scrolling-text-item">My friends</div>
+                <div class="scrolling-text-item">Dragons</div>
+                <div class="scrolling-text-item">Belgium</div>
+                <div class="scrolling-text-item">Electronic Music</div>
+                <div class="scrolling-text-item">Cooking vegetarian food</div>
+                <div class="scrolling-text-item">Reading</div>
+                <div class="scrolling-text-item">Dancing</div>
+                <div class="scrolling-text-item">Baldurs Gate 3</div>
+                <div class="scrolling-text-item">Forest hikes</div>
+                <div class="scrolling-text-item">Stavanger</div>
+                <div class="scrolling-text-item">Spinning classes</div>
+                <div class="scrolling-text-item">Animals</div>
+                <div class="scrolling-text-item">Fantasy</div>
+                <div class="scrolling-text-item">Padel</div>
+                <div class="scrolling-text-item">League of Legends</div>
+                <div class="scrolling-text-item">Board Games</div>
+                <div class="scrolling-text-item">My dogs</div>
+                <div class="scrolling-text-item">Memes</div>
+                <div class="scrolling-text-item">CSS</div>
+                <div class="scrolling-text-item">Pastel colors</div>
+                <div class="scrolling-text-item">Traveling</div>
+                <div class="scrolling-text-item">Surfing</div>
+                <div class="scrolling-text-item">Swimming</div>
+                <div class="scrolling-text-item">Strong Viking</div>
+                <div class="scrolling-text-item">Road trips</div>
+                <div class="scrolling-text-item">Halloween</div>
+                <div class="scrolling-text-item">Themed parties</div>
+                <div class="scrolling-text-item">Book club</div>
+                <div class="scrolling-text-item">Learning languages</div>
+                <div class="scrolling-text-item">Traveling</div>
+                <div class="scrolling-text-item">Vinyl records</div>
+                <div class="scrolling-text-item">Late-night coding</div>
+                <div class="scrolling-text-item">Sunsets</div>
+                <div class="scrolling-text-item">Making playlists</div>
+                <div class="scrolling-text-item">Journaling</div>
+                <div class="scrolling-text-item">Stormy days</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Image Slider -->
-        <div class="slider-container">
-          <div class="slider-list">
-            <!-- Images will be dynamically added via JavaScript -->
+          <!-- Image Slider -->
+          <div class="slider-container" role="region" aria-label="Photo carousel">
+            <div class="slider-list">
+              <!-- Images will be dynamically added via JavaScript -->
+            </div>
           </div>
-        </div>
-        <div class="about-me__section-content glassmorphism glassmorphism-text">
-          <p class="ff-raleway fs-base text-left">
-            My love for tech started with my pink Nintendo DS <img src="/assets/icons/random/ds.png" class="inline-icon" alt="Nintendo DS icon" /> and our old stationary PC at home, and now it’s all about my newer setup and my Nintendo Switch <img src="/assets/icons/random/switch.png" class="inline-icon" alt="Nintendo Switch icon" />. My first discovery of front-end was after I spent months customizing my Notion workspace, getting everything just right in terms of both design and functionality. I had everything in there: work and school notes, creative writing, habit and workout trackers, and more. I remember telling my friend,
-            <span class="fstyle-italic fw-500">"I wish I could do this for work — make things on the computer all day that are both pretty and functional."</span>
-            He laughed and said, "Well, you can. It's called front-end development." I fell down the rabbit hole and couldn’t believe I had finally found my dream career. I signed up for a course on
-            <a href="https://www.shecodes.io/workshops" class="fw-500">SheCodes</a>
-            and fell in love. <span class="underline-colored"> Now, I’m in the middle of my frontend-degree and loving every minute of it.</span>
-          </p>
-        </div>
-      </section>
+          <div class="about-me__section-content glassmorphism glassmorphism-text">
+            <p class="ff-raleway fs-base text-left">
+              My love for tech started with my pink Nintendo DS <img loading="lazy" src="/assets/icons/random/ds.png" class="inline-icon" alt="Nintendo DS icon" /> and our old stationary PC at home, and now it’s all about my newer setup and my Nintendo Switch <img loading="lazy" src="/assets/icons/random/switch.png" class="inline-icon" alt="Nintendo Switch icon" />. My first discovery of front-end was after I spent months customizing my Notion workspace, getting everything just right in terms of both design and functionality. I had everything in there: work and school notes, creative writing, habit and workout trackers, and more. I remember telling my friend,
+              <span class="fstyle-italic fw-500">"I wish I could do this for work — make things on the computer all day that are both pretty and functional."</span>
+              He laughed and said, "Well, you can. It's called front-end development." I fell down the rabbit hole and couldn’t believe I had finally found my dream career. I signed up for a course on
+              <a href="https://www.shecodes.io/workshops" class="fw-500">SheCodes</a>
+              and fell in love. <span class="underline-colored"> This October I'll graduate as a Frontend Developer, after an intense and rewarding study period that confirmed how much I love combining design and technology.</span>
+            </p>
+          </div>
+        </section>
+        <section class="projects__section" id="my-projects__section" aria-label="My Projects">
+          <div class="projects__section-content glassmorphism">
+            <div class="projects-container">
+              <div class="project-card glassmorphism-text">
+                <div class="project-thumbnail">
+                  <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" rel="noopener">
+                    <img loading="lazy" src="/assets/projects/Bloom-hero.jpg" alt="Bloom Lifestyle Blog Hero Image" />
+                  </a>
+                </div>
+                <div class="project-title">Bloom Lifestyle Blog</div>
+                <div class="project-description">
+                  <p>Bloom is a responsive blog platform targeting users interested in lifestyle and self-care, offering a modern and clean interface. It is developed using <span class="fw-500">HTML</span>, <span class="fw-500">CSS</span> and <span class="fw-500">JavaScript</span>, with an <span class="fw-500">API integration</span> to manage dynamic blog posts. The site features a carousel for the 3 latest posts, a responsive grid displaying all posts, and <span class="fw-500">admin functionality</span> for registration, login, and post management.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/NoroffFEU/FED1-PE1-taraolivia" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
-      <section class="projects__section" id="my-projects__section">
-        <div class="projects__section-content glassmorphism">
-          <div class="projects-container">
-            <div class="project-card glassmorphism-text">
-              <div class="project-thumbnail">
-                <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank">
-                  <img src="/assets/projects/bloom-hero.png" alt="Bloom Lifestyle Blog Hero Image" />
+                  <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="/html/bloom.html" class="glassmorphism">Read more</a>
+                </div>
+              </div>
+
+              <div class="project-card glassmorphism-text">
+                <div class="project-thumbnail">
+                  <a href="https://game-hub-with-themes.netlify.app/index.html" target="_blank" rel="noopener">
+                    <img loading="lazy" src="/assets/projects/game-hub-hero.jpg" alt="Game Hub Hero Image" />
+                  </a>
+                </div>
+                <div class="project-title">Game Hub: The Universe of Games</div>
+                <div class="project-description">
+                  <p>Game Hub is an interactive online targeted at gamers store built using <span class="fw-500">HTML</span>, <span class="fw-500">CSS</span> and <span class="fw-500">JavaScript</span>, showcasing video games through an <span class="fw-500">API</span>. Users can filter games by genre, view detailed game information, and simulate buying games. The platform includes dynamic reviews, similar game suggestions, and a theme switcher with 8 different themes.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/NoroffFEU/GameHub-taraolivia-js_integration-rework" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+
+                  <a href="https://game-hub-with-themes.netlify.app/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="/html/game-hub.html" class="glassmorphism">Read more</a>
+                </div>
+              </div>
+
+              <div class="project-card glassmorphism-text">
+                <div class="project-thumbnail">
+                  <a href="https://heartbids.netlify.app/" target="_blank" rel="noopener">
+                    <img loading="lazy" src="/assets/projects/heartbids-hero.jpg" alt="HeartBids Hero Image" />
+                  </a>
+                </div>
+                <div class="project-title">HeartBids – Auctions for a Cause</div>
+                <div class="project-description">
+                  <p><span class="fw-500">HeartBids</span> is a modern auction platform built with <span class="fw-500">React</span> and <span class="fw-500">TypeScript</span>, where users can donate, bid, and win items in support of charitable causes. The platform features <span class="fw-500">user authentication</span>, <span class="fw-500">real-time bidding</span>, a <span class="fw-500">credit system</span>, and <span class="fw-500">charity integration</span> through both the <span class="fw-500">Noroff API</span> and a custom <span class="fw-500">Firebase backend</span>. This project represents my transition from student to developer—combining usability, logic, and meaningful purpose in one cohesive experience.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/taraolivia/heartbids-with-react" target="_blank" rel="noopener" class="glassmorphism">
+                    <img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
+                  </a>
+                  <a href="https://heartbids.netlify.app/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="/html/heartbids.html" class="glassmorphism">Read more</a>
+                </div>
+              </div>
+
+              <div class="project-card glassmorphism-text">
+                <div class="project-thumbnail">
+                  <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank" rel="noopener">
+                    <img loading="lazy" src="/assets/projects/petagram-hero.jpg" alt="Petagram Social Media Hero Image" />
+                  </a>
+                </div>
+                <div class="project-title">Petagram - Social Media App</div>
+                <div class="project-description">
+                  <p>Petagram is a social media platform built with <span class="fw-500">Vanilla JavaScript</span> and <span class="fw-500">Tailwind CSS</span>. Features include user authentication, post creation and management, following/unfollowing users, commenting, and emoji reactions. Built with <span class="fw-500">Vite</span> and integrated with the <span class="fw-500">Noroff Social API</span>.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/NoroffFEU/js2-ca-tara-and-jenny" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+
+                  <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="/html/petagram.html" class="glassmorphism">Read more</a>
+                </div>
+              </div>
+
+              <div class="project-card glassmorphism-text">
+                <div class="project-thumbnail">
+                  <a href="https://nova-e-commerce.vercel.app/" target="_blank" rel="noopener">
+                    <img loading="lazy" src="/assets/projects/nova-hero.jpg" alt="Nova eCommerce Hero Image" />
+                  </a>
+                </div>
+                <div class="project-title">Nova - eCommerce Store</div>
+                <div class="project-description">
+                  <p>Nova is a modern eCommerce platform built with <span class="fw-500">Next.js</span> and <span class="fw-500">React</span>. Features include product browsing, search functionality, shopping cart, checkout process, and contact forms with validation. The project showcases animated color blobs in the product carousel and responsive design throughout.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/taraolivia/nova_e-commerce" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+
+                  <a href="https://nova-e-commerce.vercel.app/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="/html/nova.html" class="glassmorphism">Read more</a>
+                </div>
+              </div>
+
+              <div class="project-card glassmorphism-text">
+                <div class="project-thumbnail">
+                  <a href="https://galaxygarden.netlify.app/" target="_blank" rel="noopener">
+                    <img loading="lazy" src="/assets/projects/galaxy-garden-hero.jpg" alt="Galaxy Garden Hero Image" />
+                  </a>
+                </div>
+                <div class="project-title">Galaxy Garden Community Museum</div>
+                <div class="project-description">
+                  <p>The Galaxy Garden Community Museum website was developed using <span class="fw-500">HTML</span> and <span class="fw-500">CSS</span> to create a modern, responsive site aimed at children and their families. The project is tested across browsers and devices, offering an engaging, educational experience that sparks curiosity about science in an exciting, age-appropriate way.</p>
+                </div>
+                <span class="fw-500"></span>
+                <div class="project-links">
+                  <a href="https://github.com/taraolivia/semester-project-tara-bjorheim" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+
+                  <a href="https://galaxygarden.netlify.app/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="/html/galaxy-garden.html" class="glassmorphism">Read more</a>
+                </div>
+              </div>
+              <div class="projects__section-content-description">
+                <p class="ff-raleway fs-base glassmorphism-text">My first project, Game Hub <img loading="lazy" src="/assets/icons/random/icons8-controller-50.png" class="inline-icon" alt="Game controller icon" /> was a dream to build for a fellow gamer audience. Designing different colored themes was a personal highlight. Then came the Galaxy Garden Community Museum <img loading="lazy" src="/assets/icons/random/icons8-test-tube-48.png" class="inline-icon" alt="Science test tube icon" /> where I had the challenge of designing for both kids and families—creating a fun, engaging space for children that didn’t feel condescending to adults. I dove into color psychology and web design for kids, balancing simplicity with depth. My latest project, Bloom <img loading="lazy" src="/assets/icons/random/icons8-camellia-48.png" class="inline-icon" alt="Flower icon" /> is all about calm and minimalism—a clean, modern blog experience that lets the content take center stage.</p>
+                <p class="ff-raleway fs-base glassmorphism-text">Frontend-development is the perfect fit for me—creative, challenging, and there's always something new to learn. Plus, there’s no one 'right' answer, which means I get to experiment, explore different approaches, and have fun with it. It's a space where no two projects are ever the same, and that variety keeps me energized and in flow.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="experience__section" id="experience__section" aria-label="Experience and Skills">
+          <div class="experience__section-content">
+            <div class="tabs">
+              <button class="tab-link" data-tab="skills" role="tab" aria-selected="false">Skills</button>
+              <button class="tab-link" data-tab="work-education" role="tab" aria-selected="false">Work and Education</button>
+              <button class="tab-link" data-tab="certifications" role="tab" aria-selected="false">Certifications and Courses</button>
+            </div>
+
+            <div id="noTabsMessage" class="tab-content glassmorphism-text border-radius-bottom" style="display: none">
+              <p>Open a tab to learn more</p>
+            </div>
+
+            <div id="skills" class="tab-content glassmorphism-text border-radius-bottom">
+              <div class="tab-content-inner tab-content-flex">
+                <div class="flex-wrapper">
+                  <!-- Programming Languages and Frameworks -->
+                  <div class="skills-section">
+                    <h3>Programming Languages and Frameworks</h3>
+                    <div class="skills-grid">
+                      <div class="skill-card">
+                        <h4>HTML</h4>
+                        <img loading="lazy" src="assets/icons/icons8-html-5-50.png" alt="HTML icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>CSS</h4>
+                        <img loading="lazy" src="assets/icons/icons8-css3-50.png" alt="CSS icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>JavaScript</h4>
+                        <img loading="lazy" src="assets/icons/icons8-javascript-logo-50.png" alt="JavaScript icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>C (Beginner)</h4>
+                        <img loading="lazy" src="assets/icons/icons8-c-50.png" alt="C icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Tailwind CSS</h4>
+                        <img loading="lazy" src="assets/icons/icons8-tailwind-css-24.png" alt="Tailwind CSS icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>React</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-react-30.png" alt="React icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>TypeScript</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-typescript-50.png" alt="TypeScript icon" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tools -->
+                  <div class="skills-section">
+                    <h3>Tools</h3>
+                    <div class="skills-grid">
+                      <div class="skill-card">
+                        <h4>GitHub</h4>
+                        <img loading="lazy" src="/assets/icons/github-mark.png" alt="GitHub icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Figma</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-figma-50.png" alt="Figma icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Canva</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-canva-app-50.png" alt="Canva icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>WordPress</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-wordpress-50.png" alt="WordPress icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>SharePoint</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-microsoft-sharepoint-50.png" alt="SharePoint icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Power Automate</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-microsoft-power-automate-2020-48.png" alt="Power Automate icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Tiny MCE</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-paste-as-text-50.png" alt="Tiny MCE icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Visual Studio Code</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-visual-studio-50.png" alt="Visual Studio Code icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Netlify</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-cms-50.png" alt="Netlify icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Slack</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-slack-50.png" alt="Slack icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>npm</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-npm-32.png" alt="npm icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Postman</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-api-30.png" alt="Postman icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Decap CMS</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-dashboard-50.png" alt="Decap CMS icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Vite</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-react-30.png" alt="Vite icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Next.js</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-react-30.png" alt="Next.js icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Vercel</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-cms-50.png" alt="Vercel icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>GitLab</h4>
+                        <img loading="lazy" src="/assets/icons/github-mark.png" alt="GitLab icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Trello</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-project-management-30.png" alt="Trello icon" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Design -->
+                  <div class="skills-section">
+                    <h3>Design</h3>
+                    <div class="skills-grid">
+                      <div class="skill-card">
+                        <h4>Responsive Design</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-responsive-50.png" alt="Responsive Design icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>UX/UI</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-designer-48.png" alt="UX/UI icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>High-fidelity Wireframes</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-wireframe-50.png" alt="Wireframes icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Prototyping</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-prototype-50.png" alt="Prototyping icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>User Flows</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-user-flow-67.png" alt="User Flows icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Information Architecture</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-information-48.png" alt="Information Architecture icon" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Methodologies -->
+                  <div class="skills-section">
+                    <h3>Methodologies</h3>
+                    <div class="skills-grid">
+                      <div class="skill-card">
+                        <h4>Agile/Scrum</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-agile-32.png" alt="Agile/Scrum icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Project Management</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-project-management-30.png" alt="Project Management icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Process Automation</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-automation-50.png" alt="Process Automation icon" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Technologies -->
+                  <div class="skills-section">
+                    <h3>Technologies</h3>
+                    <div class="skills-grid">
+                      <div class="skill-card">
+                        <h4>API Integration</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-api-30.png" alt="API icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>WCAG Accessibility Standards</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-accessibility-50.png" alt="WCAG icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>SEO Optimization</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-seo-50.png" alt="SEO icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Version Control</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-ctrl-50.png" alt="Version Control icon" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Languages -->
+                  <div class="skills-section">
+                    <h3>Languages (Fluency)</h3>
+                    <div class="skills-grid">
+                      <div class="skill-card">
+                        <h4>Norwegian (Native)</h4>
+                        <img loading="lazy" src="/assets/icons/star-yellow.png" alt="5 stars for fluency" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>English (Fluent)</h4>
+                        <img loading="lazy" src="/assets/icons/star-yellow.png" alt="4 stars for fluency" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Spanish (Intermediate)</h4>
+                        <img loading="lazy" src="/assets/icons/star-yellow.png" alt="3 stars for fluency" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>French (Intermediate)</h4>
+                        <img loading="lazy" src="/assets/icons/star-yellow.png" alt="3 stars for fluency" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Next Up -->
+                  <div class="skills-section">
+                    <h3>Next Up</h3>
+                    <div class="skills-grid">
+                      <div class="skill-card">
+                        <h4>Bootstrap</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-bootstrap-50.png" alt="Bootstrap icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Sass</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-sass-avatar-50.png" alt="Sass icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Vue.js</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-vuejs-50.png" alt="Vue.js icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Angular</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-react-30.png" alt="Angular icon" />
+                      </div>
+                      <div class="skill-card">
+                        <h4>Node.js</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-react-30.png" alt="Node.js icon" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-wrapper tab-content__paragraph">
+                  <p>I’ve always been endlessly curious, always wanting to know more—whether it’s diving into new frameworks like React or finding ways to make processes more efficient. I’m the type who will happily spend an entire day learning a tool that might save me five minutes in the future, lol. A good example of this was when I wanted to remind my colleagues to update a file every week. Sure, I could have just sent the same message every Friday or scheduled it in Teams, but instead, I figured out how to automate the whole process using Microsoft Power Automate. Now, every Friday, they get a cheery message with the exact link they need, and I never have to think about it again. It’s little things like that which add up. I love finding smarter ways to simplify processes — whether that’s through automation, reusable components, or improved workflows. I believe good development balances efficiency, clarity, and a bit of creative flair.</p>
+                  <button class="close-tab-button glassmorphism" aria-label="Close current tab">Close Tab</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="work-education" class="tab-content glassmorphism-text border-radius-bottom">
+              <div class="tab-content-flex">
+                <div class="flex-wrapper">
+                  <div class="timeline">
+                    <div class="timeline-item">
+                      <div class="year">Today</div>
+                    </div>
+
+                    <div class="timeline-item">
+                      <div class="education">
+                        Frontend Development
+                        <div class="place">Noroff School of Technology</div>
+                      </div>
+                      <div class="year">2025</div>
+                      <div class="work">
+                        Frontend Developer
+                        <div class="place">TagHub - Smart Management AS, Stavanger</div>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item">
+                      <div class="year"></div>
+                      <div class="work">
+                        Administrative Coordinator
+                        <div class="place">Stavangerregionens Europakontor, Brussels</div>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item">
+                      <div class="education">
+                        Personal Training & Nutrition
+                        <div class="place">Active Education</div>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item">
+                      <div class="work">
+                        First Secretary, Consultant & First Consultant
+                        <div class="place">Skatteetaten, Stavanger</div>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item">
+                      <div class="education">
+                        Spanish Studies
+                        <div class="place">EF school of Costa Rica</div>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item">
+                      <div class="education">
+                        General Studies
+                        <div class="place">St. Olav High School, Stavanger</div>
+                      </div>
+                      <div class="year"></div>
+                      <div class="work">
+                        Assistant at Art School
+                        <div class="place">Pippis Kunstskole, Stavanger</div>
+                      </div>
+                    </div>
+                    <div class="timeline-item"></div>
+                    <div class="year">2015</div>
+                  </div>
+                </div>
+
+                <div class="flex-wrapper tab-content__paragraph">
+                  <p class="ff-raleway fs-base">What really excites me is this mix of organization and creativity. My career so far has been such a blend of both technical and artistic work. I’ve taught at an art school for children, worked at the Norwegian tax authorities, and now, as an administrative coordinator, I jump between Excel spreadsheets and Canva designs on a daily basis. I love getting lost in the technical side of things—solving deep, complex problems—but I equally love the creative freedom that comes with brainstorming ideas. In my front-end work, I aim to bring that balance, designing web applications that work seamlessly but also evoke a sense of ease, satisfaction, and maybe even a bit of wonder.</p>
+                  <button class="close-tab-button glassmorphism" aria-label="Close current tab">Close Tab</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="certifications" class="tab-content glassmorphism-text border-radius-bottom tab-content-flex">
+              <div class="tab-content-inner tab-content-flex">
+                <!-- Development Section -->
+                <div class="category">
+                  <h3>Development, Design, etc</h3>
+                  <ul class="certifications-list">
+                    <li>
+                      <h4>
+                        <a href="https://cssday.nl/2025" target="_blank" rel="noopener"> CSS Day 2025</a>
+                      </h4>
+                      <p>Amsterdam | 2025</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <a href="https://www.linkedin.com/learning/javascript-essential-training?u=43268076" target="_blank" rel="noopener"> JavaScript Essential Training </a>
+                      </h4>
+                      <p>LinkedIn Learning | 2025</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <a href="https://www.linkedin.com/learning/introduction-to-web-apis-22019269?u=43268076" target="_blank" rel="noopener"> Introduction to Web APIs </a>
+                      </h4>
+                      <p>LinkedIn Learning | 2025</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <a href="https://www.shecodes.io/workshops#features" target="_blank" rel="noopener"> SheCodes Basics </a>
+                      </h4>
+                      <p>SheCodes | 2022</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science" target="_blank" rel="noopener"> CS50: Introduction to Computer Science </a>
+                      </h4>
+                      <p>Harvard School of Engineering and Applied Sciences | Ongoing</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <a href="https://www.linkedin.com/learning/figma-essential-training-the-basics?u=43268076" target="_blank" rel="noopener"> Figma Essential Training: The Basics </a>
+                      </h4>
+                      <p>LinkedIn Learning | 2023</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <a href="https://www.linkedin.com/learning/introduction-to-graphic-design-concepts-2021?u=43268076" target="_blank" rel="noopener"> Introduction to Graphic Design Concepts </a>
+                      </h4>
+                      <p>LinkedIn Learning | 2023</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Project Management Section -->
+                <div class="category">
+                  <h3>Other</h3>
+                  <ul class="certifications-list">
+                    <li>
+                      <h4>
+                        <a href="https://www.linkedin.com/learning/scrum-the-basics?u=43268076" target="_blank" rel="noopener"> Scrum: The Basics </a>
+                      </h4>
+                      <p>LinkedIn Learning | 2025</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <a href="https://www.linkedin.com/learning/how-to-regain-control-of-your-time-energy-and-priorities?u=43268076" target="_blank" rel="noopener"> How to Regain Control of Your Time, Energy, and Priorities </a>
+                      </h4>
+                      <p>LinkedIn Learning | 2023</p>
+                    </li>
+                    <li>
+                      <h4>Advanced Personal Trainer (AE L5)</h4>
+                      <p>Active Education | 2022</p>
+                    </li>
+                    <li>
+                      <h4>Certified Nutrition Coach (AE L4)</h4>
+                      <p>Active Education | 2022</p>
+                    </li>
+                    <li>
+                      <h4>Certified Weight Management Exercise Specialist (AE L5)</h4>
+                      <p>Active Education | 2022</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" rel="noopener"> Learning How to Learn </a>
+                      </h4>
+                      <p>Coursera | 2023</p>
+                    </li>
+                    <li>
+                      <h4>Basic course in CrossFit</h4>
+                      <p>Rapida Bodø | 2022</p>
+                    </li>
+                    <li>
+                      <h4>Spanish (B2 Level)</h4>
+                      <p>EF School of Costa Rica | 2020</p>
+                    </li>
+                    <li>
+                      <h4>French (B1 Level)</h4>
+                      <p>CLL Brussels | 2025</p>
+                    </li>
+                    <button class="close-tab-button glassmorphism" aria-label="Close current tab">Close Tab</button>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="contact__section" id="contact__section" aria-label="Contact Information">
+          <div class="contact-page-wrapper">
+            <div class="contact-page-section contact-page-section-secondary border-radius-left glassmorphism-text">
+              <p>Need a Creative Partner?</p>
+              <p>I’m In!</p>
+            </div>
+
+            <div class="contact-page-section contact-page-section-primary border-radius-right">
+              <p>E-mail me at:</p>
+              <a href="mailto:tara.bjorheim@outlook.com" class="fw-700">tara.bjorheim@outlook.com</a>
+              <p>And let's connect on</p>
+              <div class="contact-info__icons">
+                <a href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/" aria-label="Visit my LinkedIn profile"><img loading="lazy" src="/assets/icons/contact/linkedin.png" alt="LinkedIn profile" /> </a>
+                <a href="https://github.com/taraolivia" aria-label="Visit my GitHub profile">
+                  <img loading="lazy" src="/assets/icons/contact/github.png" alt="GitHub profile" />
                 </a>
-              </div>
-              <div class="project-title">Bloom Lifestyle Blog</div>
-              <div class="project-description">
-               <p> Bloom is a responsive blog platform targeting users interested in lifestyle and self-care, offering a modern and clean interface. It is developed using
-                <span class="fw-500">HTML</span>, <span class="fw-500">CSS</span> and <span class="fw-500">JavaScript</span>, with an <span class="fw-500">API integration</span> to manage dynamic blog posts. The site features a carousel for the 3 latest posts, a responsive grid displaying all posts, and <span class="fw-500">admin functionality</span> for registration, login, and post management. </p>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/NoroffFEU/FED1-PE1-taraolivia" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
-
-                <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" class="glassmorphism">View Live</a>
-                <a href="/html/bloom.html" class="glassmorphism">Read more</a>
-              </div>
-            </div>
-
-            <div class="project-card glassmorphism-text">
-              <div class="project-thumbnail">
-                <a href="https://game-hub-with-themes.netlify.app/index.html" target="_blank">
-                  <img src="/assets/projects/game-hub-hero.png" alt="Game Hub Hero Image" />
+                <a href="https://www.instagram.com/tara_bjo/" aria-label="Visit my Instagram profile">
+                  <img loading="lazy" src="/assets/icons/contact/instagram.png" alt="Instagram profile" />
                 </a>
+                <!--               <img loading="lazy" src="/assets/icons/contact/behance.png" alt="" />
+ -->
               </div>
-              <div class="project-title">Game Hub: The Universe of Games</div>
-              <div class="project-description"> <p>Game Hub is an interactive online targeted at gamers store built using <span class="fw-500">HTML</span>, <span class="fw-500">CSS</span> and <span class="fw-500">JavaScript</span>, showcasing video games through an <span class="fw-500">API</span>. Users can filter games by genre, view detailed game information, and simulate buying games. The platform includes dynamic reviews, similar game suggestions, and a theme switcher with 8 different themes.</p> </div>
-              <div class="project-links">
-                <a href="https://github.com/NoroffFEU/GameHub-taraolivia-js_integration-rework" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
-
-                <a href="https://game-hub-with-themes.netlify.app/" target="_blank" class="glassmorphism">View Live</a>
-                <a href="/html/game-hub.html" class="glassmorphism">Read more</a>
-              </div>
-            </div>
-
-            <div class="project-card glassmorphism-text">
-              <div class="project-thumbnail">
-                <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank">
-                  <img src="/assets/projects/petagram-hero.png" alt="Petagram Social Media Hero Image"/>
-                </a>
-              </div>
-              <div class="project-title">Petagram - Social Media App</div>
-              <div class="project-description">
-                <p>Petagram is a social media platform built with <span class="fw-500">Vanilla JavaScript</span> and <span class="fw-500">Tailwind CSS</span>. Features include user authentication, post creation and management, following/unfollowing users, commenting, and emoji reactions. Built with <span class="fw-500">Vite</span> and integrated with the <span class="fw-500">Noroff Social API</span>.</p>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/NoroffFEU/js2-ca-tara-and-jenny" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
-
-                <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank" class="glassmorphism">View Live</a>
-                <a href="/html/petagram.html" class="glassmorphism">Read more</a>
-              </div>
-            </div>
-
-            <div class="project-card glassmorphism-text">
-              <div class="project-thumbnail">
-                <a href="https://nova-e-commerce.vercel.app/" target="_blank">
-                  <img src="/assets/projects/nova-hero.png" alt="Nova eCommerce Hero Image"/>
-                </a>
-              </div>
-              <div class="project-title">Nova - eCommerce Store</div>
-              <div class="project-description">
-                <p>Nova is a modern eCommerce platform built with <span class="fw-500">Next.js</span> and <span class="fw-500">React</span>. Features include product browsing, search functionality, shopping cart, checkout process, and contact forms with validation. The project showcases animated color blobs in the product carousel and responsive design throughout.</p>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/taraolivia/nova_e-commerce" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
-
-                <a href="https://nova-e-commerce.vercel.app/" target="_blank" class="glassmorphism">View Live</a>
-                <a href="/html/nova.html" class="glassmorphism">Read more</a>
-              </div>
-            </div>
-
-            <div class="project-card glassmorphism-text">
-              <div class="project-thumbnail">
-                <a href="https://heartbids.netlify.app/" target="_blank">
-                  <img src="/assets/projects/heartbids-hero.png" alt="HeartBids Hero Image"/>
-                </a>
-              </div>
-              <div class="project-title">HeartBids - Auctions for a Cause</div>
-              <div class="project-description">
-                <p>HeartBids is an auction platform built with <span class="fw-500">React</span> and <span class="fw-500">TypeScript</span>, where users can donate, bid, and win items to support charitable causes. Features include user authentication, real-time bidding, credit system, and charity integration with both <span class="fw-500">Noroff API</span> and custom <span class="fw-500">Firebase API</span>.</p>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/taraolivia/heartbids-with-react" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
-
-                <a href="https://heartbids.netlify.app/" target="_blank" class="glassmorphism">View Live</a>
-                <a href="/html/heartbids.html" class="glassmorphism">Read more</a>
-              </div>
-            </div>
-
-            <div class="project-card glassmorphism-text">
-              <div class="project-thumbnail">
-                <a href="https://galaxygarden.netlify.app/" target="_blank">
-                  <img src="/assets/projects/galaxy-garden-hero.png" alt="Galaxy Garden Hero Image"/>
-                </a>
-              </div>
-              <div class="project-title">Galaxy Garden Community Museum</div>
-              <div class="project-description">
-                <p> The Galaxy Garden Community Museum website was developed using
-                <span class="fw-500">HTML</span> and <span class="fw-500">CSS</span> to create a modern, responsive site aimed at children and their families. The project is tested across browsers and devices, offering an engaging, educational experience that sparks curiosity about science in an exciting, age-appropriate way.</p>
-              </div>
-              <span class="fw-500"></span>
-              <div class="project-links">
-                <a href="https://github.com/taraolivia/semester-project-tara-bjorheim" target="_blank" class="glassmorphism"><img src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
-
-                <a href="https://galaxygarden.netlify.app/" target="_blank" class="glassmorphism">View Live</a>
-                <a href="/html/galaxy-garden.html" class="glassmorphism">Read more</a>
-              </div>
-            </div>
-            <div class="projects__section-content-description">
-              <p class="ff-raleway fs-base glassmorphism-text">My first project, Game Hub <img src="/assets/icons/random/icons8-controller-50.png" class="inline-icon" alt="Game controller icon" /> was a dream to build for a fellow gamer audience. Designing different colored themes was a personal highlight. Then came the Galaxy Garden Community Museum <img src="/assets/icons/random/icons8-test-tube-48.png" class="inline-icon" alt="Science test tube icon" /> where I had the challenge of designing for both kids and families—creating a fun, engaging space for children that didn’t feel condescending to adults. I dove into color psychology and web design for kids, balancing simplicity with depth. My latest project, Bloom <img src="/assets/icons/random/icons8-camellia-48.png" class="inline-icon" alt="Flower icon" /> is all about calm and minimalism—a clean, modern blog experience that lets the content take center stage.</p>
-              <p class="ff-raleway fs-base glassmorphism-text">Frontend-development is the perfect fit for me—creative, challenging, and there's always something new to learn. Plus, there’s no one 'right' answer, which means I get to experiment, explore different approaches, and have fun with it. It's a space where no two projects are ever the same, and that variety keeps me energized and in flow.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="experience__section" id="experience__section">
-        <div class="experience__section-content">
-          <div class="tabs">
-            <button class="tab-link" data-tab="skills">Skills</button>
-            <button class="tab-link" data-tab="work-education">Work and Education</button>
-            <button class="tab-link" data-tab="certifications">Certifications and Courses</button>
-          </div>
-
-          <div id="noTabsMessage" class="tab-content glassmorphism-text border-radius-bottom" style="display: none">
-            <p>Open a tab to learn more</p>
-          </div>
-
-          <div id="skills" class="tab-content glassmorphism-text border-radius-bottom">
-            <div class="tab-content-inner tab-content-flex">
-              <div class="flex-wrapper">
-                <!-- Programming Languages and Frameworks -->
-                <div class="skills-section">
-                  <h3>Programming Languages and Frameworks</h3>
-                  <div class="skills-grid">
-                    <div class="skill-card">
-                      <h4>HTML</h4>
-                      <img src="assets/icons/icons8-html-5-50.png" alt="HTML icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>CSS</h4>
-                      <img src="assets/icons/icons8-css3-50.png" alt="CSS icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>JavaScript</h4>
-                      <img src="assets/icons/icons8-javascript-logo-50.png" alt="JavaScript icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>C (Beginner)</h4>
-                      <img src="assets/icons/icons8-c-50.png" alt="C icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Tailwind CSS (Beginner)</h4>
-                      <img src="assets/icons/icons8-tailwind-css-24.png" alt="Tailwind CSS icon" />
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Tools -->
-                <div class="skills-section">
-                  <h3>Tools</h3>
-                  <div class="skills-grid">
-                    <div class="skill-card">
-                      <h4>GitHub</h4>
-                      <img src="/assets/icons/github-mark.png" alt="GitHub icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Figma</h4>
-                      <img src="/assets/icons/icons8-figma-50.png" alt="Figma icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Canva</h4>
-                      <img src="/assets/icons/icons8-canva-app-50.png" alt="Canva icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>WordPress</h4>
-                      <img src="/assets/icons/icons8-wordpress-50.png" alt="WordPress icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>SharePoint</h4>
-                      <img src="/assets/icons/icons8-microsoft-sharepoint-50.png" alt="SharePoint icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Power Automate</h4>
-                      <img src="/assets/icons/icons8-microsoft-power-automate-2020-48.png" alt="Power Automate icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Tiny MCE</h4>
-                      <img src="/assets/icons/icons8-paste-as-text-50.png" alt="Tiny MCE icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Visual Studio Code</h4>
-                      <img src="/assets/icons/icons8-visual-studio-50.png" alt="Visual Studio Code icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Netlify</h4>
-                      <img src="/assets/icons/icons8-cms-50.png" alt="Netlify icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Slack</h4>
-                      <img src="/assets/icons/icons8-slack-50.png" alt="Slack icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>npm</h4>
-                      <img src="/assets/icons/icons8-npm-32.png" alt="npm icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Postman</h4>
-                      <img src="/assets/icons/icons8-api-30.png" alt="Postman icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Decap CMS</h4>
-                      <img src="/assets/icons/icons8-dashboard-50.png" alt="Decap CMS icon" />
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Design -->
-                <div class="skills-section">
-                  <h3>Design</h3>
-                  <div class="skills-grid">
-                    <div class="skill-card">
-                      <h4>Responsive Design</h4>
-                      <img src="/assets/icons/icons8-responsive-50.png" alt="Responsive Design icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>UX/UI</h4>
-                      <img src="/assets/icons/icons8-designer-48.png" alt="UX/UI icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>High-fidelity Wireframes</h4>
-                      <img src="/assets/icons/icons8-wireframe-50.png" alt="Wireframes icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Prototyping</h4>
-                      <img src="/assets/icons/icons8-prototype-50.png" alt="Prototyping icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>User Flows</h4>
-                      <img src="/assets/icons/icons8-user-flow-67.png" alt="User Flows icon" />
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Methodologies -->
-                <div class="skills-section">
-                  <h3>Methodologies</h3>
-                  <div class="skills-grid">
-                    <div class="skill-card">
-                      <h4>Agile/Scrum</h4>
-                      <img src="/assets/icons/icons8-agile-32.png" alt="Agile/Scrum icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Project Management</h4>
-                      <img src="/assets/icons/icons8-project-management-30.png" alt="Project Management icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Process Automation</h4>
-                      <img src="/assets/icons/icons8-automation-50.png" alt="Process Automation icon" />
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Technologies -->
-                <div class="skills-section">
-                  <h3>Technologies</h3>
-                  <div class="skills-grid">
-                    <div class="skill-card">
-                      <h4>API Integration</h4>
-                      <img src="/assets/icons/icons8-api-30.png" alt="API icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>WCAG Accessibility Standards</h4>
-                      <img src="/assets/icons/icons8-accessibility-50.png" alt="WCAG icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>SEO Optimization</h4>
-                      <img src="/assets/icons/icons8-seo-50.png" alt="SEO icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Version Control</h4>
-                      <img src="/assets/icons/icons8-ctrl-50.png" alt="Version Control icon" />
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Languages -->
-                <div class="skills-section">
-                  <h3>Languages (Fluency)</h3>
-                  <div class="skills-grid">
-                    <div class="skill-card">
-                      <h4>Norwegian (Native)</h4>
-                      <img src="/assets/icons/star-yellow.png" alt="5 stars for fluency" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>English (Fluent)</h4>
-                      <img src="/assets/icons/star-yellow.png" alt="4 stars for fluency" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Spanish (Intermediate)</h4>
-                      <img src="/assets/icons/star-yellow.png" alt="3 stars for fluency" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>French (Intermediate)</h4>
-                      <img src="/assets/icons/star-yellow.png" alt="3 stars for fluency" />
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Next Up -->
-                <div class="skills-section">
-                  <h3>Next Up</h3>
-                  <div class="skills-grid">
-                    <div class="skill-card">
-                      <h4>Bootstrap</h4>
-                      <img src="/assets/icons/icons8-bootstrap-50.png" alt="Bootstrap icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Sass</h4>
-                      <img src="/assets/icons/icons8-sass-avatar-50.png" alt="Sass icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>React</h4>
-                      <img src="/assets/icons/icons8-react-30.png" alt="React icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Vue.js</h4>
-                      <img src="/assets/icons/icons8-vuejs-50.png" alt="Vue.js icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>Information Architecture</h4>
-                      <img src="/assets/icons/icons8-information-48.png" alt="Information Architecture icon" />
-                    </div>
-                    <div class="skill-card">
-                      <h4>TypeScript</h4>
-                      <img src="/assets/icons/icons8-typescript-50.png" alt="TypeScript icon" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex-wrapper tab-content__paragraph">
-                <p>I’ve always been endlessly curious, always wanting to know more—whether it’s diving into new frameworks like React or finding ways to make processes more efficient. I’m the type who will happily spend an entire day learning a tool that might save me five minutes in the future, lol. A good example of that is at my current job, where I wanted to remind my colleagues to update a file every week. Sure, I could have just sent the same message every Friday or scheduled it in Teams, but instead, I figured out how to automate the whole process using Microsoft Power Automate. Now, every Friday, they get a cheery message with the exact link they need, and I never have to think about it again. It’s little things like that which add up.</p>
-                <button class="close-tab-button glassmorphism">Close Tab</button>
-              </div>
-            </div>
-          </div>
-
-          <div id="work-education" class="tab-content glassmorphism-text border-radius-bottom">
-            <div class="tab-content-flex">
-              <div class="flex-wrapper">
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <div class="year">Today</div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="education">
-                      Frontend Development
-                      <div class="place">Noroff School of Technology</div>
-                    </div>
-                    <div class="year"></div>
-                    <div class="work">
-                      Administrative Coordinator
-                      <div class="place">Stavangerregionens Europakontor, Brussels</div>
-                    </div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="education">
-                      Personal Training & Nutrition
-                      <div class="place">Active Education</div>
-                    </div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="work">
-                      First Secretary, Consultant & First Consultant
-                      <div class="place">Skatteetaten, Stavanger</div>
-                    </div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="education">
-                      Spanish Studies
-                      <div class="place">EF school of Costa Rica</div>
-                    </div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="education">
-                      General Studies
-                      <div class="place">St. Olav High School, Stavanger</div>
-                    </div>
-                    <div class="year"></div>
-                    <div class="work">
-                      Assistant at Art School
-                      <div class="place">Pippis Kunstskole, Stavanger</div>
-                    </div>
-                  </div>
-                  <div class="timeline-item"></div>
-                  <div class="year">2015</div>
-                </div>
-              </div>
-
-              <div class="flex-wrapper tab-content__paragraph">
-                <p class="ff-raleway fs-base">What really excites me is this mix of organization and creativity. My career so far has been such a blend of both technical and artistic work. I’ve taught at an art school for children, worked at the Norwegian tax authorities, and now, as an administrative coordinator, I jump between Excel spreadsheets and Canva designs on a daily basis. I love getting lost in the technical side of things—solving deep, complex problems—but I equally love the creative freedom that comes with brainstorming ideas. In my front-end work, I aim to bring that balance, designing web applications that work seamlessly but also evoke a sense of ease, satisfaction, and maybe even a bit of wonder.</p>
-                <button class="close-tab-button glassmorphism">Close Tab</button>
-              </div>
-            </div>
-          </div>
-
-          <div id="certifications" class="tab-content glassmorphism-text border-radius-bottom tab-content-flex">
-            <div class="tab-content-inner tab-content-flex">
-              <!-- Development Section -->
-              <div class="category">
-                <h3>Development, Design, etc</h3>
-                <ul class="certifications-list">
-                  <li>
-                    <h4>
-                      <a href="https://cssday.nl/2024" target="_blank"> CSS Day 2024</a>
-                    </h4>
-                    <p>Amsterdam | 2024</p>
-                  </li>
-                  <li>
-                    <h4>
-                      <a href="https://www.linkedin.com/learning/javascript-essential-training?u=43268076" target="_blank"> JavaScript Essential Training </a>
-                    </h4>
-                    <p>LinkedIn Learning | 2024</p>
-                  </li>
-                  <li>
-                    <h4>
-                      <a href="https://www.linkedin.com/learning/introduction-to-web-apis-22019269?u=43268076" target="_blank"> Introduction to Web APIs </a>
-                    </h4>
-                    <p>LinkedIn Learning | 2024</p>
-                  </li>
-                  <li>
-                    <h4>
-                      <a href="https://www.shecodes.io/workshops#features" target="_blank"> SheCodes Basics </a>
-                    </h4>
-                    <p>SheCodes | 2022</p>
-                  </li>
-                  <li>
-                    <h4>
-                      <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science" target="_blank"> CS50: Introduction to Computer Science </a>
-                    </h4>
-                    <p>Harvard School of Engineering and Applied Sciences | Ongoing</p>
-                  </li>
-                  <li>
-                    <h4>
-                      <a href="https://www.linkedin.com/learning/figma-essential-training-the-basics?u=43268076" target="_blank"> Figma Essential Training: The Basics </a>
-                    </h4>
-                    <p>LinkedIn Learning | 2023</p>
-                  </li>
-                  <li>
-                    <h4>
-                      <a href="https://www.linkedin.com/learning/introduction-to-graphic-design-concepts-2021?u=43268076" target="_blank"> Introduction to Graphic Design Concepts </a>
-                    </h4>
-                    <p>LinkedIn Learning | 2023</p>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Project Management Section -->
-              <div class="category">
-                <h3>Other</h3>
-                <ul class="certifications-list">
-                  <li>
-                    <h4>
-                      <a href="https://www.linkedin.com/learning/scrum-the-basics?u=43268076" target="_blank"> Scrum: The Basics </a>
-                    </h4>
-                    <p>LinkedIn Learning | 2024</p>
-                  </li>
-                  <li>
-                    <h4>
-                      <a href="https://www.linkedin.com/learning/how-to-regain-control-of-your-time-energy-and-priorities?u=43268076" target="_blank"> How to Regain Control of Your Time, Energy, and Priorities </a>
-                    </h4>
-                    <p>LinkedIn Learning | 2023</p>
-                  </li>
-                  <li>
-                    <h4>Advanced Personal Trainer (AE L5)</h4>
-                    <p>Active Education | 2022</p>
-                  </li>
-                  <li>
-                    <h4>Certified Nutrition Coach (AE L4)</h4>
-                    <p>Active Education | 2022</p>
-                  </li>
-                  <li>
-                    <h4>Certified Weight Management Exercise Specialist (AE L5)</h4>
-                    <p>Active Education | 2022</p>
-                  </li>
-                  <li>
-                    <h4>
-                      <a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank"> Learning How to Learn </a>
-                    </h4>
-                    <p>Coursera | 2023</p>
-                  </li>
-                  <li>
-                    <h4>Basic course in CrossFit</h4>
-                    <p>Rapida Bodø | 2022</p>
-                  </li>
-                  <li>
-                    <h4>
-                     Spanish (B2 Level)
-                    </h4>
-                    <p>EF School of Costa Rica | 2020</p>
-                  </li>
-                  <li>
-                    <h4>
-                      French (B1 Level)
-                    </h4>
-                    <p>CLL Brussels | 2024</p>
-                  </li>
-                  <button class="close-tab-button glassmorphism">Close Tab</button>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact__section" id="contact__section">
-        <div class="contact-page-wrapper">
-          <div class="contact-page-section contact-page-section-secondary border-radius-left glassmorphism-text">
-            <p>Need a Creative Partner?</p>
-            <p>I’m In!</p>
-          </div>
-
-          <div class="contact-page-section contact-page-section-primary border-radius-right">
-            <p>E-mail me at:</p>
-            <a href="mailto:tara.bjorheim@outlook.com" class="fw-700">tara.bjorheim@outlook.com</a>
-            <p>And let's connect on</p>
-            <div class="contact-info__icons">
-              <a href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/"><img src="/assets/icons/contact/linkedin.png" alt="LinkedIn profile" /> </a>
-              <a href="https://github.com/taraolivia">
-                <img src="/assets/icons/contact/github.png" alt="GitHub profile" />
-              </a>
-              <a href="https://www.instagram.com/tara_bjo/">
-                <img src="/assets/icons/contact/instagram.png" alt="Instagram profile" />
-              </a>
-              <!--               <img src="/assets/icons/contact/behance.png" alt="" />
+              <!--             <a href="linktree.com">My LinkTree</a>
  -->
             </div>
-            <!--             <a href="linktree.com">My LinkTree</a>
- -->
           </div>
-        </div>
-      </section>
-
-      <section class="end-notes__section glassmorphism-text">
+        </section>
+        <section class="end-notes__section glassmorphism-text" aria-label="End Notes">
           <div class="end-notes__section-text">
-          <h2 class="ff-lora fstyle-italic padding-bottom-1em">End note</h2>
-          <p>Thank you for making it this far!</p>
-            <p> This page was designed and built by me, <span class="underline-colored">Tara Olivia Bjørheim.</span> </p>
-            <p> It's built with HTML, CSS, and vanilla JavaScript. Version control is handled through GitHub. The page is deployed through <a href="https://www.netlify.com/" target="_blank" class="fw-500">Netlify</a>. Stay tuned for more updates as I incorporate more of my ideas!</p>
+            <h2 class="ff-lora fstyle-italic padding-bottom-1em">End note</h2>
+            <p>Thank you for making it this far!</p>
+            <p>This page was designed and built by me, <span class="underline-colored">Tara Olivia Bjørheim.</span></p>
+            <p>It's built with HTML, CSS, and vanilla JavaScript. Version control is handled through GitHub. The page is deployed through <a href="https://www.netlify.com/" target="_blank" rel="noopener" class="fw-500">Netlify</a>. Stay tuned for more updates as I incorporate more of my ideas!</p>
             <p>All the photos on this site are personal and close to my heart. I kindly ask that they not be used without permission. Thank you for understanding!</p>
             <p>The icons are from <a href="https://icons8.com/" class="fw-700">icons8.</a></p>
-          <p>Got any ideas or feedback? Don't hesitate to <a href="#contact__section" class="fw-500">send me a message :)</a></p>
-          <p>&copy; 2024 Tara Olivia Bjørheim. All rights reserved.</p></div>
+            <p>Got any ideas or feedback? Don't hesitate to <a href="#contact__section" class="fw-500">send me a message :)</a></p>
+            <p>&copy; 2025 Tara Olivia Bjørheim. All rights reserved.</p>
+          </div>
           <div class="end-notes__section-image">
-          <img src="/assets/me/about-me-carousel/(48).jpg" alt="Tara Olivia Bjørheim"></div>
-      </section>
-
-
+            <img loading="lazy" src="/assets/me/about-me-carousel/(48).jpg" alt="Tara Olivia Bjørheim" />
+          </div>
+        </section>
+      </main>
       <!--       <section class="fun__section" id="fun__section">
         <div class="interview-container">
           <div class="accordion-category__wrapper">
@@ -850,8 +910,8 @@
 
           <section id="personalizedPortfolioContent"></section>
         </div>
-      </section> -->
+      </section>
+      </main> -->
     </div>
   </body>
-
 </html>
