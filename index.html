@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Front-end developer and aspiring UI/UX designer based in Brussels. Passionate about creating beautiful, functional web experiences with HTML, CSS, and JavaScript." />
+    <meta name="description" content="Front-end developer in Stavanger building accessible, performant web apps with React, TypeScript, and Tailwind. View projects and experience." />
     <meta name="author" content="Tara Olivia Bjørheim" />
     <meta property="og:title" content="Tara Olivia Bjørheim | Front-End Developer Portfolio" />
-    <meta property="og:description" content="Front-end developer and aspiring UI/UX designer based in Brussels. View my projects and experience." />
+    <meta property="og:description" content="Front-end developer based in Stavanger, Norway. View my projects and experience." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tara-olivia.netlify.app/" />
+    <meta property="og:image" content="https://tara-olivia.netlify.app/assets/og-image.jpg" />
+    <meta property="og:site_name" content="Tara Olivia Bjørheim" />
     <title>Tara Olivia Bjørheim | Portfolio</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,16 +30,11 @@
 
     <!-- JavaScript Modules -->
     <script type="module" src="/js/main.js"></script>
-
-    <script>
-      /* To prevent Firefox FOUC, this must be here */
-      let FF_FOUC_FIX;
-    </script>
   </head>
 
   <body>
     <div id="loading-screen" class="bg-container normal">
-      <section id="hero__section">
+      <section id="hero__section--loading">
         <h1 class="ff-lora fw-700 fstyle-italic">Tara Olivia Bjørheim</h1>
         <div class="hero__section-h2">
           <h2 class="ff-lora fw-200">Front-End Developer</h2>
@@ -58,11 +56,11 @@
           <!-- This will change dynamically -->
 
           <!-- Dropdown icon for mobile -->
-          <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+          <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
 
           <!-- Full navbar items hidden by default on mobile -->
           <ul class="header__nav-menu" role="list">
-            <div class="cloud"></div>
+            <li class="cloud" role="presentation"></li>
             <!-- Cloud behind active item -->
             <li class="nav-dot"><a href="#about-me__section">Me!</a></li>
             <li class="nav-dot">
@@ -92,7 +90,7 @@
             <p class="ff-raleway fs-base">Hello! I'm Tara, a front-end developer with a passion for technology and design. I'm originally from Stavanger, Norway, but I’ve lived in many places, including Costa Rica, Tanzania, and under the northern lights in Bodø. Until this year, I’ve been based in Brussels, Belgium, where I worked as an administrative coordinator and continued to expand my skills in web development. This year, I’ve returned home to Norway to begin my career as a full-time developer. Currently based in Stavanger, I work as a Frontend Developer at TagHub – Smart Management AS. Talking about everything I love doing would take hours, so I've included some photos and honorable mentions below :)</p>
           </div>
           <div class="scrolling-text-container">
-            <div class="scrolling-text-inner" style="--marquee-speed: 150s; --direction: scroll-right" role="marquee">
+            <div class="scrolling-text-inner" style="--marquee-speed: 150s; --direction: scroll-right">
               <div class="scrolling-text">
                 <!-- Your original items -->
                 <div class="scrolling-text-item">My family</div>
@@ -112,7 +110,7 @@
                 <div class="scrolling-text-item">Cooking vegetarian food</div>
                 <div class="scrolling-text-item">Reading</div>
                 <div class="scrolling-text-item">Dancing</div>
-                <div class="scrolling-text-item">Baldurs Gate 3</div>
+                <div class="scrolling-text-item">Baldur's Gate 3</div>
                 <div class="scrolling-text-item">Forest hikes</div>
                 <div class="scrolling-text-item">Stavanger</div>
                 <div class="scrolling-text-item">Spinning classes</div>
@@ -125,7 +123,6 @@
                 <div class="scrolling-text-item">Memes</div>
                 <div class="scrolling-text-item">CSS</div>
                 <div class="scrolling-text-item">Pastel colors</div>
-                <div class="scrolling-text-item">Traveling</div>
                 <div class="scrolling-text-item">Surfing</div>
                 <div class="scrolling-text-item">Swimming</div>
                 <div class="scrolling-text-item">Strong Viking</div>
@@ -134,15 +131,16 @@
                 <div class="scrolling-text-item">Themed parties</div>
                 <div class="scrolling-text-item">Book club</div>
                 <div class="scrolling-text-item">Learning languages</div>
-                <div class="scrolling-text-item">Traveling</div>
                 <div class="scrolling-text-item">Vinyl records</div>
                 <div class="scrolling-text-item">Late-night coding</div>
                 <div class="scrolling-text-item">Sunsets</div>
                 <div class="scrolling-text-item">Making playlists</div>
                 <div class="scrolling-text-item">Journaling</div>
                 <div class="scrolling-text-item">Stormy days</div>
+              </div>
 
-                <!-- Duplicate the items to create the seamless loop -->
+              <!-- Duplicate items for seamless loop -->
+              <div class="scrolling-text" aria-hidden="true">
                 <div class="scrolling-text-item">My family</div>
                 <div class="scrolling-text-item">Concerts</div>
                 <div class="scrolling-text-item">Camping</div>
@@ -160,7 +158,7 @@
                 <div class="scrolling-text-item">Cooking vegetarian food</div>
                 <div class="scrolling-text-item">Reading</div>
                 <div class="scrolling-text-item">Dancing</div>
-                <div class="scrolling-text-item">Baldurs Gate 3</div>
+                <div class="scrolling-text-item">Baldur's Gate 3</div>
                 <div class="scrolling-text-item">Forest hikes</div>
                 <div class="scrolling-text-item">Stavanger</div>
                 <div class="scrolling-text-item">Spinning classes</div>
@@ -173,7 +171,6 @@
                 <div class="scrolling-text-item">Memes</div>
                 <div class="scrolling-text-item">CSS</div>
                 <div class="scrolling-text-item">Pastel colors</div>
-                <div class="scrolling-text-item">Traveling</div>
                 <div class="scrolling-text-item">Surfing</div>
                 <div class="scrolling-text-item">Swimming</div>
                 <div class="scrolling-text-item">Strong Viking</div>
@@ -182,7 +179,6 @@
                 <div class="scrolling-text-item">Themed parties</div>
                 <div class="scrolling-text-item">Book club</div>
                 <div class="scrolling-text-item">Learning languages</div>
-                <div class="scrolling-text-item">Traveling</div>
                 <div class="scrolling-text-item">Vinyl records</div>
                 <div class="scrolling-text-item">Late-night coding</div>
                 <div class="scrolling-text-item">Sunsets</div>
@@ -201,7 +197,7 @@
           </div>
           <div class="about-me__section-content glassmorphism glassmorphism-text">
             <p class="ff-raleway fs-base text-left">
-              My love for tech started with my pink Nintendo DS <img loading="lazy" src="/assets/icons/random/ds.png" class="inline-icon" alt="Nintendo DS icon" /> and our old stationary PC at home, and now it’s all about my newer setup and my Nintendo Switch <img loading="lazy" src="/assets/icons/random/switch.png" class="inline-icon" alt="Nintendo Switch icon" />. My first discovery of front-end was after I spent months customizing my Notion workspace, getting everything just right in terms of both design and functionality. I had everything in there: work and school notes, creative writing, habit and workout trackers, and more. I remember telling my friend,
+              My love for tech started with my pink Nintendo DS <img loading="lazy" src="/assets/icons/random/ds.png" class="inline-icon" alt="" aria-hidden="true" /> and our old stationary PC at home, and now it’s all about my newer setup and my Nintendo Switch <img loading="lazy" src="/assets/icons/random/switch.png" class="inline-icon" alt="" aria-hidden="true" />. My first discovery of front-end was after I spent months customizing my Notion workspace, getting everything just right in terms of both design and functionality. I had everything in there: work and school notes, creative writing, habit and workout trackers, and more. I remember telling my friend,
               <span class="fstyle-italic fw-500">"I wish I could do this for work — make things on the computer all day that are both pretty and functional."</span>
               He laughed and said, "Well, you can. It's called front-end development." I fell down the rabbit hole and couldn’t believe I had finally found my dream career. I signed up for a course on
               <a href="https://www.shecodes.io/workshops" class="fw-500">SheCodes</a>
@@ -225,7 +221,7 @@
                 <div class="project-links">
                   <a href="https://github.com/NoroffFEU/FED1-PE1-taraolivia" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
-                  <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View Bloom live">View Live</a>
                   <a href="/html/bloom.html" class="glassmorphism">Read more</a>
                 </div>
               </div>
@@ -238,12 +234,12 @@
                 </div>
                 <div class="project-title">Game Hub: The Universe of Games</div>
                 <div class="project-description">
-                  <p>Game Hub is an interactive online targeted at gamers store built using <span class="fw-500">HTML</span>, <span class="fw-500">CSS</span> and <span class="fw-500">JavaScript</span>, showcasing video games through an <span class="fw-500">API</span>. Users can filter games by genre, view detailed game information, and simulate buying games. The platform includes dynamic reviews, similar game suggestions, and a theme switcher with 8 different themes.</p>
+                  <p>Game Hub is an interactive online store targeted at gamers built using <span class="fw-500">HTML</span>, <span class="fw-500">CSS</span> and <span class="fw-500">JavaScript</span>, showcasing video games through an <span class="fw-500">API</span>. Users can filter games by genre, view detailed game information, and simulate buying games. The platform includes dynamic reviews, similar game suggestions, and a theme switcher with 8 different themes.</p>
                 </div>
                 <div class="project-links">
                   <a href="https://github.com/NoroffFEU/GameHub-taraolivia-js_integration-rework" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
-                  <a href="https://game-hub-with-themes.netlify.app/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="https://game-hub-with-themes.netlify.app/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View Game Hub live">View Live</a>
                   <a href="/html/game-hub.html" class="glassmorphism">Read more</a>
                 </div>
               </div>
@@ -262,7 +258,7 @@
                   <a href="https://github.com/taraolivia/heartbids-with-react" target="_blank" rel="noopener" class="glassmorphism">
                     <img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
                   </a>
-                  <a href="https://heartbids.netlify.app/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="https://heartbids.netlify.app/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View HeartBids live">View Live</a>
                   <a href="/html/heartbids.html" class="glassmorphism">Read more</a>
                 </div>
               </div>
@@ -280,7 +276,7 @@
                 <div class="project-links">
                   <a href="https://github.com/NoroffFEU/js2-ca-tara-and-jenny" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
-                  <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View Petagram live">View Live</a>
                   <a href="/html/petagram.html" class="glassmorphism">Read more</a>
                 </div>
               </div>
@@ -298,7 +294,7 @@
                 <div class="project-links">
                   <a href="https://github.com/taraolivia/nova_e-commerce" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
-                  <a href="https://nova-e-commerce.vercel.app/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="https://nova-e-commerce.vercel.app/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View Nova live">View Live</a>
                   <a href="/html/nova.html" class="glassmorphism">Read more</a>
                 </div>
               </div>
@@ -317,12 +313,12 @@
                 <div class="project-links">
                   <a href="https://github.com/taraolivia/semester-project-tara-bjorheim" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
-                  <a href="https://galaxygarden.netlify.app/" target="_blank" rel="noopener" class="glassmorphism">View Live</a>
+                  <a href="https://galaxygarden.netlify.app/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View Galaxy Garden live">View Live</a>
                   <a href="/html/galaxy-garden.html" class="glassmorphism">Read more</a>
                 </div>
               </div>
               <div class="projects__section-content-description">
-                <p class="ff-raleway fs-base glassmorphism-text">My first project, Game Hub <img loading="lazy" src="/assets/icons/random/icons8-controller-50.png" class="inline-icon" alt="Game controller icon" /> was a dream to build for a fellow gamer audience. Designing different colored themes was a personal highlight. Then came the Galaxy Garden Community Museum <img loading="lazy" src="/assets/icons/random/icons8-test-tube-48.png" class="inline-icon" alt="Science test tube icon" /> where I had the challenge of designing for both kids and families—creating a fun, engaging space for children that didn’t feel condescending to adults. I dove into color psychology and web design for kids, balancing simplicity with depth. My latest project, Bloom <img loading="lazy" src="/assets/icons/random/icons8-camellia-48.png" class="inline-icon" alt="Flower icon" /> is all about calm and minimalism—a clean, modern blog experience that lets the content take center stage.</p>
+                <p class="ff-raleway fs-base glassmorphism-text">My first project, Game Hub <img loading="lazy" src="/assets/icons/random/icons8-controller-50.png" class="inline-icon" alt="" aria-hidden="true" /> was a dream to build for a fellow gamer audience. Designing different colored themes was a personal highlight. Then came the Galaxy Garden Community Museum <img loading="lazy" src="/assets/icons/random/icons8-test-tube-48.png" class="inline-icon" alt="" aria-hidden="true" /> where I had the challenge of designing for both kids and families—creating a fun, engaging space for children that didn’t feel condescending to adults. I dove into color psychology and web design for kids, balancing simplicity with depth. My latest project, Bloom <img loading="lazy" src="/assets/icons/random/icons8-camellia-48.png" class="inline-icon" alt="" aria-hidden="true" /> is all about calm and minimalism—a clean, modern blog experience that lets the content take center stage.</p>
                 <p class="ff-raleway fs-base glassmorphism-text">Frontend-development is the perfect fit for me—creative, challenging, and there's always something new to learn. Plus, there’s no one 'right' answer, which means I get to experiment, explore different approaches, and have fun with it. It's a space where no two projects are ever the same, and that variety keeps me energized and in flow.</p>
               </div>
             </div>
@@ -330,17 +326,17 @@
         </section>
         <section class="experience__section" id="experience__section" aria-label="Experience and Skills">
           <div class="experience__section-content">
-            <div class="tabs">
-              <button class="tab-link" data-tab="skills" role="tab" aria-selected="false">Skills</button>
-              <button class="tab-link" data-tab="work-education" role="tab" aria-selected="false">Work and Education</button>
-              <button class="tab-link" data-tab="certifications" role="tab" aria-selected="false">Certifications and Courses</button>
+            <div class="tabs" role="tablist">
+              <button class="tab-link" data-tab="skills" role="tab" aria-controls="skills" aria-selected="false">Skills</button>
+              <button class="tab-link" data-tab="work-education" role="tab" aria-controls="work-education" aria-selected="false">Work and Education</button>
+              <button class="tab-link" data-tab="certifications" role="tab" aria-controls="certifications" aria-selected="false">Certifications and Courses</button>
             </div>
 
             <div id="noTabsMessage" class="tab-content glassmorphism-text border-radius-bottom" style="display: none">
               <p>Open a tab to learn more</p>
             </div>
 
-            <div id="skills" class="tab-content glassmorphism-text border-radius-bottom">
+            <div id="skills" class="tab-content glassmorphism-text border-radius-bottom" role="tabpanel">
               <div class="tab-content-inner tab-content-flex">
                 <div class="flex-wrapper">
                   <!-- Programming Languages and Frameworks -->
@@ -407,8 +403,8 @@
                         <img loading="lazy" src="/assets/icons/icons8-microsoft-power-automate-2020-48.png" alt="Power Automate icon" />
                       </div>
                       <div class="skill-card">
-                        <h4>Tiny MCE</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-paste-as-text-50.png" alt="Tiny MCE icon" />
+                        <h4>TinyMCE</h4>
+                        <img loading="lazy" src="/assets/icons/icons8-paste-as-text-50.png" alt="TinyMCE icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Visual Studio Code</h4>
@@ -587,7 +583,7 @@
               </div>
             </div>
 
-            <div id="work-education" class="tab-content glassmorphism-text border-radius-bottom">
+            <div id="work-education" class="tab-content glassmorphism-text border-radius-bottom" role="tabpanel">
               <div class="tab-content-flex">
                 <div class="flex-wrapper">
                   <div class="timeline">
@@ -632,7 +628,7 @@
                     <div class="timeline-item">
                       <div class="education">
                         Spanish Studies
-                        <div class="place">EF school of Costa Rica</div>
+                        <div class="place">EF School of Costa Rica</div>
                       </div>
                     </div>
 
@@ -659,7 +655,7 @@
               </div>
             </div>
 
-            <div id="certifications" class="tab-content glassmorphism-text border-radius-bottom tab-content-flex">
+            <div id="certifications" class="tab-content glassmorphism-text border-radius-bottom tab-content-flex" role="tabpanel">
               <div class="tab-content-inner tab-content-flex">
                 <!-- Development Section -->
                 <div class="category">
@@ -775,11 +771,11 @@
               <a href="mailto:tara.bjorheim@outlook.com" class="fw-700">tara.bjorheim@outlook.com</a>
               <p>And let's connect on</p>
               <div class="contact-info__icons">
-                <a href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/" aria-label="Visit my LinkedIn profile"><img loading="lazy" src="/assets/icons/contact/linkedin.png" alt="LinkedIn profile" /> </a>
-                <a href="https://github.com/taraolivia" aria-label="Visit my GitHub profile">
+                <a href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/" target="_blank" rel="noopener" aria-label="Visit my LinkedIn profile"><img loading="lazy" src="/assets/icons/contact/linkedin.png" alt="LinkedIn profile" /> </a>
+                <a href="https://github.com/taraolivia" target="_blank" rel="noopener" aria-label="Visit my GitHub profile">
                   <img loading="lazy" src="/assets/icons/contact/github.png" alt="GitHub profile" />
                 </a>
-                <a href="https://www.instagram.com/tara_bjo/" aria-label="Visit my Instagram profile">
+                <a href="https://www.instagram.com/tara_bjo/" target="_blank" rel="noopener" aria-label="Visit my Instagram profile">
                   <img loading="lazy" src="/assets/icons/contact/instagram.png" alt="Instagram profile" />
                 </a>
                 <!--               <img loading="lazy" src="/assets/icons/contact/behance.png" alt="" />

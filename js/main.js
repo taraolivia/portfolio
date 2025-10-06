@@ -1,12 +1,18 @@
+/**
+ * Main entry point for portfolio website functionality
+ * @module main
+ */
+
 import { initializeNavAndCloud } from './navbar.mjs';
 import { initializeImageSlider } from './aboutMeCarousel.mjs';
 
 // Prevent scrolling during loading
 document.body.classList.add('no-scroll');
 
-// Use DOMContentLoaded instead of window.onload for faster loading
+/**
+ * Handles loading screen fade out and re-enables scrolling
+ */
 document.addEventListener('DOMContentLoaded', function() {
-  // Small delay to ensure smooth transition
   setTimeout(() => {
     const loadingScreen = document.getElementById('loading-screen');
     loadingScreen.classList.add('hide');
@@ -14,7 +20,69 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 500);
 });
 
+/**
+ * Dynamically adjusts the number of background containers based on content height
+ */
+function adjustBackgroundContainers() {
+  const contentHeight = document.body.scrollHeight;
+  const viewportHeight = window.innerHeight;
+  const bgContainerHeight = viewportHeight;
+  const requiredContainers = Math.ceil(contentHeight / bgContainerHeight);
+  const bgContainerParent = document.body;
+  let existingContainers = Array.from(document.querySelectorAll('.bg-container')).filter(container => container.id !== 'loading-screen');
+  const currentContainers = existingContainers.length;
+  if (currentContainers < requiredContainers) {
+    for (let i = currentContainers; i < requiredContainers; i++) {
+      const newContainer = document.createElement('div');
+      newContainer.classList.add('bg-container');
+      if (i % 2 === 0) {
+        newContainer.classList.add('normal');
+      } else {
+        newContainer.classList.add('flipped');
+      }
+      bgContainerParent.appendChild(newContainer);
+    }
+  }
+  if (currentContainers > requiredContainers) {
+    for (let i = currentContainers - 1; i >= requiredContainers; i--) {
+      existingContainers[i].remove();
+    }
+  }
+}
 
+document.addEventListener('DOMContentLoaded', () => {
+  adjustBackgroundContainers();
+  setTimeout(adjustBackgroundContainers, 100);
+});
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(adjustBackgroundContainers, 250);
+});
+window.addEventListener('load', () => {
+  setTimeout(adjustBackgroundContainers, 100);
+  const images = document.querySelectorAll('img');
+  let loadedImages = 0;
+  images.forEach(img => {
+    if (img.complete) {
+      loadedImages++;
+    } else {
+      img.addEventListener('load', () => {
+        loadedImages++;
+        if (loadedImages === images.length) {
+          adjustBackgroundContainers();
+        }
+      });
+    }
+  });
+  if (loadedImages === images.length) {
+    adjustBackgroundContainers();
+  }
+});
+
+/**
+ * Initializes all interactive components on page load
+ */
 document.addEventListener('DOMContentLoaded', () => {
   initializeNavAndCloud();
   initializeImageSlider();
@@ -42,61 +110,27 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', function(event) {
       const tabName = this.getAttribute('data-tab');
       toggleTab(event, tabName);
+      setTimeout(adjustBackgroundContainers, 100);
     });
   });
 
   // Add event listeners to close-tab buttons (if they exist)
   const closeTabButtons = document.querySelectorAll('.close-tab-button');
   closeTabButtons.forEach(button => {
-    button.addEventListener('click', closeTab);
+    button.addEventListener('click', () => {
+      closeTab();
+      setTimeout(adjustBackgroundContainers, 100);
+    });
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  adjustBackgroundContainers();
-});
-
-function adjustBackgroundContainers() {
-  const contentHeight = document.body.scrollHeight; // Total height of the content
-  const viewportHeight = window.innerHeight; // Height of the viewport
-  const bgContainerHeight = viewportHeight; // Each bg-container is 100vh
-  const requiredContainers = Math.ceil(contentHeight / bgContainerHeight) +1; 
-
-  const bgContainerParent = document.body;
-  
-  // Select all bg-containers, excluding the loading screen
-  let existingContainers = Array.from(document.querySelectorAll('.bg-container')).filter(container => container.id !== 'loading-screen');
-  const currentContainers = existingContainers.length;
-
-  // Add more containers if there aren't enough
-  if (currentContainers < requiredContainers) {
-    for (let i = currentContainers; i < requiredContainers; i++) {
-      const newContainer = document.createElement('div');
-      newContainer.classList.add('bg-container');
-      
-      // Alternate between 'normal' and 'flipped' class
-      if (i % 2 === 0) {
-        newContainer.classList.add('normal');
-      } else {
-        newContainer.classList.add('flipped');
-      }
-      
-      bgContainerParent.appendChild(newContainer);
-    }
-  }
-
-  // Remove extra containers if there are too many
-  if (currentContainers > requiredContainers) {
-    for (let i = currentContainers - 1; i >= requiredContainers; i--) {
-      existingContainers[i].remove();
-    }
-  }
-}
 
 
-
-
-
+/**
+ * Toggles tab visibility and manages active states
+ * @param {Event} evt - Click event
+ * @param {string} tabName - ID of the tab to toggle
+ */
 function toggleTab(evt, tabName) {
   const noTabsMessage = document.getElementById('noTabsMessage');
   const currentTabContent = document.getElementById(tabName);
@@ -136,6 +170,9 @@ function toggleTab(evt, tabName) {
   });
 }
 
+/**
+ * Closes all tabs and shows the default message
+ */
 function closeTab() {
   const noTabsMessage = document.getElementById('noTabsMessage');
 

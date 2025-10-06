@@ -41,12 +41,8 @@
   --font-raleway: 'Raleway', sans-serif;
   --font-feature-settings: "liga" 1, "calt" 1;
   --font-variant-ligatures: common-ligatures;
-
-
   
   /* Font Weights */
-
-
   /* Font Sizes Regular Screen Size. Will be 2 numbers smaller for mobile*/
   --font-size-xs: 1.4rem; /* 14px */
   --font-size-s: 1.6rem; /* 16px */

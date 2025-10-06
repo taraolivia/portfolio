@@ -1,3 +1,11 @@
+/**
+ * Personalized portfolio generator module
+ * @module personalized-portfolio
+ */
+
+/**
+ * Initializes the interactive portfolio questionnaire functionality
+ */
 export function initializePortfolio() {
     const categoryHeaders = document.querySelectorAll('.category-header');
     const submitButton = document.getElementById('submitButton');

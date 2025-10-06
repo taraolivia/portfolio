@@ -1,3 +1,11 @@
+/**
+ * Navigation and cloud indicator module
+ * @module navbar
+ */
+
+/**
+ * Initializes navigation functionality including smooth scrolling, active section tracking, and cloud indicator
+ */
 export function initializeNavAndCloud() {
     const navLinks = document.querySelectorAll('.header__nav-menu li a');
     const sections = document.querySelectorAll('section');
@@ -33,29 +41,12 @@ export function initializeNavAndCloud() {
         });
     });
 
-    // Intersection Observer to detect section in view
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Clear all active states
-                navLinks.forEach(link => link.parentElement.classList.remove('active'));
-                cloud.classList.remove('active');
-                
-                const activeLink = document.querySelector(`.header__nav-menu li a[href="#${entry.target.id}"]`);
-                
-                if (activeLink) {
-                    activeLink.parentElement.classList.add('active');
-                    activeSectionDisplay.textContent = activeLink.textContent;
-                    moveCloudToNavItem(activeLink);
-                } else {
-                    activeSectionDisplay.textContent = '';
-                }
-            }
-        });
-    }, { threshold: 0.2 });
 
-    sections.forEach(section => observer.observe(section));
 
+    /**
+     * Moves the cloud indicator to the active navigation item
+     * @param {HTMLElement} navItem - The active navigation link element
+     */
     function moveCloudToNavItem(navItem) {
         if (cloud && navItem) {
             const navItemRect = navItem.getBoundingClientRect();
@@ -79,16 +70,36 @@ export function initializeNavAndCloud() {
         }
     });
 
-    // Make toggleMenu globally accessible
+    /**
+     * Toggles mobile navigation menu visibility
+     */
     window.toggleMenu = function() {
         const navMenu = document.querySelector('.header__nav-menu');
-        navMenu.classList.toggle('active');
+        const hamburger = document.querySelector('.hamburger');
+        const isActive = navMenu.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isActive);
     };
 
     // Toggle Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.header__nav-menu');
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', window.toggleMenu);
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.toggleMenu();
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // Prevent menu clicks from closing
+        navMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
     }
 }

@@ -1,14 +1,18 @@
+/**
+ * Image carousel module for about me section
+ * @module aboutMeCarousel
+ */
+
+/**
+ * Initializes the auto-scrolling image carousel with randomized photos
+ */
 export function initializeImageSlider() {
     const sliderList = document.querySelector('.slider-list');
     if (!sliderList) {
         return;
     }
 
-    
-    
-    const imageFolderPath = 'assets/me/about-me-carousel/'; // Path to the image folder
-    
-    // Use the updated imageFilenames array going up to 280
+    const imageFolderPath = 'assets/me/about-me-carousel/';
     const imageFilenames = [
             '().jpg', '(1).jpg', '(2).jpg', '(3).jpg', '(4).jpg',
             '(6).jpg', '(7).jpg', '(8).jpg', '(9).jpg', '(10).jpg',
@@ -68,7 +72,10 @@ export function initializeImageSlider() {
              '(278).jpg', '(279).jpg', '(280).jpg'
             ];
 
-    // Randomize the image filenames
+    /**
+     * Shuffles array elements in place using Fisher-Yates algorithm
+     * @param {Array} array - Array to shuffle
+     */
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -76,56 +83,52 @@ export function initializeImageSlider() {
         }
     }
 
-    shuffleArray(imageFilenames); // Randomize the images
+    shuffleArray(imageFilenames);
 
-// Create a loading indicator
-const loadingIndicator = document.createElement('div');
-loadingIndicator.classList.add('loading-indicator');
-loadingIndicator.innerText = 'Cute pictures loading!'; // You can use a spinner or other indicator
-sliderList.appendChild(loadingIndicator);
+    const loadingIndicator = document.createElement('div');
+    loadingIndicator.classList.add('loading-indicator');
+    loadingIndicator.innerText = 'Cute pictures loading!';
+    sliderList.appendChild(loadingIndicator);
 
-// Add an event listener to hide the loading indicator once all images have loaded
-let imagesLoaded = 0;
+    let imagesLoaded = 0;
 
-function createAndAppendImage(filename, index) {
-    const sliderItem = document.createElement('div');
-    sliderItem.classList.add('slider-list-item');
-    sliderItem.setAttribute('style', `--position: ${index + 1}`);
+    /**
+     * Creates an image element and appends it to the slider
+     * @param {string} filename - Image filename
+     * @param {number} index - Position index in the slider
+     */
+    function createAndAppendImage(filename, index) {
+        const sliderItem = document.createElement('div');
+        sliderItem.classList.add('slider-list-item');
+        sliderItem.setAttribute('style', `--position: ${index + 1}`);
 
-    const img = document.createElement('img');
-    img.src = `${imageFolderPath}${filename}`; // Load the image immediately
-    img.alt = `Image ${filename}`;
+        const img = document.createElement('img');
+        img.src = `${imageFolderPath}${filename}`;
+        img.alt = `Image ${filename}`;
 
-    // Disable right-click for this specific image
-    img.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-    });
-    img.draggable = false;
+        img.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+        img.draggable = false;
 
-    img.onload = () => {
-        imagesLoaded++;
-        if (imagesLoaded === imageFilenames.length) {
-            loadingIndicator.style.display = 'none'; // Hide loading indicator when all images are loaded
-        }
-    };
+        img.onload = () => {
+            imagesLoaded++;
+            if (imagesLoaded === imageFilenames.length) {
+                loadingIndicator.style.display = 'none';
+            }
+        };
 
-    sliderItem.appendChild(img);
-    sliderList.appendChild(sliderItem);
-}
-
-// Append images dynamically to the slider list
-imageFilenames.forEach(createAndAppendImage);
-
-    
-
-    // Append images dynamically to the slider list
+        sliderItem.appendChild(img);
+        sliderList.appendChild(sliderItem);
+    }
     imageFilenames.forEach(createAndAppendImage);
-
-    // Start scrolling logic (no infinite scroll needed with so many images)
     let scrollPosition = 0;
     const scrollSpeed = 0.5;
     let animationId;
 
+    /**
+     * Animates the slider scroll position
+     */
     function scrollSlider() {
         scrollPosition -= scrollSpeed;
         sliderList.style.transform = `translateX(${scrollPosition}px)`;
@@ -138,14 +141,18 @@ imageFilenames.forEach(createAndAppendImage);
         animationId = requestAnimationFrame(scrollSlider);
     }
 
-    // Start scrolling animation
+    /**
+     * Starts the scrolling animation
+     */
     function startScroll() {
         if (!animationId) {
             animationId = requestAnimationFrame(scrollSlider);
         }
     }
 
-    // Stop scrolling animation
+    /**
+     * Stops the scrolling animation
+     */
     function stopScroll() {
         if (animationId) {
             cancelAnimationFrame(animationId);
@@ -153,19 +160,19 @@ imageFilenames.forEach(createAndAppendImage);
         }
     }
 
-    startScroll(); // Start the scroll initially
-
-    // Stop scrolling on hover and resume after
+    startScroll();
     sliderList.addEventListener('mouseenter', stopScroll);
     sliderList.addEventListener('mouseleave', startScroll);
 
-    // Hover effect for grayscale images
+    /**
+     * Applies grayscale effect to non-hovered images
+     */
     function applyGrayscaleEffect() {
-        const items = Array.from(sliderList.children); // Get all items
+        const items = Array.from(sliderList.children);
         items.forEach(item => {
             item.addEventListener('mouseenter', () => {
                 items.forEach(sibling => sibling.classList.add('grayscale'));
-                item.classList.remove('grayscale'); // Remove grayscale from hovered item
+                item.classList.remove('grayscale');
             });
 
             item.addEventListener('mouseleave', () => {
@@ -174,5 +181,5 @@ imageFilenames.forEach(createAndAppendImage);
         });
     }
 
-    applyGrayscaleEffect(); // Apply grayscale effect
+    applyGrayscaleEffect();
 }

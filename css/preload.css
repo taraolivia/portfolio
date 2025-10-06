@@ -63,7 +63,14 @@
 .no-scroll {
   overflow: hidden;
 }
+#hero__section--loading h1 {
+  font-size: 9vw;
+  color: rgba(0, 0, 0, 0.4);
+}
 
+#hero__section--loading .hero__section-h2 {
+  font-size: var(--font-size-l);
+}
 
 .loading-indicator {
   font-family: var(--font-lora);
