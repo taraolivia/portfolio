@@ -1,10 +1,13 @@
 # Portfolio - Tara Olivia Bjørheim
 
+<img width="1892" height="841" alt="Screenshot 2025-10-06 at 09 38 56" src="https://github.com/user-attachments/assets/79bbfcae-5e76-4428-b9a3-23af2477bbaa" />
+
+
 A personal portfolio website showcasing my work as a front-end developer and aspiring UI/UX designer.
 
 ## 🌐 Live Site
 
-[View Portfolio](https://your-portfolio-url.netlify.app)
+[View Portfolio](https://tara-olivia.netlify.app/)
 
 ## 📋 Description
 
@@ -81,4 +84,4 @@ cd portfolio
 
 ## 📄 License
 
-© 2024 Tara Olivia Bjørheim. All rights reserved.
+© 2025 Tara Olivia Bjørheim. All rights reserved.
