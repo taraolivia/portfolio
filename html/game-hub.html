@@ -7,20 +7,24 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" /></noscript>
 
     <!-- Preload and Load Critical CSS -->
-    <link rel="preload" href="../css/preload.css" as="style" onload="this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="../css/preload.css" /></noscript>
     <link rel="preload" href="../assets/background/background-holo-1.jpg" as="image" />
-    <link rel="preload" href="../assets/background/background-holo-2.jpg" as="image" />
 
     <!-- Main Stylesheets -->
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/variables.css?v=20260609" />
+    <link rel="stylesheet" href="../css/reset.css?v=20260609" />
+    <link rel="stylesheet" href="../css/utilities.css?v=20260609" />
+    <link rel="stylesheet" href="../css/preload.css?v=20260609" />
+    <link rel="stylesheet" href="../css/skip-link.css?v=20260609" />
+    <link rel="stylesheet" href="../css/accessibility.css?v=20260609" />
+    <link rel="stylesheet" href="../css/styles.css?v=20260609" />
 
     <!-- JavaScript Modules -->
-    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/main.js?v=20260609"></script>
 
     <script>
       /* To prevent Firefox FOUC, this must be here */
@@ -66,11 +70,11 @@
               <li class="tech-item glassmorphism-text">CSS Variables & Utility Classes</li>
             </div>
           </div>
-          <img loading="lazy" src="../assets/projects/game-hub/Screen Shot 2024-10-20 at 03.44.38.jpg" alt="Game Hub Hero Section" />
+          <img loading="eager" fetchpriority="high" decoding="async" src="../assets/projects/game-hub/Screen Shot 2024-10-20 at 03.44.38.jpg" alt="Game Hub Hero Section" />
         </section>
 
         <section class="project-page__section glassmorphism-text wrap-reverse">
-            <img loading="lazy" src="/assets/projects/game-hub/Screen Shot 2024-10-20 at 03.48.53.jpg" alt="Game Hub Games overview" />
+            <img loading="lazy" decoding="async" src="/assets/projects/game-hub/Screen Shot 2024-10-20 at 03.48.53.jpg" alt="Game Hub Games overview" />
             <div>
             <h2 class="padding-top-bottom-1em">My Role in the Project</h2>
             <p>Game Hub was developed as part of my first JavaScript project. I was responsible for every aspect of the project, including:</p>
@@ -104,7 +108,7 @@
               </li>
             </ul>
           </div>
-          <img loading="lazy" src="/assets/projects/game-hub/Screen Shot 2024-10-20 at 03.16.50.jpg" alt="Game Hub product page, showcasing theme switcher and dynamic reviews" />
+          <img loading="lazy" decoding="async" src="/assets/projects/game-hub/Screen Shot 2024-10-20 at 03.16.50.jpg" alt="Game Hub product page, showcasing theme switcher and dynamic reviews" />
         </section>
 
         <section class="project-page__section glassmorphism-text">
@@ -145,11 +149,11 @@
               </li>
             </ul>
           </div>
-          <img loading="lazy" src="/assets/projects/game-hub/Screen Shot 2024-10-20 at 03.48.06.jpg" alt="Game Hub wireframes in Figma showcasing the visual design process" />
+          <img loading="lazy" decoding="async" src="/assets/projects/game-hub/Screen Shot 2024-10-20 at 03.48.06.jpg" alt="Game Hub wireframes in Figma showcasing the visual design process" />
         </section>
 
         <section class="project-page__section glassmorphism-text wrap-reverse">
-            <img loading="lazy" src="/assets/projects/game-hub/Screen Shot 2024-10-20 at 03.18.29.jpg" alt="Game Hub checkout page with a summary of games in the cart" />
+            <img loading="lazy" decoding="async" src="/assets/projects/game-hub/Screen Shot 2024-10-20 at 03.18.29.jpg" alt="Game Hub checkout page with a summary of games in the cart" />
             <div>
             <h2 class="padding-top-bottom-1em">Future Improvements</h2>
             <ul>
@@ -178,12 +182,12 @@
               <a href="https://game-hub-with-themes.netlify.app/" target="_blank" rel="noopener" class="glassmorphism-text">View Live</a>
 
               <a href="https://github.com/NoroffFEU/GameHub-taraolivia-js_integration-rework" target="_blank" rel="noopener" aria-label="Go to GitHub repository" class="project-page-github">
-                <img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
+                <img loading="lazy" decoding="async" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
               </a>
             </div>
             <p class="padding-top-bottom-1em">Check out the live version of the Game Hub platform or explore the source code on GitHub to see how it's built.</p>
           </div>
-          <img loading="lazy" src="/assets/projects/game-hub/Screen Shot 2024-10-20 at 03.19.19.jpg" alt="Game Hub learning and takeaways" />
+          <img loading="lazy" decoding="async" src="/assets/projects/game-hub/Screen Shot 2024-10-20 at 03.19.19.jpg" alt="Game Hub learning and takeaways" />
 
         </section>
       </main>

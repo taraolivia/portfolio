@@ -3,11 +3,12 @@
  * @module main
  */
 
-import { initializeNavAndCloud } from './navbar.mjs';
-import { initializeImageSlider } from './aboutMeCarousel.mjs';
+import { initializeNavAndCloud } from './navbar.mjs?v=20260609';
+import { initializeImageSlider } from './aboutMeCarousel.mjs?v=20260609';
 
 // Prevent scrolling during loading
 document.body.classList.add('no-scroll');
+const backgroundContainerSelector = '.bg-container:not(#loading-screen)';
 
 /**
  * Handles loading screen fade out and re-enables scrolling
@@ -15,70 +16,77 @@ document.body.classList.add('no-scroll');
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(() => {
     const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.classList.add('hide');
+    if (loadingScreen) {
+      loadingScreen.classList.add('hide');
+    }
     document.body.classList.remove('no-scroll');
-  }, 500);
+  }, 250);
 });
 
 /**
  * Dynamically adjusts the number of background containers based on content height
  */
 function adjustBackgroundContainers() {
-  const contentHeight = document.body.scrollHeight;
-  const viewportHeight = window.innerHeight;
-  const bgContainerHeight = viewportHeight;
-  const requiredContainers = Math.ceil(contentHeight / bgContainerHeight);
-  const bgContainerParent = document.body;
-  let existingContainers = Array.from(document.querySelectorAll('.bg-container')).filter(container => container.id !== 'loading-screen');
-  const currentContainers = existingContainers.length;
-  if (currentContainers < requiredContainers) {
-    for (let i = currentContainers; i < requiredContainers; i++) {
+  const contentContainer = document.querySelector(backgroundContainerSelector);
+  if (!contentContainer) {
+    return;
+  }
+
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 1;
+  const contentHeight = Math.max(contentContainer.scrollHeight, viewportHeight);
+  const requiredContainers = Math.ceil(contentHeight / viewportHeight);
+  const existingContainers = Array.from(document.querySelectorAll(backgroundContainerSelector));
+  const fillerContainers = existingContainers.slice(1);
+  const requiredFillers = Math.max(0, requiredContainers - 1);
+
+  if (fillerContainers.length < requiredFillers) {
+    for (let i = fillerContainers.length; i < requiredFillers; i++) {
       const newContainer = document.createElement('div');
       newContainer.classList.add('bg-container');
-      if (i % 2 === 0) {
+      if ((i + 1) % 2 === 0) {
         newContainer.classList.add('normal');
       } else {
         newContainer.classList.add('flipped');
       }
-      bgContainerParent.appendChild(newContainer);
+      document.body.appendChild(newContainer);
     }
   }
-  if (currentContainers > requiredContainers) {
-    for (let i = currentContainers - 1; i >= requiredContainers; i--) {
-      existingContainers[i].remove();
+
+  if (fillerContainers.length > requiredFillers) {
+    for (let i = fillerContainers.length - 1; i >= requiredFillers; i--) {
+      fillerContainers[i].remove();
     }
   }
 }
 
+let backgroundAdjustmentFrame;
+function scheduleBackgroundAdjustment() {
+  if (backgroundAdjustmentFrame) {
+    cancelAnimationFrame(backgroundAdjustmentFrame);
+  }
+
+  backgroundAdjustmentFrame = requestAnimationFrame(() => {
+    adjustBackgroundContainers();
+    backgroundAdjustmentFrame = null;
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  adjustBackgroundContainers();
-  setTimeout(adjustBackgroundContainers, 100);
+  scheduleBackgroundAdjustment();
+
+  const observedContent = document.querySelector('main') || document.querySelector(backgroundContainerSelector);
+  if ('ResizeObserver' in window && observedContent) {
+    const resizeObserver = new ResizeObserver(scheduleBackgroundAdjustment);
+    resizeObserver.observe(observedContent);
+  } else {
+    window.addEventListener('load', scheduleBackgroundAdjustment, { once: true });
+  }
 });
 let resizeTimeout;
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(adjustBackgroundContainers, 250);
-});
-window.addEventListener('load', () => {
-  setTimeout(adjustBackgroundContainers, 100);
-  const images = document.querySelectorAll('img');
-  let loadedImages = 0;
-  images.forEach(img => {
-    if (img.complete) {
-      loadedImages++;
-    } else {
-      img.addEventListener('load', () => {
-        loadedImages++;
-        if (loadedImages === images.length) {
-          adjustBackgroundContainers();
-        }
-      });
-    }
-  });
-  if (loadedImages === images.length) {
-    adjustBackgroundContainers();
-  }
-});
+  resizeTimeout = setTimeout(scheduleBackgroundAdjustment, 250);
+}, { passive: true });
 
 /**
  * Initializes all interactive components on page load

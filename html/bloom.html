@@ -7,20 +7,24 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" /></noscript>
 
     <!-- Preload and Load Critical CSS -->
-    <link rel="preload" href="../css/preload.css" as="style" onload="this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="../css/preload.css" /></noscript>
     <link rel="preload" href="../assets/background/background-holo-1.jpg" as="image" />
-    <link rel="preload" href="../assets/background/background-holo-2.jpg" as="image" />
 
     <!-- Main Stylesheets -->
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/variables.css?v=20260609" />
+    <link rel="stylesheet" href="../css/reset.css?v=20260609" />
+    <link rel="stylesheet" href="../css/utilities.css?v=20260609" />
+    <link rel="stylesheet" href="../css/preload.css?v=20260609" />
+    <link rel="stylesheet" href="../css/skip-link.css?v=20260609" />
+    <link rel="stylesheet" href="../css/accessibility.css?v=20260609" />
+    <link rel="stylesheet" href="../css/styles.css?v=20260609" />
 
     <!-- JavaScript Modules -->
-    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/main.js?v=20260609"></script>
 
     <script>
       /* To prevent Firefox FOUC, this must be here */
@@ -67,11 +71,11 @@
               <li class="tech-item glassmorphism-text">GitHub (Version Control and Projects)</li>
             </div>
           </div>
-          <img loading="lazy" src="../assets/projects/Bloom-hero.jpg" alt="Bloom Lifestyle Blog Hero Section showing the responsive design" />
+          <img loading="eager" fetchpriority="high" decoding="async" src="../assets/projects/Bloom-hero.jpg" alt="Bloom Lifestyle Blog Hero Section showing the responsive design" />
         </section>
 
         <section class="project-page__section glassmorphism-text wrap-reverse">
-          <img loading="lazy" src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.35.50.jpg" alt="Detailed view of a blog post titled 'How to Spot Wild Animals: Tips for Observing Wildlife in Nature,' with clear typography, a sidebar showing the author, and a 'copy link' button" />
+          <img loading="lazy" decoding="async" src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.35.50.jpg" alt="Detailed view of a blog post titled 'How to Spot Wild Animals: Tips for Observing Wildlife in Nature,' with clear typography, a sidebar showing the author, and a 'copy link' button" />
           <div>
             <h2 class="padding-top-bottom-1em">My Role in the Project</h2>
             <p>The Bloom Lifestyle Blog was developed as part of my final exam for the FED year 1 program. The exam brief required the creation of a fully responsive blog platform that integrates dynamic content through an API and provides both a public-facing interface and admin features. I was responsible for every aspect of the project, including:</p>
@@ -116,7 +120,7 @@
               </li>
             </ul>
           </div>
-          <img loading="lazy" src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.35.12.jpg" alt="Carousel showcasing the post 'Why You Should Prioritize Yourself and Not Feel Guilty About It,' followed by a grid of blog posts like 'DIY Bath Recipes for a Relaxing Spa Experience at Home." />
+          <img loading="lazy" decoding="async" src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.35.12.jpg" alt="Carousel showcasing the post 'Why You Should Prioritize Yourself and Not Feel Guilty About It,' followed by a grid of blog posts like 'DIY Bath Recipes for a Relaxing Spa Experience at Home." />
         </section>
 
         <section class="project-page__section glassmorphism-text">
@@ -140,8 +144,8 @@
               </div>
             </div>
           </div>
-          <img loading="lazy" src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.32.34.jpg" alt="Bloom's login screen with fields for email and password, accompanied by a floral background and the Bloom logo at the top." />
-          <img loading="lazy" src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.32.41.jpg" alt="Bloom's custom loading screen with the Bloom logo centered against a dark background, featuring floral accents." />
+          <img loading="lazy" decoding="async" src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.32.34.jpg" alt="Bloom's login screen with fields for email and password, accompanied by a floral background and the Bloom logo at the top." />
+          <img loading="lazy" decoding="async" src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.32.41.jpg" alt="Bloom's custom loading screen with the Bloom logo centered against a dark background, featuring floral accents." />
         </section>
 
         <section class="project-page__section glassmorphism-text">
@@ -165,11 +169,11 @@
               </li>
             </ul>
           </div>
-          <img loading="lazy" src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.34.16.jpg" alt="Admin overview screen of Bloom, displaying a blog post management system where users can edit or delete posts and write new ones." />
+          <img loading="lazy" decoding="async" src="/assets/projects/bloom/Screen Shot 2024-10-19 at 22.34.16.jpg" alt="Admin overview screen of Bloom, displaying a blog post management system where users can edit or delete posts and write new ones." />
         </section>
 
         <section class="project-page__section glassmorphism-text wrap-reverse">
-          <img loading="lazy" src="/assets/projects/bloom/figma.jpg" alt="Screenshot of Bloom’s design wireframe created in Figma, showcasing the layout and visual structure." />
+          <img loading="lazy" decoding="async" src="/assets/projects/bloom/figma.jpg" alt="Screenshot of Bloom’s design wireframe created in Figma, showcasing the layout and visual structure." />
           <div>
             <h2 class="padding-top-bottom-1em">Future Improvements</h2>
             <ul>
@@ -195,7 +199,7 @@
               <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" rel="noopener" class="glassmorphism-text">View Live</a>
 
               <a href="https://github.com/NoroffFEU/FED1-PE1-taraolivia" target="_blank" rel="noopener" aria-label="Go to GitHub repository" class="project-page-github">
-                <img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
+                <img loading="lazy" decoding="async" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
               </a>
             </div>
             <p class="padding-top-bottom-1em">Check out the live version of the Bloom platform or explore the source code on GitHub to see how it's built.</p>

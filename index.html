@@ -15,21 +15,24 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" /></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" /></noscript>
 
     <!-- Preload and Load Critical CSS -->
-    <link rel="preload" href="/css/preload.css" as="style" onload="this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="/css/preload.css" /></noscript>
     <link rel="preload" href="/assets/background/background-holo-1.jpg" as="image" />
-    <link rel="preload" href="/assets/background/background-holo-2.jpg" as="image" />
 
     <!-- Main Stylesheets -->
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/variables.css?v=20260609" />
+    <link rel="stylesheet" href="/css/reset.css?v=20260609" />
+    <link rel="stylesheet" href="/css/utilities.css?v=20260609" />
+    <link rel="stylesheet" href="/css/preload.css?v=20260609" />
+    <link rel="stylesheet" href="/css/skip-link.css?v=20260609" />
+    <link rel="stylesheet" href="/css/accessibility.css?v=20260609" />
+    <link rel="stylesheet" href="/css/styles.css?v=20260609" />
 
     <!-- JavaScript Modules -->
-    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/main.js?v=20260609"></script>
   </head>
 
   <body>
@@ -197,7 +200,7 @@
           </div>
           <div class="about-me__section-content glassmorphism glassmorphism-text">
             <p class="ff-raleway fs-base text-left">
-              My love for tech started with my pink Nintendo DS <img loading="lazy" src="/assets/icons/random/ds.png" class="inline-icon" alt="" aria-hidden="true" /> and our old stationary PC at home, and now it’s all about my newer setup and my Nintendo Switch <img loading="lazy" src="/assets/icons/random/switch.png" class="inline-icon" alt="" aria-hidden="true" />. My first discovery of front-end was after I spent months customizing my Notion workspace, getting everything just right in terms of both design and functionality. I had everything in there: work and school notes, creative writing, habit and workout trackers, and more. I remember telling my friend,
+              My love for tech started with my pink Nintendo DS <img loading="lazy" decoding="async" src="/assets/icons/random/ds.png" class="inline-icon" alt="" aria-hidden="true" /> and our old stationary PC at home, and now it’s all about my newer setup and my Nintendo Switch <img loading="lazy" decoding="async" src="/assets/icons/random/switch.png" class="inline-icon" alt="" aria-hidden="true" />. My first discovery of front-end was after I spent months customizing my Notion workspace, getting everything just right in terms of both design and functionality. I had everything in there: work and school notes, creative writing, habit and workout trackers, and more. I remember telling my friend,
               <span class="fstyle-italic fw-500">"I wish I could do this for work: make things on the computer all day that are both pretty and functional."</span>
               He laughed and said, "Well, you can. It's called front-end development." I fell down the rabbit hole and couldn’t believe I had finally found my dream career. I signed up for a course on
               <a href="https://www.shecodes.io/workshops" class="fw-500">SheCodes</a>
@@ -211,7 +214,7 @@
               <div class="project-card glassmorphism-text">
                 <div class="project-thumbnail">
                   <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" rel="noopener">
-                    <img loading="lazy" src="/assets/projects/Bloom-hero.jpg" alt="Bloom Lifestyle Blog Hero Image" />
+                    <img loading="lazy" decoding="async" src="/assets/projects/Bloom-hero.jpg" alt="Bloom Lifestyle Blog Hero Image" />
                   </a>
                 </div>
                 <div class="project-title">Bloom Lifestyle Blog</div>
@@ -219,7 +222,7 @@
                   <p>Bloom is a responsive blog platform targeting users interested in lifestyle and self-care, offering a modern and clean interface. It is developed using <span class="fw-500">HTML</span>, <span class="fw-500">CSS</span> and <span class="fw-500">JavaScript</span>, with an <span class="fw-500">API integration</span> to manage dynamic blog posts. The site features a carousel for the 3 latest posts, a responsive grid displaying all posts, and <span class="fw-500">admin functionality</span> for registration, login, and post management.</p>
                 </div>
                 <div class="project-links">
-                  <a href="https://github.com/NoroffFEU/FED1-PE1-taraolivia" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+                  <a href="https://github.com/NoroffFEU/FED1-PE1-taraolivia" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" decoding="async" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
                   <a href="https://bloom-lifestyle-blog.netlify.app/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View Bloom live">View Live</a>
                   <a href="/html/bloom.html" class="glassmorphism">Read more</a>
@@ -229,7 +232,7 @@
               <div class="project-card glassmorphism-text">
                 <div class="project-thumbnail">
                   <a href="https://heartbids.netlify.app/" target="_blank" rel="noopener">
-                    <img loading="lazy" src="/assets/projects/heartbids-hero.jpg" alt="HeartBids Hero Image" />
+                    <img loading="lazy" decoding="async" src="/assets/projects/heartbids-hero.jpg" alt="HeartBids Hero Image" />
                   </a>
                 </div>
                 <div class="project-title">HeartBids: Auctions for a Cause</div>
@@ -238,7 +241,7 @@
                 </div>
                 <div class="project-links">
                   <a href="https://github.com/taraolivia/heartbids-with-react" target="_blank" rel="noopener" class="glassmorphism">
-                    <img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
+                    <img loading="lazy" decoding="async" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
                   </a>
                   <a href="https://heartbids.netlify.app/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View HeartBids live">View Live</a>
                   <a href="/html/heartbids.html" class="glassmorphism">Read more</a>
@@ -248,7 +251,7 @@
               <div class="project-card glassmorphism-text">
                 <div class="project-thumbnail">
                   <a href="https://game-hub-with-themes.netlify.app/index.html" target="_blank" rel="noopener">
-                    <img loading="lazy" src="/assets/projects/game-hub-hero.jpg" alt="Game Hub Hero Image" />
+                    <img loading="lazy" decoding="async" src="/assets/projects/game-hub-hero.jpg" alt="Game Hub Hero Image" />
                   </a>
                 </div>
                 <div class="project-title">Game Hub: The Universe of Games</div>
@@ -256,7 +259,7 @@
                   <p>Game Hub is an interactive online store targeted at gamers built using <span class="fw-500">HTML</span>, <span class="fw-500">CSS</span> and <span class="fw-500">JavaScript</span>, showcasing video games through an <span class="fw-500">API</span>. Users can filter games by genre, view detailed game information, and simulate buying games. The platform includes dynamic reviews, similar game suggestions, and a theme switcher with 8 different themes.</p>
                 </div>
                 <div class="project-links">
-                  <a href="https://github.com/NoroffFEU/GameHub-taraolivia-js_integration-rework" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+                  <a href="https://github.com/NoroffFEU/GameHub-taraolivia-js_integration-rework" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" decoding="async" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
                   <a href="https://game-hub-with-themes.netlify.app/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View Game Hub live">View Live</a>
                   <a href="/html/game-hub.html" class="glassmorphism">Read more</a>
@@ -266,7 +269,7 @@
               <div class="project-card glassmorphism-text" hidden data-portfolio-status="paused" style="display: none">
                 <div class="project-thumbnail">
                   <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank" rel="noopener">
-                    <img loading="lazy" src="/assets/projects/petagram-hero.jpg" alt="Petagram Social Media Hero Image" />
+                    <img loading="lazy" decoding="async" src="/assets/projects/petagram-hero.jpg" alt="Petagram Social Media Hero Image" />
                   </a>
                 </div>
                 <div class="project-title">Petagram - Social Media App</div>
@@ -274,7 +277,7 @@
                   <p>Petagram is a social media platform built with <span class="fw-500">Vanilla JavaScript</span> and <span class="fw-500">Tailwind CSS</span>. Features include user authentication, post creation and management, following/unfollowing users, commenting, and emoji reactions. Built with <span class="fw-500">Vite</span> and integrated with the <span class="fw-500">Noroff Social API</span>.</p>
                 </div>
                 <div class="project-links">
-                  <a href="https://github.com/NoroffFEU/js2-ca-tara-and-jenny" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+                  <a href="https://github.com/NoroffFEU/js2-ca-tara-and-jenny" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" decoding="async" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
                   <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View Petagram live">View Live</a>
                   <a href="/html/petagram.html" class="glassmorphism">Read more</a>
@@ -284,7 +287,7 @@
               <div class="project-card glassmorphism-text" hidden data-portfolio-status="paused" style="display: none">
                 <div class="project-thumbnail">
                   <a href="https://nova-e-commerce.vercel.app/" target="_blank" rel="noopener">
-                    <img loading="lazy" src="/assets/projects/nova-hero.jpg" alt="Nova eCommerce Hero Image" />
+                    <img loading="lazy" decoding="async" src="/assets/projects/nova-hero.jpg" alt="Nova eCommerce Hero Image" />
                   </a>
                 </div>
                 <div class="project-title">Nova - eCommerce Store</div>
@@ -292,7 +295,7 @@
                   <p>Nova is a modern eCommerce platform built with <span class="fw-500">Next.js</span> and <span class="fw-500">React</span>. Features include product browsing, search functionality, shopping cart, checkout process, and contact forms with validation. The project showcases animated color blobs in the product carousel and responsive design throughout.</p>
                 </div>
                 <div class="project-links">
-                  <a href="https://github.com/taraolivia/nova_e-commerce" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+                  <a href="https://github.com/taraolivia/nova_e-commerce" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" decoding="async" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
                   <a href="https://nova-e-commerce.vercel.app/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View Nova live">View Live</a>
                   <a href="/html/nova.html" class="glassmorphism">Read more</a>
@@ -302,7 +305,7 @@
               <div class="project-card glassmorphism-text">
                 <div class="project-thumbnail">
                   <a href="https://galaxygarden.netlify.app/" target="_blank" rel="noopener">
-                    <img loading="lazy" src="/assets/projects/galaxy-garden-hero.jpg" alt="Galaxy Garden Hero Image" />
+                    <img loading="lazy" decoding="async" src="/assets/projects/galaxy-garden-hero.jpg" alt="Galaxy Garden Hero Image" />
                   </a>
                 </div>
                 <div class="project-title">Galaxy Garden Community Museum</div>
@@ -311,14 +314,14 @@
                 </div>
                 <span class="fw-500"></span>
                 <div class="project-links">
-                  <a href="https://github.com/taraolivia/semester-project-tara-bjorheim" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
+                  <a href="https://github.com/taraolivia/semester-project-tara-bjorheim" target="_blank" rel="noopener" class="glassmorphism"><img loading="lazy" decoding="async" src="/assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" /></a>
 
                   <a href="https://galaxygarden.netlify.app/" target="_blank" rel="noopener" class="glassmorphism" aria-label="View Galaxy Garden live">View Live</a>
                   <a href="/html/galaxy-garden.html" class="glassmorphism">Read more</a>
                 </div>
               </div>
               <div class="projects__section-content-description">
-                <p class="ff-raleway fs-base glassmorphism-text">My first project, Game Hub <img loading="lazy" src="/assets/icons/random/icons8-controller-50.png" class="inline-icon" alt="" aria-hidden="true" /> was a dream to build for a fellow gamer audience. Designing different colored themes was a personal highlight. Then came the Galaxy Garden Community Museum <img loading="lazy" src="/assets/icons/random/icons8-test-tube-48.png" class="inline-icon" alt="" aria-hidden="true" /> where I had the challenge of designing a fun, engaging space for children that didn’t feel condescending to adults. I dove into color psychology and web design for kids, balancing simplicity with depth. Since then, projects like Bloom <img loading="lazy" src="/assets/icons/random/icons8-camellia-48.png" class="inline-icon" alt="" aria-hidden="true" /> and HeartBids have helped me grow from foundational builds into richer React, TypeScript, API, and product-focused work.</p>
+                <p class="ff-raleway fs-base glassmorphism-text">My first project, Game Hub <img loading="lazy" decoding="async" src="/assets/icons/random/icons8-controller-50.png" class="inline-icon" alt="" aria-hidden="true" /> was a dream to build for a fellow gamer audience. Designing different colored themes was a personal highlight. Then came the Galaxy Garden Community Museum <img loading="lazy" decoding="async" src="/assets/icons/random/icons8-test-tube-48.png" class="inline-icon" alt="" aria-hidden="true" /> where I had the challenge of designing a fun, engaging space for children that didn’t feel condescending to adults. I dove into color psychology and web design for kids, balancing simplicity with depth. Since then, projects like Bloom <img loading="lazy" decoding="async" src="/assets/icons/random/icons8-camellia-48.png" class="inline-icon" alt="" aria-hidden="true" /> and HeartBids have helped me grow from foundational builds into richer React, TypeScript, API, and product-focused work.</p>
                 <p class="ff-raleway fs-base glassmorphism-text">Frontend development is the perfect fit for me: creative, challenging, and always giving me something new to learn. I love that there is no single "right" answer, which means I get to experiment, explore different approaches, and have fun with it. No two projects feel the same, and that variety keeps me energized and in flow.<br /><br />I also love building little things I can share with friends, like <a href="https://taras-library.netlify.app/" target="_blank" rel="noopener" class="fw-500">Tara's Library</a>, where I curate book recommendations and present them as a digital "blind date with a book".</p>
               </div>
             </div>
@@ -345,31 +348,31 @@
                     <div class="skills-grid">
                       <div class="skill-card">
                         <h4>HTML</h4>
-                        <img loading="lazy" src="assets/icons/icons8-html-5-50.png" alt="HTML icon" />
+                        <img loading="lazy" decoding="async" src="assets/icons/icons8-html-5-50.png" alt="HTML icon" />
                       </div>
                       <div class="skill-card">
                         <h4>CSS</h4>
-                        <img loading="lazy" src="assets/icons/icons8-css3-50.png" alt="CSS icon" />
+                        <img loading="lazy" decoding="async" src="assets/icons/icons8-css3-50.png" alt="CSS icon" />
                       </div>
                       <div class="skill-card">
                         <h4>JavaScript</h4>
-                        <img loading="lazy" src="assets/icons/icons8-javascript-logo-50.png" alt="JavaScript icon" />
+                        <img loading="lazy" decoding="async" src="assets/icons/icons8-javascript-logo-50.png" alt="JavaScript icon" />
                       </div>
                       <div class="skill-card">
                         <h4>C (Beginner)</h4>
-                        <img loading="lazy" src="assets/icons/icons8-c-50.png" alt="C icon" />
+                        <img loading="lazy" decoding="async" src="assets/icons/icons8-c-50.png" alt="C icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Tailwind CSS</h4>
-                        <img loading="lazy" src="assets/icons/icons8-tailwind-css-24.png" alt="Tailwind CSS icon" />
+                        <img loading="lazy" decoding="async" src="assets/icons/icons8-tailwind-css-24.png" alt="Tailwind CSS icon" />
                       </div>
                       <div class="skill-card">
                         <h4>React</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-react-30.png" alt="React icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-react-30.png" alt="React icon" />
                       </div>
                       <div class="skill-card">
                         <h4>TypeScript</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-typescript-50.png" alt="TypeScript icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-typescript-50.png" alt="TypeScript icon" />
                       </div>
                     </div>
                   </div>
@@ -380,75 +383,75 @@
                     <div class="skills-grid">
                       <div class="skill-card">
                         <h4>GitHub</h4>
-                        <img loading="lazy" src="/assets/icons/github-mark.png" alt="GitHub icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/github-mark.png" alt="GitHub icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Figma</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-figma-50.png" alt="Figma icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-figma-50.png" alt="Figma icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Canva</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-canva-app-50.png" alt="Canva icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-canva-app-50.png" alt="Canva icon" />
                       </div>
                       <div class="skill-card">
                         <h4>WordPress</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-wordpress-50.png" alt="WordPress icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-wordpress-50.png" alt="WordPress icon" />
                       </div>
                       <div class="skill-card">
                         <h4>SharePoint</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-microsoft-sharepoint-50.png" alt="SharePoint icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-microsoft-sharepoint-50.png" alt="SharePoint icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Power Automate</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-microsoft-power-automate-2020-48.png" alt="Power Automate icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-microsoft-power-automate-2020-48.png" alt="Power Automate icon" />
                       </div>
                       <div class="skill-card">
                         <h4>TinyMCE</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-paste-as-text-50.png" alt="TinyMCE icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-paste-as-text-50.png" alt="TinyMCE icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Visual Studio Code</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-visual-studio-50.png" alt="Visual Studio Code icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-visual-studio-50.png" alt="Visual Studio Code icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Netlify</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-cms-50.png" alt="Netlify icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-cms-50.png" alt="Netlify icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Slack</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-slack-50.png" alt="Slack icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-slack-50.png" alt="Slack icon" />
                       </div>
                       <div class="skill-card">
                         <h4>npm</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-npm-32.png" alt="npm icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-npm-32.png" alt="npm icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Postman</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-api-30.png" alt="Postman icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-api-30.png" alt="Postman icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Decap CMS</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-dashboard-50.png" alt="Decap CMS icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-dashboard-50.png" alt="Decap CMS icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Vite</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-react-30.png" alt="Vite icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-react-30.png" alt="Vite icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Next.js</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-react-30.png" alt="Next.js icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-react-30.png" alt="Next.js icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Vercel</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-cms-50.png" alt="Vercel icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-cms-50.png" alt="Vercel icon" />
                       </div>
                       <div class="skill-card">
                         <h4>GitLab</h4>
-                        <img loading="lazy" src="/assets/icons/github-mark.png" alt="GitLab icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/github-mark.png" alt="GitLab icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Trello</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-project-management-30.png" alt="Trello icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-project-management-30.png" alt="Trello icon" />
                       </div>
                     </div>
                   </div>
@@ -459,27 +462,27 @@
                     <div class="skills-grid">
                       <div class="skill-card">
                         <h4>Responsive Design</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-responsive-50.png" alt="Responsive Design icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-responsive-50.png" alt="Responsive Design icon" />
                       </div>
                       <div class="skill-card">
                         <h4>UX/UI</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-designer-48.png" alt="UX/UI icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-designer-48.png" alt="UX/UI icon" />
                       </div>
                       <div class="skill-card">
                         <h4>High-fidelity Wireframes</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-wireframe-50.png" alt="Wireframes icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-wireframe-50.png" alt="Wireframes icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Prototyping</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-prototype-50.png" alt="Prototyping icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-prototype-50.png" alt="Prototyping icon" />
                       </div>
                       <div class="skill-card">
                         <h4>User Flows</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-user-flow-67.png" alt="User Flows icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-user-flow-67.png" alt="User Flows icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Information Architecture</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-information-48.png" alt="Information Architecture icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-information-48.png" alt="Information Architecture icon" />
                       </div>
                     </div>
                   </div>
@@ -490,15 +493,15 @@
                     <div class="skills-grid">
                       <div class="skill-card">
                         <h4>Agile/Scrum</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-agile-32.png" alt="Agile/Scrum icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-agile-32.png" alt="Agile/Scrum icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Project Management</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-project-management-30.png" alt="Project Management icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-project-management-30.png" alt="Project Management icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Process Automation</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-automation-50.png" alt="Process Automation icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-automation-50.png" alt="Process Automation icon" />
                       </div>
                     </div>
                   </div>
@@ -509,19 +512,19 @@
                     <div class="skills-grid">
                       <div class="skill-card">
                         <h4>API Integration</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-api-30.png" alt="API icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-api-30.png" alt="API icon" />
                       </div>
                       <div class="skill-card">
                         <h4>WCAG Accessibility Standards</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-accessibility-50.png" alt="WCAG icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-accessibility-50.png" alt="WCAG icon" />
                       </div>
                       <div class="skill-card">
                         <h4>SEO Optimization</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-seo-50.png" alt="SEO icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-seo-50.png" alt="SEO icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Version Control</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-ctrl-50.png" alt="Version Control icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-ctrl-50.png" alt="Version Control icon" />
                       </div>
                     </div>
                   </div>
@@ -532,19 +535,19 @@
                     <div class="skills-grid">
                       <div class="skill-card">
                         <h4>Norwegian (Native)</h4>
-                        <img loading="lazy" src="/assets/icons/star-yellow.png" alt="5 stars for fluency" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/star-yellow.png" alt="5 stars for fluency" />
                       </div>
                       <div class="skill-card">
                         <h4>English (Fluent)</h4>
-                        <img loading="lazy" src="/assets/icons/star-yellow.png" alt="4 stars for fluency" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/star-yellow.png" alt="4 stars for fluency" />
                       </div>
                       <div class="skill-card">
                         <h4>Spanish (Intermediate)</h4>
-                        <img loading="lazy" src="/assets/icons/star-yellow.png" alt="3 stars for fluency" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/star-yellow.png" alt="3 stars for fluency" />
                       </div>
                       <div class="skill-card">
                         <h4>French (Intermediate)</h4>
-                        <img loading="lazy" src="/assets/icons/star-yellow.png" alt="3 stars for fluency" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/star-yellow.png" alt="3 stars for fluency" />
                       </div>
                     </div>
                   </div>
@@ -555,23 +558,23 @@
                     <div class="skills-grid">
                       <div class="skill-card">
                         <h4>Bootstrap</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-bootstrap-50.png" alt="Bootstrap icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-bootstrap-50.png" alt="Bootstrap icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Sass</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-sass-avatar-50.png" alt="Sass icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-sass-avatar-50.png" alt="Sass icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Vue.js</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-vuejs-50.png" alt="Vue.js icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-vuejs-50.png" alt="Vue.js icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Angular</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-react-30.png" alt="Angular icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-react-30.png" alt="Angular icon" />
                       </div>
                       <div class="skill-card">
                         <h4>Node.js</h4>
-                        <img loading="lazy" src="/assets/icons/icons8-react-30.png" alt="Node.js icon" />
+                        <img loading="lazy" decoding="async" src="/assets/icons/icons8-react-30.png" alt="Node.js icon" />
                       </div>
                     </div>
                   </div>
@@ -771,14 +774,14 @@
               <a href="mailto:tara.bjorheim@outlook.com" class="fw-700">tara.bjorheim@outlook.com</a>
               <p>And let's connect on</p>
               <div class="contact-info__icons">
-                <a href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/" target="_blank" rel="noopener" aria-label="Visit my LinkedIn profile"><img loading="lazy" src="/assets/icons/contact/linkedin.png" alt="LinkedIn profile" /> </a>
+                <a href="https://www.linkedin.com/in/tara-olivia-bj%C3%B8rheim-198110228/" target="_blank" rel="noopener" aria-label="Visit my LinkedIn profile"><img loading="lazy" decoding="async" src="/assets/icons/contact/linkedin.png" alt="LinkedIn profile" /> </a>
                 <a href="https://github.com/taraolivia" target="_blank" rel="noopener" aria-label="Visit my GitHub profile">
-                  <img loading="lazy" src="/assets/icons/contact/github.png" alt="GitHub profile" />
+                  <img loading="lazy" decoding="async" src="/assets/icons/contact/github.png" alt="GitHub profile" />
                 </a>
                 <a href="https://www.instagram.com/tara_bjo/" target="_blank" rel="noopener" aria-label="Visit my Instagram profile">
-                  <img loading="lazy" src="/assets/icons/contact/instagram.png" alt="Instagram profile" />
+                  <img loading="lazy" decoding="async" src="/assets/icons/contact/instagram.png" alt="Instagram profile" />
                 </a>
-                <!--               <img loading="lazy" src="/assets/icons/contact/behance.png" alt="" />
+                <!--               <img loading="lazy" decoding="async" src="/assets/icons/contact/behance.png" alt="" />
  -->
               </div>
               <!--             <a href="linktree.com">My LinkTree</a>
@@ -798,7 +801,7 @@
             <p>&copy; 2026 Tara Olivia Bjørheim. All rights reserved.</p>
           </div>
           <div class="end-notes__section-image">
-            <img loading="lazy" src="/assets/me/about-me-carousel/(48).jpg" alt="Tara Olivia Bjørheim" />
+            <img loading="lazy" decoding="async" src="/assets/me/about-me-carousel/(48).jpg" alt="Tara Olivia Bjørheim" />
           </div>
         </section>
       </main>

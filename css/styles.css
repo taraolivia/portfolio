@@ -1,28 +1,4 @@
 /* ============================= */
-/* Imports */
-/* ============================= */
-
-/* Import variables */
-@import url("variables.css");
-
-/* Import reset styles */
-@import url("reset.css");
-
-/* Import utilities */
-@import url("utilities.css");
-
-/* Import preload */
-@import url("preload.css");
-
-/* Import skip link */
-@import url("skip-link.css");
-
-/* Import accessibility */
-@import url("accessibility.css");
-
-/* ============================= */
-
-/* ============================= */
 /*        Typography Styles      */
 /* ============================= */
 
@@ -297,6 +273,13 @@ body {
 .slider-list {
   display: flex;
   align-items: center;
+}
+.slider-list > .loading-indicator {
+  flex: 0 0 100%;
+  position: static;
+  transform: none;
+  padding: 1em;
+  text-align: center;
 }
 .slider-list-item {
   flex-shrink: 0;

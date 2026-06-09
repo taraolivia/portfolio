@@ -8,20 +8,24 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap" /></noscript>
 
     <!-- Preload and Load Critical CSS -->
-    <link rel="preload" href="../css/preload.css" as="style" onload="this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="../css/preload.css" /></noscript>
     <link rel="preload" href="../assets/background/background-holo-1.jpg" as="image" />
-    <link rel="preload" href="../assets/background/background-holo-2.jpg" as="image" />
 
     <!-- Main Stylesheets -->
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/variables.css?v=20260609" />
+    <link rel="stylesheet" href="../css/reset.css?v=20260609" />
+    <link rel="stylesheet" href="../css/utilities.css?v=20260609" />
+    <link rel="stylesheet" href="../css/preload.css?v=20260609" />
+    <link rel="stylesheet" href="../css/skip-link.css?v=20260609" />
+    <link rel="stylesheet" href="../css/accessibility.css?v=20260609" />
+    <link rel="stylesheet" href="../css/styles.css?v=20260609" />
 
     <!-- JavaScript Modules -->
-    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/main.js?v=20260609"></script>
 
     <script>
       /* To prevent Firefox FOUC, this must be here */
@@ -68,11 +72,11 @@
               <li class="tech-item glassmorphism-text">Netlify (Deployment)</li>
             </div>
           </div>
-          <img loading="lazy" src="../assets/projects/petagram-hero.jpg" alt="Petagram social media platform showing the feed and user interface" />
+          <img loading="eager" fetchpriority="high" decoding="async" src="../assets/projects/petagram-hero.jpg" alt="Petagram social media platform showing the feed and user interface" />
         </section>
 
         <section class="project-page__section glassmorphism-text wrap-reverse">
-          <img loading="lazy" src="../assets/projects/petagram/feed-page.jpg" alt="Petagram feed page showing posts, search functionality, and create post form" />
+          <img loading="lazy" decoding="async" src="../assets/projects/petagram/feed-page.jpg" alt="Petagram feed page showing posts, search functionality, and create post form" />
           <div>
             <h2 class="padding-top-bottom-1em">My Role in the Project</h2>
             <p>Petagram was developed as a JavaScript 2 course assignment, focusing on advanced JavaScript concepts and social media functionality. Working with a partner, I was responsible for:</p>
@@ -112,7 +116,7 @@
               </li>
             </ul>
           </div>
-          <img loading="lazy" src="../assets/projects/petagram/profile-page.jpg" alt="Petagram user profile page showing user posts and follow functionality" />
+          <img loading="lazy" decoding="async" src="../assets/projects/petagram/profile-page.jpg" alt="Petagram user profile page showing user posts and follow functionality" />
         </section>
 
         <section class="project-page__section glassmorphism-text">
@@ -165,11 +169,11 @@
               </li>
             </ul>
           </div>
-          <img loading="lazy" src="../assets/projects/petagram/authentication.jpg" alt="Petagram login and registration forms with validation" />
+          <img loading="lazy" decoding="async" src="../assets/projects/petagram/authentication.jpg" alt="Petagram login and registration forms with validation" />
         </section>
 
         <section class="project-page__section glassmorphism-text wrap-reverse">
-          <img loading="lazy" src="../assets/projects/petagram-hero.jpg" alt="Petagram social media platform showing the feed and user interface" />
+          <img loading="lazy" decoding="async" src="../assets/projects/petagram-hero.jpg" alt="Petagram social media platform showing the feed and user interface" />
           <div>
             <h2 class="padding-top-bottom-1em">Future Improvements</h2>
             <ul>
@@ -198,7 +202,7 @@
               <a href="https://petagram-with-tailwindcss.netlify.app/auth/login/" target="_blank" rel="noopener" class="glassmorphism-text">View Live</a>
 
               <a href="https://github.com/NoroffFEU/js2-ca-tara-and-jenny" target="_blank" rel="noopener" aria-label="Go to GitHub repository" class="project-page-github">
-                <img loading="lazy" src="../assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
+                <img loading="lazy" decoding="async" src="../assets/icons/github-mark.png" alt="Github mark logo in black" id="github-mark-round-black" />
               </a>
             </div>
             <p class="padding-top-bottom-1em">Experience the social media platform or explore the Vanilla JavaScript and Tailwind CSS implementation on GitHub.</p>

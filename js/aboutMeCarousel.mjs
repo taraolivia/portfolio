@@ -12,6 +12,7 @@ export function initializeImageSlider() {
         return;
     }
 
+    const maxCarouselImages = 24;
     const imageFolderPath = 'assets/me/about-me-carousel/';
     const imageFilenames = [
             '().jpg', '(1).jpg', '(2).jpg', '(3).jpg', '(4).jpg',
@@ -84,13 +85,23 @@ export function initializeImageSlider() {
     }
 
     shuffleArray(imageFilenames);
+    const carouselImages = imageFilenames.slice(0, maxCarouselImages);
 
     const loadingIndicator = document.createElement('div');
     loadingIndicator.classList.add('loading-indicator');
     loadingIndicator.innerText = 'Cute pictures loading!';
     sliderList.appendChild(loadingIndicator);
 
-    let imagesLoaded = 0;
+    let scrollPosition = 0;
+    let maxScrollDistance = 0;
+
+    function updateScrollBounds() {
+        maxScrollDistance = Math.max(0, sliderList.scrollWidth - sliderList.clientWidth);
+    }
+
+    function hideLoadingIndicator() {
+        loadingIndicator.style.display = 'none';
+    }
 
     /**
      * Creates an image element and appends it to the slider
@@ -105,36 +116,44 @@ export function initializeImageSlider() {
         const img = document.createElement('img');
         img.src = `${imageFolderPath}${filename}`;
         img.alt = `Image ${filename}`;
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.fetchPriority = 'low';
 
         img.addEventListener('contextmenu', (e) => {
             e.preventDefault();
         });
         img.draggable = false;
 
-        img.onload = () => {
-            imagesLoaded++;
-            if (imagesLoaded === imageFilenames.length) {
-                loadingIndicator.style.display = 'none';
-            }
-        };
+        img.addEventListener('load', () => {
+            hideLoadingIndicator();
+            updateScrollBounds();
+        }, { once: true });
+        img.addEventListener('error', hideLoadingIndicator, { once: true });
 
         sliderItem.appendChild(img);
         sliderList.appendChild(sliderItem);
     }
-    imageFilenames.forEach(createAndAppendImage);
-    let scrollPosition = 0;
+    carouselImages.forEach(createAndAppendImage);
+    updateScrollBounds();
+
     const scrollSpeed = 0.5;
     let animationId;
+    const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     /**
      * Animates the slider scroll position
      */
     function scrollSlider() {
+        if (maxScrollDistance <= 0) {
+            updateScrollBounds();
+        }
+
         scrollPosition -= scrollSpeed;
         sliderList.style.transform = `translateX(${scrollPosition}px)`;
 
         // Reset scroll position if the end is reached
-        if (Math.abs(scrollPosition) >= sliderList.scrollWidth - sliderList.clientWidth) {
+        if (maxScrollDistance > 0 && Math.abs(scrollPosition) >= maxScrollDistance) {
             scrollPosition = 0; 
         }
 
@@ -160,15 +179,35 @@ export function initializeImageSlider() {
         }
     }
 
-    startScroll();
-    sliderList.addEventListener('mouseenter', stopScroll);
-    sliderList.addEventListener('mouseleave', startScroll);
+    if (reduceMotionQuery.matches) {
+        updateScrollBounds();
+    } else if ('IntersectionObserver' in window) {
+        const sliderObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    startScroll();
+                } else {
+                    stopScroll();
+                }
+            });
+        }, { rootMargin: '200px' });
+
+        sliderObserver.observe(sliderList);
+    } else {
+        startScroll();
+    }
+
+    window.addEventListener('resize', updateScrollBounds, { passive: true });
+    if (!reduceMotionQuery.matches) {
+        sliderList.addEventListener('mouseenter', stopScroll);
+        sliderList.addEventListener('mouseleave', startScroll);
+    }
 
     /**
      * Applies grayscale effect to non-hovered images
      */
     function applyGrayscaleEffect() {
-        const items = Array.from(sliderList.children);
+        const items = Array.from(sliderList.querySelectorAll('.slider-list-item'));
         items.forEach(item => {
             item.addEventListener('mouseenter', () => {
                 items.forEach(sibling => sibling.classList.add('grayscale'));
