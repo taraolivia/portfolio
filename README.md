@@ -3,7 +3,7 @@
 <img width="1892" height="841" alt="Screenshot 2025-10-06 at 09 38 56" src="https://github.com/user-attachments/assets/79bbfcae-5e76-4428-b9a3-23af2477bbaa" />
 
 
-A personal portfolio website showcasing my work as a front-end developer and aspiring UI/UX designer.
+A personal portfolio website showcasing my work as a frontend developer with a UX-focused approach to building accessible, thoughtful interfaces.
 
 ## 🌐 Live Site
 
@@ -84,4 +84,4 @@ cd portfolio
 
 ## 📄 License
 
-© 2025 Tara Olivia Bjørheim. All rights reserved.
+© 2026 Tara Olivia Bjørheim. All rights reserved.

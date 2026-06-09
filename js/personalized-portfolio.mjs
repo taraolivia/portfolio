@@ -34,7 +34,7 @@ export function initializePortfolio() {
             let answerContent = '';
             switch (checkbox.value) {
                 case 'currentJob':
-                    answerContent = `<h3>What do you currently do for work?</h3><p>I am an Administrative Coordinator at the Stavanger Region European Office in Brussels...</p>`;
+                    answerContent = `<h3>What do you currently do for work?</h3><p>I work full-time as a Frontend Developer at Smart Management (TagHub) in Stavanger...</p>`;
                     break;
                 case 'professionalExperience':
                     answerContent = `<h3>How has your professional experience shaped your approach to front-end development?</h3><p>Working in various administrative roles taught me the importance of organization, communication...</p>`;
@@ -46,7 +46,7 @@ export function initializePortfolio() {
                     answerContent = `<h3>If you weren’t a developer, what would you be doing?</h3><p>If I weren’t a developer, I’d probably be working in a creative field like design or psychology...</p>`;
                     break;
                 case 'workingInBrussels':
-                    answerContent = `<h3>What’s your favorite part of working in Brussels?</h3><p>The diversity of cultures and the international environment make working in Brussels so exciting...</p>`;
+                    answerContent = `<h3>What did you enjoy about working in Brussels?</h3><p>The diversity of cultures and the international environment made working in Brussels so exciting...</p>`;
                     break;
                 // Add other cases as needed
             }

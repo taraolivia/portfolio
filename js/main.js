@@ -91,17 +91,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabContent = document.querySelectorAll('.tab-content');
   const tabLinks = document.querySelectorAll('.tab-link');
 
-  // Initially hide all tab content and remove active classes
-  tabContent.forEach(content => content.style.display = 'none');
-  tabLinks.forEach(link => link.classList.remove('active'));
+  if (!noTabsMessage || tabContent.length === 0 || tabLinks.length === 0) {
+    return;
+  }
 
-  // Load the last active tab from localStorage or show the noTabsMessage
-  const lastActiveTab = localStorage.getItem('activeTab');
-  if (lastActiveTab && document.getElementById(lastActiveTab)) {
-    document.getElementById(lastActiveTab).style.display = 'block';
-    document.querySelector(`[data-tab="${lastActiveTab}"]`).classList.add('active');
+  // Initially hide all tab content and remove active states
+  tabContent.forEach(content => content.style.display = 'none');
+  tabLinks.forEach(link => {
+    link.classList.remove('active');
+    link.setAttribute('aria-selected', 'false');
+  });
+
+  // Load the last active tab from localStorage, falling back to Skills
+  const defaultActiveTab = 'skills';
+  const savedActiveTab = localStorage.getItem('activeTab');
+  const savedTabContent = savedActiveTab ? document.getElementById(savedActiveTab) : null;
+  const savedTabLink = savedActiveTab ? document.querySelector(`[data-tab="${savedActiveTab}"]`) : null;
+  const initialActiveTab = savedTabContent && savedTabLink ? savedActiveTab : defaultActiveTab;
+  const activeTabContent = document.getElementById(initialActiveTab);
+  const activeTabLink = document.querySelector(`[data-tab="${initialActiveTab}"]`);
+
+  if (savedActiveTab && initialActiveTab !== savedActiveTab) {
+    localStorage.removeItem('activeTab');
+  }
+
+  if (activeTabContent && activeTabLink) {
+    activeTabContent.style.display = 'block';
+    activeTabLink.classList.add('active');
+    activeTabLink.setAttribute('aria-selected', 'true');
     noTabsMessage.style.display = 'none';  // Hide the message since a tab is active
   } else {
+    localStorage.removeItem('activeTab');
     noTabsMessage.style.display = 'block';  // Show the message if no tabs are active
   }
 
@@ -147,11 +167,15 @@ function toggleTab(evt, tabName) {
   tabContent.forEach(content => content.style.display = 'none');
 
   const tabLinks = document.querySelectorAll('.tab-link');
-  tabLinks.forEach(link => link.classList.remove('active'));
+  tabLinks.forEach(link => {
+    link.classList.remove('active');
+    link.setAttribute('aria-selected', 'false');
+  });
 
   // Show the clicked tab and add the active class to the clicked link
   currentTabContent.style.display = 'block';
   currentTabLink.classList.add('active');
+  currentTabLink.setAttribute('aria-selected', 'true');
 
   // Save the active tab in localStorage
   localStorage.setItem('activeTab', tabName);
@@ -161,6 +185,9 @@ function toggleTab(evt, tabName) {
 
   // Scroll to the top of the tabs section with an offset
   const tabsSection = document.querySelector('.tabs');
+  if (!tabsSection) {
+    return;
+  }
   const offset = 100;  // Adjust the offset to your needs
   const sectionTop = tabsSection.getBoundingClientRect().top + window.pageYOffset;
 
@@ -181,7 +208,10 @@ function closeTab() {
   tabContent.forEach(content => content.style.display = 'none');
 
   const tabLinks = document.querySelectorAll('.tab-link');
-  tabLinks.forEach(link => link.classList.remove('active'));
+  tabLinks.forEach(link => {
+    link.classList.remove('active');
+    link.setAttribute('aria-selected', 'false');
+  });
 
   // Remove the active tab from localStorage
   localStorage.removeItem('activeTab');
@@ -191,6 +221,9 @@ function closeTab() {
 
   // Scroll back to the top of the tabs section with an offset
   const tabsSection = document.querySelector('.tabs');
+  if (!tabsSection) {
+    return;
+  }
   const offset = 100;  // Adjust the offset as needed
   const sectionTop = tabsSection.getBoundingClientRect().top + window.pageYOffset;
 
